@@ -14,14 +14,12 @@ import Home5Testimonial from "@/components/testimonial/Home5Testimonial";
 import Home5whyChoose from "@/components/why-choose/Home5whyChoose";
 import Home5Workprocess from "@/components/workProcess/Home5Workprocess";
 import useWow from "@/hooks/useWow";
-import Marquee from "react-fast-marquee";
 
 const Home = () => {
   useWow();
   return (
     <>
       <Header1 />
-
       <Home5Banner />
       <Home5BannerMarque />
       <Home5Partnerships />

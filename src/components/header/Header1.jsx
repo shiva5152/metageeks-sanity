@@ -965,9 +965,7 @@ const Header1 = () => {
                       icon === true ? "menu-item-has-children" : ""
                     }`}
                   >
-                    <Link href={link} className="drop-down">
-                      {label}
-                    </Link>
+                    <Link href={link}>{label}</Link>
                     {icon && (
                       <i
                         onClick={() => toggleMenu(label)}

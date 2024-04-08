@@ -3,169 +3,28 @@
         "id": "1",
         "label": "Home",
         "link": "/",
-        "icon": true,
-        "subMenu": [
-            {
-                "id": "1",
-                "label": "Light Version",
-                "link": "/",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Startup Agency",
-                        "link": "/"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Digital Marketing Agency",
-                        "link": "/digital-marketing"
-                    },
-                    {
-                        "id": "3",
-                        "label": "Saas Product",
-                        "link": "/saas"
-                    },
-                    {
-                        "id": "4",
-                        "label": "Creative Agency",
-                        "link": "/creative-agency"
-                    },
-                    {
-                        "id": "5",
-                        "label": "It Solution",
-                        "link": "/it-solution"
-                    }
-                ]
-            },
-            {
-                "id": "1",
-                "label": "Dark Version",
-                "link": "/",
-                "icon": true,
-                "subMenu": [
-                    {
-                        "id": "1",
-                        "label": "Startup Agency",
-                        "link": "/startup-agency-dark"
-                    },
-                    {
-                        "id": "2",
-                        "label": "Digital Marketing Agency",
-                        "link": "/digital-marketing-dark"
-                    },
-                    {
-                        "id": "3",
-                        "label": "Saas Product",
-                        "link": "/saas-dark"
-                    },
-                    {
-                        "id": "4",
-                        "label": "Creative Agency",
-                        "link": "/creative-agency-dark"
-                    },
-                    {
-                        "id": "5",
-                        "label": "It Solution",
-                        "link": "/it-solution-dark"
-                    }
-                ]
-            }
-        ]
+        "icon": false   
     },
     {
         "id": "2",
         "label": "Services",
         "link": "/service",
-        "icon": true,
-        "subMenu": [
-            {
-                "id": "1",
-                "label": "Service style 01",
-                "link": "/service"
-            },
-            {
-                "id": "2",
-                "label": "Service style 02",
-                "link": "/service/service2"
-            },
-            {
-                "id": "3",
-                "label": "Service style 03",
-                "link": "/service/service3"
-            },
-            {
-                "id": "4",
-                "label": "Service style 04",
-                "link": "/service/service4"
-            },
-            {
-                "id": "4",
-                "label": "service details",
-                "link": "/service/service-details"
-            }
-        ]
+        "icon": false
+        
     },
     {
         "id": "3",
         "label": "Case Study",
         "link": "/case-study",
-        "icon": true,
-        "subMenu": [
-            {
-                "id": "1",
-                "label": "Case Study Style 01",
-                "link": "/case-study"
-            },
-            {
-                "id": "2",
-                "label": "Case Study Style 02",
-                "link": "/case-study/case-study2"
-            },
-            {
-                "id": "3",
-                "label": "Case Study Details",
-                "link": "/case-study/case-study-details"
-            }
-        ]
+        "icon": false
+        
     },
     {
         "id": "4",
         "label": "Blog",
         "link": "/blog",
-        "icon": true,
-        "subMenu": [
-            {
-                "id": "1",
-                "label": "Blog Grid",
-                "link": "/blog"
-            },
-            {
-                "id": "2",
-                "label": "Blog Grid Sidebar",
-                "link": "/blog/blog-grid-sidebar"
-            },
-            {
-                "id": "3",
-                "label": "Blog List",
-                "link": "/blog/blog-list"
-            },
-            {
-                "id": "4",
-                "label": "Blog Standard",
-                "link": "/blog/blog-standard"
-            },
-            {
-                "id": "5",
-                "label": "Blog Details Style 01",
-                "link": "/blog/blog-details"
-            },
-            {
-                "id": "6",
-                "label": "Blog Details Style 02",
-                "link": "/blog/blog-details2"
-            }
-        ]
+        "icon": false
+        
     },
     {
         "id": "5",

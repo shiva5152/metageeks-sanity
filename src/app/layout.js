@@ -48,10 +48,10 @@ export default function RootLayout({ children }) {
         <ScrollProgress />
         {children}
       </body>
-      <script
+      {/* <script
         type="text/javascript"
         src="https://widget.clutch.co/static/js/widget.js"
-      ></script>
+      ></script> */}
     </html>
   );
 }

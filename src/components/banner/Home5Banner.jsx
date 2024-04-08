@@ -77,7 +77,7 @@ const Home5Banner = async () => {
                   <Link href="/contact" className="primary-btn5 two">
                     {hero.cta}
                   </Link>
-                  {/* <a href="https://clutch.co" className="rating-area">
+                  <a href="https://clutch.co" className="rating-area">
                     <div className="review">
                       <span>Review On</span>
                       <img
@@ -111,8 +111,8 @@ const Home5Banner = async () => {
                       </ul>
                       <span>(50 reviews)</span>
                     </div>
-                  </a> */}
-                  <div
+                  </a>
+                  {/* <div
                     className="clutch-widget"
                     data-url="https://widget.clutch.co"
                     data-widget-type="2"
@@ -121,7 +121,7 @@ const Home5Banner = async () => {
                     data-expandifr="true"
                     data-scale="100"
                     data-clutchcompany-id="2251045"
-                  ></div>
+                  ></div> */}
                 </div>
               </div>
             </div>

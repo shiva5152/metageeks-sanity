@@ -3,9 +3,48 @@ import MainLayout from "@/components/layout/MainLayout";
 import useWow from "@/hooks/useWow";
 import Link from "next/link";
 import React from "react";
+import { client } from "../../../sanity/lib/client";
+import { useEffect, useState } from "react";
+
+const getPost = async () => {
+  const query = `
+    *[_type=="blog"]{
+  
+    title,
+    slug,
+    description,
+    mainImage{
+      asset->{
+        _id,
+        url
+      }
+    },
+    date,
+    tags,
+  },
+}
+    `;
+
+  const response = await client.fetch(query);
+  console.log(response);
+  return response;
+};
 
 const BlogStandardPage = () => {
   useWow();
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getPost();
+      setPosts(response);
+    };
+    fetchData();
+  }, []);
+
+  // console.log(posts);
+
   return (
     <MainLayout>
       <div
