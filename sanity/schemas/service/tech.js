@@ -1,6 +1,6 @@
-export const serviceProcess = {
-  name: "serviceProcess",
-  title: "Service Process",
+export const serviceTechStack = {
+  name: "serviceTechStack",
+  title: "Service Tech Stack",
   type: "document",
 
   fields: [
@@ -29,14 +29,8 @@ export const serviceProcess = {
       validation: (Rule) => Rule.required().error("Required"),
     },
     {
-      name: "extraText",
-      title: "Extra Text",
-      type: "string",
-      validation: (Rule) => Rule.required().error("Required"),
-    },
-    {
-      name: "process",
-      title: "Process",
+      name: "techStack",
+      title: "Tech Stack",
       type: "array",
       of: [
         {
@@ -49,15 +43,10 @@ export const serviceProcess = {
               validation: (Rule) => Rule.required().error("Required"),
             },
             {
-              name: "description",
-              title: "Description",
-              type: "text",
-              validation: (Rule) => Rule.required().error("Required"),
-            },
-            {
               name: "icon",
               title: "Icon",
               type: "url",
+              validation: (Rule) => Rule.required().error("Required"),
             },
           ],
         },

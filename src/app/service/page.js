@@ -602,7 +602,7 @@ const ServicePage3 = () => {
                   <div className="button-area">
                     <Link
                       className="explore-btn"
-                      href="/service/service-details"
+                      href="/service/software-development"
                     >
                       Learn More
                       <svg

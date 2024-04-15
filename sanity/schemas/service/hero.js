@@ -5,10 +5,43 @@ export const serviceHero = {
 
   fields: [
     {
-      name: "heading",
-      title: "Heading",
+      name: "intoHeading",
+      title: "Intro Heading",
       type: "string",
       validation: (Rule) => Rule.required().error("Required"),
+    },
+    {
+      name: "planHeading",
+      title: "Plan Heading",
+      type: "string",
+      validation: (Rule) => Rule.required().error("Required"),
+    },
+    {
+      name: "heading",
+      title: "Heading",
+      type: "object",
+      fields: [
+        {
+          name: "boldText",
+          title: "Bold Text",
+          type: "string",
+        },
+        {
+          name: "text",
+          title: "Text",
+          type: "string",
+        },
+      ],
+      validation: (Rule) => Rule.required().error("Required"),
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "planHeading",
+        maxLength: 96,
+      },
     },
 
     {
@@ -65,6 +98,18 @@ export const serviceHero = {
       title: "Service Process",
       type: "reference",
       to: [{ type: "serviceProcess" }],
+    },
+    {
+      name: "serviceFeature",
+      title: "Service Feature",
+      type: "reference",
+      to: [{ type: "serviceProcess" }],
+    },
+    {
+      name: "serviceTechStack",
+      title: "Service Tech Stack",
+      type: "reference",
+      to: [{ type: "serviceTechStack" }],
     },
   ],
 };
