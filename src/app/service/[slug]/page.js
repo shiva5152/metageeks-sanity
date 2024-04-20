@@ -2,9 +2,9 @@ import MainLayout from "@/components/layout/MainLayout";
 import Home5Workprocess from "@/components/workProcess/Home5Workprocess";
 import { client } from "../../../../sanity/lib/client";
 
-async function getService() {
+async function getService(slug) {
   const query = `
- *[_type == "serviceHero"] {
+ *[_type == "serviceHero" && slug.current == "${slug}"] {
   intoHeading,
     paragraph,
     planHeading,
@@ -61,7 +61,6 @@ async function getService() {
   `;
 
   const response = await client.fetch(query);
-  console.log(response);
   return response[0];
 }
 
@@ -72,9 +71,10 @@ export const metadata = {
   },
 };
 
-const ServiceDetailsPage = async () => {
-  const service = await getService();
-  const slug = service.slug.current;
+const ServiceDetailsPage = async ({ params }) => {
+  const slug = params.slug;
+  const service = await getService(slug);
+
   metadata.title = "Service Details | " + slug;
 
   return (
