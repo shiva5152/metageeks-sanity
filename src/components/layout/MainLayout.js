@@ -19,11 +19,12 @@ const MainLayout = ({ children }) => {
   const shouldRenderBreadcrumb = !hideBreadcrumbRoutes.some(
     (route) => route === pathname
   );
+  const words = ["service", "blog"];
 
   return (
     <>
       <Header2 />
-      {!pathname.startsWith("/service") && <Breadcrumb />}
+      {!words.some((word) => pathname.startsWith(`/${word}`)) && <Breadcrumb />}
       {children}
       {shouldRenderBreadcrumb && <Home1Contact />}
       <Footer />

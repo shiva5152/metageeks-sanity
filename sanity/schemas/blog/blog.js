@@ -14,6 +14,11 @@ export const blog = {
       type: "string",
     },
     {
+      name: "category",
+      title: "Category",
+      type: "string",
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -51,10 +56,16 @@ export const blog = {
       type: "datetime",
     },
     {
-      title: "Content",
       name: "content",
+      title: "Content",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          fields: [{ type: "text", name: "alt", title: "Alt" }],
+        },
+      ],
     },
   ],
 };
