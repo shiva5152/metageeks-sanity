@@ -23,7 +23,7 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header2 />
-      <Breadcrumb />
+      {!pathname.startsWith("/service") && <Breadcrumb />}
       {children}
       {shouldRenderBreadcrumb && <Home1Contact />}
       <Footer />

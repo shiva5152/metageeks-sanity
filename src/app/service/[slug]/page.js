@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import Home5Workprocess from "@/components/workProcess/Home5Workprocess";
 import { client } from "../../../../sanity/lib/client";
+import Link from "next/link";
 
 async function getService(slug) {
   const query = `
@@ -79,6 +80,43 @@ const ServiceDetailsPage = async ({ params }) => {
 
   return (
     <MainLayout>
+      <div
+        className="breadcrumb-section"
+        style={{
+          backgroundImage:
+            "url(/assets/img/innerpage/breadcrumb-bg1.png), linear-gradient(180deg, #121212 0%, #121212 100%)",
+        }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="banner-wrapper">
+                <div className="banner-content">
+                  <ul className="breadcrumb-list">
+                    <li>
+                      <Link href="/">Home</Link>
+                    </li>
+                    <li>{`/service/${slug}`}</li>
+                  </ul>
+                  <h1>{service.intoHeading}</h1>
+                </div>
+                <div className="scroll-down-btn">
+                  <a href={"#service-details-section"}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width={19}
+                      height={29}
+                      viewBox="0 0 19 29"
+                    >
+                      <path d="M9.5 0V28M9.5 28C10 24.3333 12.4 17.1 18 17.5M9.5 28C8.5 24.1667 5.4 16.7 1 17.5" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div
         className="service-details-page pt-120 mb-120"
         id="service-details-section"
