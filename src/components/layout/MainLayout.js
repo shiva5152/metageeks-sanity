@@ -19,12 +19,14 @@ const MainLayout = ({ children }) => {
   const shouldRenderBreadcrumb = !hideBreadcrumbRoutes.some(
     (route) => route === pathname
   );
-  const words = ["service", "blog"];
+  const words = ["service", "blog", "case-study"];
+  const regex = new RegExp(`^/(${words.join("|")})/.*$`);
 
   return (
     <>
       <Header2 />
-      {!words.some((word) => pathname.startsWith(`/${word}`)) && <Breadcrumb />}
+      {/* {!words.some((word) => pathname.startsWith(`/${word}`)) && <Breadcrumb />} */}
+      {!regex.test(pathname) && <Breadcrumb />}
       {children}
       {shouldRenderBreadcrumb && <Home1Contact />}
       <Footer />

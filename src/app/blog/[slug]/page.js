@@ -677,7 +677,7 @@ const BlogPage = () => {
 
 export default BlogPage;
 
-const myPortableTextComponents = {
+export const myPortableTextComponents = {
   types: {
     image: ({ value }) => (
       <Image
@@ -732,7 +732,7 @@ const myPortableTextComponents = {
   },
 };
 
-const richTextStyles = `
+export const richTextStyles = `
 mt-14
 text-justify
 max-w-2xl

@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
-const useWow = () => {
+const useWow = (dependencies = []) => {
   useEffect(() => {
     const initWow = () => {
-      import('wowjs').then((module) => {
+      import("wowjs").then((module) => {
         const WOW = module.default;
         const wow = new WOW.WOW({
-          boxClass: 'wow',
-          animateClass: 'animated',
+          boxClass: "wow",
+          animateClass: "animated",
           offset: 80,
           mobile: true,
           live: true,
@@ -16,23 +16,23 @@ const useWow = () => {
       });
     };
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       initWow();
 
       const handleRouteChange = () => {
-        if (typeof window.WOW !== 'undefined') {
+        if (typeof window.WOW !== "undefined") {
           window.WOW.sync();
         }
       };
 
       // Listen for route changes
-      document.addEventListener('routeChangeComplete', handleRouteChange);
+      document.addEventListener("routeChangeComplete", handleRouteChange);
 
       return () => {
-        document.removeEventListener('routeChangeComplete', handleRouteChange);
+        document.removeEventListener("routeChangeComplete", handleRouteChange);
       };
     }
-  }, []);
+  }, dependencies);
 };
 
 export default useWow;
