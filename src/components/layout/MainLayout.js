@@ -1,8 +1,10 @@
 "use client";
+import React from "react";
 import { usePathname } from "next/navigation"; // Import usePathname from next/navigation
-import Home1Contact from "../contact/Home1Contact";
-import Footer from "../footer/Footer";
+import Header2 from "@/components/header/Header2";
 import Breadcrumb from "./Breadcrumb";
+import Footer from "../footer/Footer";
+import Home1Contact from "../contact/Home1Contact";
 
 const MainLayout = ({ children }) => {
   const pathname = usePathname(); // Get the current pathname
