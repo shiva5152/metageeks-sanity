@@ -16,46 +16,52 @@ const Footer5 = () => {
                         <div className="footer-widget">
                           <div className="footer-logo">
                             <Link href="/" className="logo-dark">
-                              <img src="/assets/img/footer-logo2.svg" alt="" />
+                              <img src="/assets/img/logo.png" alt="" />
                             </Link>
                             <Link href="/" className="logo-light">
                               <img
-                                src="/assets/img/footer-logo2-light.svg"
+                                src="/assets/img/logo.png"
                                 alt=""
                               />
                             </Link>
                           </div>
                           <div className="footer-contact-area">
-                            <h6>Address 01</h6>
+                            <h6>India Office</h6>
                             <a href="#">
-                              8204 Glen Ridge <br /> DriveEndicott, NY 13760
+                            55, 2nd Lane, Westend Marg<br /> Saidullajab, Saket<br /> New Delhi - 110030
                             </a>
                           </div>
                           <div className="social-area">
-                            <h6>Social Just You Connected Us!</h6>
+                            <h6>Follow Us!</h6>
                             <ul className="social-list">
                               <li>
-                                <a href="https://www.linkedin.com/">
+                                <a href="https://www.linkedin.com/company/metageekstech" target="_blank">
                                   <i className="bi bi-linkedin" />
                                   <span>LinkedIn</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.facebook.com/">
+                                <a href="https://www.facebook.com/metageeks.tech" target="_blank">
                                   <i className="bi bi-facebook" />
                                   <span>Facebook</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://twitter.com/">
+                                <a href="https://twitter.com/metageeks_tech" target="_blank">
                                   <i className="bi bi-twitter-x" />
                                   <span>Twitter</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.instagram.com/">
+                                <a href="https://www.instagram.com/metageeks.tech/" target="_blank">
                                   <i className="bi bi-instagram" />
                                   <span>Instagram</span>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://www.youtube.com/channel/UC8JKaWzL5azbclD8anmsMxQ" target="_blank">
+                                  <i className="bi bi-youtube" />
+                                  <span>YouTube</span>
                                 </a>
                               </li>
                             </ul>
@@ -157,8 +163,7 @@ const Footer5 = () => {
                   <div className="footer-bottom">
                     <div className="copyright-area">
                       <p>
-                        Copyright 2024 <a href="#">Zenfy</a> | Design By{" "}
-                        <a href="https://www.egenslab.com/">Egens Lab</a>
+                        Copyright 2024 | <a href="#">Metageeks Technologies Pvt Ltd</a>
                       </p>
                     </div>
                     <div className="footer-bottom-right">
@@ -180,7 +185,7 @@ const Footer5 = () => {
               <div className="col-xl-1 d-xl-block d-none">
                 <div className="contact-area">
                   <h2>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:info@metageeks.tech">info@metageeks.tech</a>
                   </h2>
                 </div>
               </div>

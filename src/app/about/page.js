@@ -7,6 +7,7 @@ import MainLayout from "@/components/layout/MainLayout";
 import Home5Team from "@/components/team/Home5Team";
 import Home5whyChoose from "@/components/why-choose/Home5whyChoose";
 
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Autoplay,
@@ -61,7 +62,9 @@ const Aboutpage = () => {
     };
   }, []);
   return (
+    
     <MainLayout>
+    
       <div
         className="home1-about-section scroll-margin pt-120 mb-120"
         id="about-section"
