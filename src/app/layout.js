@@ -15,6 +15,7 @@ import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import useWow from "@/hooks/useWow";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,8 +43,9 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="16x16"
         />
-        <title>Zenfy - Software, SaaS &amp; Digital Agency Template</title>
+        <title>Metageeks Technologies | Blockchain, Custom Software & AI Solutions</title>
       </head>
+      <GoogleTagManager gtmId="GTM-K5VV2K23" />
       <body>
         <ScrollProgress />
         {children}

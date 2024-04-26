@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation"; // Import usePathname from next/navigation
-import Header2 from "../header/Header2";
+import Header1 from "@/components/header/Header1";
 import Breadcrumb from "./Breadcrumb";
 import Footer from "../footer/Footer";
 import Home1Contact from "../contact/Home1Contact";
@@ -22,7 +22,7 @@ const MainLayout = ({ children }) => {
 
   return (
     <>
-      <Header2 />
+      <Header1 />
       <Breadcrumb />
       {children}
       {shouldRenderBreadcrumb && <Home1Contact />}
