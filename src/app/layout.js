@@ -15,6 +15,8 @@ import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import useWow from "@/hooks/useWow";
+import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,12 +44,29 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="16x16"
         />
-        <title>Zenfy - Software, SaaS &amp; Digital Agency Template</title>
+        <title>
+          Metageeks Technologies | Blockchain, Custom Software & AI Solutions
+        </title>
       </head>
+      <GoogleTagManager gtmId="GTM-W2K58FQ3" />
       <body>
         <ScrollProgress />
         {children}
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2K58FQ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          }}
+        />
       </body>
+      <Script id="gtm" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-W2K58FQ3');
+      `}
+      </Script>
       {/* <script
         type="text/javascript"
         src="https://widget.clutch.co/static/js/widget.js"
