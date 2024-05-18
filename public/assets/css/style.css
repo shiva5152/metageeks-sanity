@@ -13782,7 +13782,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.home5-banner-section .banner-content h1 span {
+.home5-banner-section .banner-content h1 ._span {
   text-decoration: underline;
   color: var(--primary-color1);
   font-style: italic;

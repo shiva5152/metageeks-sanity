@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { client } from "../../../sanity/lib/client";
 // import BlockContent from "@sanity/block-content-to-react";
+import TypewriterEffect from "./TypeWriterEffect";
 
 async function getPost() {
   const query = `
@@ -69,8 +70,10 @@ const Home5Banner = async () => {
                   </svg>
                 </span>
                 <h1>
-                  {hero.heading.beforeSpan} <span>{hero.heading.span}</span>{" "}
-                  {hero.heading.afterSpan}
+                  {hero.heading.beforeSpan}{" "}
+                  <span className="_span">{hero.heading.span}</span>{" "}
+                  <TypewriterEffect /> Development <br />
+                  Company
                 </h1>
                 <p>{hero.paragraph}</p>
                 <div className="banner-content-bottom">
