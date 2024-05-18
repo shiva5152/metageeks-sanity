@@ -76,16 +76,8 @@ const Footer = () => {
                     />
                   </div>
                   <div className="logo">
-                    <img
-                      src="/assets/img/footer-logo.svg"
-                      alt=""
-                      className="light"
-                    />
-                    <img
-                      src="/assets/img/footer-logo-dark.svg"
-                      alt=""
-                      className="dark"
-                    />
+                    <img src="/assets/img/logo.png" alt="" className="light" />
+                    <img src="/assets/img/logo.png" alt="" className="dark" />
                   </div>
                 </div>
               </div>
@@ -122,8 +114,8 @@ const Footer = () => {
                   </div>
                   <div className="content">
                     <p>
-                      Welcome to Zenfy, where innovation meets our passion in a
-                      journey that started with a simple idea and a shared
+                      Welcome to MetaGeeks, where innovation meets our passion
+                      in a journey that started with a simple idea and a shared
                       dream.
                     </p>
                   </div>
@@ -223,7 +215,7 @@ const Footer = () => {
               <div className="content">
                 <span>Call Any Time</span>
                 <h6>
-                  <a href="tel:2-965-871-8617">2-965-871-8617</a>
+                  <a href="tel:+918860382254">+91 886 0382 254</a>
                 </h6>
               </div>
             </div>
@@ -244,8 +236,8 @@ const Footer = () => {
               <div className="content">
                 <span>Address</span>
                 <h6>
-                  <a href="https://www.google.com/maps/place/Egens+Lab/@23.8340712,90.3631117,17z/data=!3m1!4b1!4m6!3m5!1s0x3755c14c8682a473:0xa6c74743d52adb88!8m2!3d23.8340663!4d90.3656866!16s%2Fg%2F11rs9vlwsk?entry=ttu">
-                    Dhaka, Bangladesh
+                  <a href="https://maps.app.goo.gl/92WiJ41Prt3UpFu9A">
+                    India, New Delhi
                   </a>
                 </h6>
               </div>
@@ -270,7 +262,7 @@ const Footer = () => {
               <div className="content">
                 <span>Say Hello</span>
                 <h6>
-                  <a href="mailto:info@example.com">info@example.com</a>
+                  <a href="mailto:Info@metageeks.tech">Info@metageeks.tech</a>
                 </h6>
               </div>
             </div>
@@ -278,8 +270,9 @@ const Footer = () => {
           <div className="footer-bottom">
             <div className="copyright-area">
               <p>
-                Copyright 2024 <a href="#">Zenfy</a> | Design By{" "}
-                <a href="https://www.egenslab.com/">Egens Lab</a>
+                Copyright 2024 <a href="#">MetaGeeks</a>
+                {/* | Design By{" "}
+                <a href="https://www.egenslab.com/">MetaGeeks</a> */}
               </p>
             </div>
             <div className="footer-bottom-right">

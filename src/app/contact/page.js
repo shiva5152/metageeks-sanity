@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import MainLayout from "@/components/layout/MainLayout";
 import useWow from "@/hooks/useWow";
 import React from "react";
 
 const ContactPage = () => {
-  useWow()
+  useWow();
   return (
     <MainLayout>
       <div className="contact-page scroll-margin pt-120 mb-120" id="contact">
@@ -54,9 +54,12 @@ const ContactPage = () => {
             >
               <div className="contact-area">
                 <div className="address">
-                  <h4 className="title">United Kingdom</h4>
-                  <span>London</span>
-                  <p>28200 Old 41 Rd #208 Bonita Springs, FL 34135</p>
+                  <h4 className="title">India</h4>
+                  <span>New Delhi</span>
+                  <p>
+                    Metageeks Technologies Pvt Ltd., 55, 2nd Lane, Westend Marg,
+                    Saidullajab, Saket, New Delhi-110030
+                  </p>
                 </div>
                 <div className="working-hour">
                   <div className="icon">
@@ -73,9 +76,9 @@ const ContactPage = () => {
                   </div>
                   <div className="content">
                     <span>Working Hours</span>
-                    <h6>Mon to Sat : 8am- 9pm</h6>
+                    <h6>Mon to Fri : 9:30am- 6:30pm</h6>
                     <h6>
-                      Sunday : <span>Closed</span>
+                      Saturday & Sunday : <span>Closed</span>
                     </h6>
                   </div>
                 </div>
@@ -88,7 +91,7 @@ const ContactPage = () => {
             >
               <div className="company-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.5647631857846!2d90.36311167605992!3d23.83407118555764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1700138349574!5m2!1sen!2sbd"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.683352475909!2d77.20950452495259!3d28.51917308922041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x69faea4c682cb8d1%3A0x79f33f98bef96a60!2sMetageeks%20Technologies%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1716009556355!5m2!1sen!2sin"
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -132,7 +135,7 @@ const ContactPage = () => {
                       </g>
                     </svg>
                   </span>
-                  <h2>Connect with Zenfy</h2>
+                  <h2>Connect with Metageeks</h2>
                   <p>
                     Ready to take the first step towards unlocking
                     opportunities, realizing goals, and embracing innovation?
@@ -160,7 +163,7 @@ const ContactPage = () => {
                     <div className="content">
                       <span>To More Inquiry</span>
                       <h6>
-                        <a href="tel:+990737621432">+990-737 621 432</a>
+                        <a href="tel:+918860382254">+91 886 0382 254</a>
                       </h6>
                     </div>
                   </div>
@@ -182,7 +185,9 @@ const ContactPage = () => {
                     <div className="content">
                       <span>To Send Mail</span>
                       <h6>
-                        <a href="mailto:info@example.com">info@gmail.com</a>
+                        <a href="mailto:Info@metageeks.tech">
+                          Info@metageeks.tech
+                        </a>
                       </h6>
                     </div>
                   </div>
@@ -195,19 +200,19 @@ const ContactPage = () => {
                   <h6>Social Just You Connected Us!</h6>
                   <ul className="social-list">
                     <li>
-                      <a href="https://www.linkedin.com/">
+                      <a href="https://www.linkedin.com/company/metageekstech/">
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/">
+                      <a href="https://www.facebook.com/metageeks.tech/">
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/">
+                      <a href="https://x.com/MetaGeeks_tech?t=fwt-7ZmA6NsSFV6J2dcN3w&s=09">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={18}
@@ -222,7 +227,7 @@ const ContactPage = () => {
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/">
+                      <a href="https://www.instagram.com/metageeks.tech?utm_source=qr&igsh=MWI3YWdjbzdtcWhzZw==">
                         <i className="bi bi-instagram" />
                         <span>Instagram</span>
                       </a>
