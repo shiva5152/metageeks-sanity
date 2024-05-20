@@ -80,7 +80,7 @@ const ServiceDetailsPage = async ({ params }) => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Product",
     name: service.heading.boldText + service.heading.text,
     description: service.paragraph,
     image: service.mainImage,
