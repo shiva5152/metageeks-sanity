@@ -105,7 +105,9 @@ const BlogStandardPage = () => {
                       <div className="blog-meta">
                         <ul className="category">
                           <li>
-                            <Link href="/blog">{post.category}</Link>
+                            <Link href={`/blog/${post.slug.current}`}>
+                              {post.category}
+                            </Link>
                           </li>
                         </ul>
                         <div className="blog-comment">

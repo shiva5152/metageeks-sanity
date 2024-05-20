@@ -62,7 +62,7 @@ const Home5About = () => {
                   </svg>
                 </span>
                 <h2>
-                More than just a blockchain development company{" "}
+                  More than just a blockchain development company{" "}
                   <span>we're a catalyst for innovation</span>
                 </h2>
               </div>
@@ -75,7 +75,14 @@ const Home5About = () => {
               data-wow-duration="1500ms"
             >
               <div className="about-content">
-                <p>We are committed to going beyond the usual way of doing things in Software Development. We want to set new standards in Software Development industry, create new and clever solutions, and make big advances in how technology works. We always focus on finding new ideas and ways to improve, using our skills to make things better for our clients.</p>
+                <p>
+                  We are committed to going beyond the usual way of doing things
+                  in Software Development. We want to set new standards in
+                  Software Development industry, create new and clever
+                  solutions, and make big advances in how technology works. We
+                  always focus on finding new ideas and ways to improve, using
+                  our skills to make things better for our clients.
+                </p>
                 <div className="eg-progress-wrap">
                   <div className="eg-progress-bar-single mb-40">
                     <div className="eg-progress-bar-title">
@@ -84,10 +91,10 @@ const Home5About = () => {
                     <div className="eg-progress-bar">
                       <div className="experience-bar-per" data-per="95%" />
                     </div>
-                  </div>                  
+                  </div>
                   <div className="eg-progress-bar-single mb-40">
                     <div className="eg-progress-bar-title">
-                      <h6>Web3  Game Development</h6>
+                      <h6>Web3 Game Development</h6>
                     </div>
                     <div className="eg-progress-bar">
                       <div className="experience-bar-per" data-per="85%" />
@@ -110,7 +117,7 @@ const Home5About = () => {
                     </div>
                   </div>
                 </div>
-                <div className="about-countdown-area">
+                {/* <div className="about-countdown-area">
                   <ul>
                     <li className="single-countdown">
                       <div className="content">
@@ -146,7 +153,7 @@ const Home5About = () => {
                       </div>
                     </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="col-lg-6">

@@ -5,12 +5,12 @@ const TypewriterEffect = () => {
   return (
     <Typewriter
       words={["Blockchain", "Software", "AI", "Game"]}
-      loop={5}
+      loop={false}
       cursor
       cursorStyle=""
       typeSpeed={70}
       deleteSpeed={50}
-      delaySpeed={1000}
+      delaySpeed={2500}
     />
   );
 };

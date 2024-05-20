@@ -53,7 +53,7 @@ const Home5whyChoose = () => {
               data-wow-duration="1500ms"
             >
               <div className="why-choose-img">
-                <img src="assets/img/home5/why-choose.jpg" alt="" />
+                <img src="/assets/img/uiniqe-idea.jpg" alt="" />
               </div>
             </div>
             <div className="col-lg-7">
