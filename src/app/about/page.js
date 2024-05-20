@@ -742,7 +742,7 @@ const Aboutpage = () => {
 
       <Home5Team />
 
-      <Home5Blog />
+      {/* <Home5Blog /> */}
 
       <div className="contact-section">
         <div className="container">

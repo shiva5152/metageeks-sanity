@@ -22,7 +22,7 @@ const Home5Portfolio = () => {
                   >
                     <path d="M3.7081 12.9544C3.41861 13.1128 3.09011 12.8352 3.14861 12.4808L3.7711 8.69694L1.12886 6.01223C0.882112 5.76104 1.01036 5.30186 1.34111 5.25226L5.0146 4.69548L6.6526 1.23399C6.80035 0.922003 7.2001 0.922003 7.34785 1.23399L8.98584 4.69548L12.6593 5.25226C12.9901 5.30186 13.1183 5.76104 12.8708 6.01223L10.2293 8.69694L10.8518 12.4808C10.9103 12.8352 10.5818 13.1128 10.2923 12.9544L6.9991 11.1497L3.7081 12.9544Z" />
                   </svg>
-                  Showcase of Portfolio
+                  Case Studies
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={14}
@@ -33,12 +33,12 @@ const Home5Portfolio = () => {
                   </svg>
                 </span>
                 <h2>
-                  Unveiling the Success <span> Stories at Zenfy.</span>
+                  Real-World Success Stories
+                  <span> Stories at MetaGeeks.</span>
                 </h2>
-                <p>
-                  Feel free adapt this based on the specific managed services,
-                  features, and unique selling points your IT service company
-                  provides.
+                <p style={{ marginLeft: "0px" }}>
+                  Explore these success stories to see how we can help your
+                  business achieve its full potential.
                 </p>
               </div>
             </div>

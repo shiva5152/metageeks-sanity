@@ -13,10 +13,12 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../../public/assets/css/bootstrap.min.css";
 import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
+import "react-toastify/dist/ReactToastify.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import useWow from "@/hooks/useWow";
-import { GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,15 +50,10 @@ export default function RootLayout({ children }) {
           Metageeks Technologies | Blockchain, Custom Software & AI Solutions
         </title>
       </head>
-      <GoogleTagManager gtmId="GTM-W2K58FQ3" />
       <body>
         <ScrollProgress />
         {children}
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2K58FQ3" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-          }}
-        />
+        <ToastContainer />
       </body>
       <Script id="gtm" strategy="afterInteractive">
         {`

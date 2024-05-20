@@ -33,12 +33,9 @@ const Home5Service = () => {
                   </svg>
                 </span>
                 <h2>
-                  To Provides Smart <span> Solutions.</span>
+                Innovative Solutions <span> at Your Service.</span>
                 </h2>
-                <p>
-                  Feel free adapt this based on the specific managed services,
-                  features, and unique selling points your IT service company
-                  provides.
+                <p>Explore our range of innovative solutions designed to streamline processes, optimize efficiency, and drive success in your endeavors. With a focus on intelligence and adaptability, we deliver tailored strategies to meet your unique needs. Trust us to provide smart solutions that propel your business forward.
                 </p>
               </div>
               <div className="banner-btn">

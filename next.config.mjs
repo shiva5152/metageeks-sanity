@@ -6,6 +6,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.sanity.io",
       },
+      {
+        protocol: "https",
+        hostname: "https://img.freepik.com",
+      },
+      {
+        protocol: "https",
+        hostname: "https://media.licdn.com",
+      },
     ],
   },
 };

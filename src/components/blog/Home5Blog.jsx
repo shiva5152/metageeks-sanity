@@ -1,7 +1,60 @@
+"use client";
 import Link from "next/link";
 import React from "react";
+import { client } from "../../../sanity/lib/client";
+import { urlForImage } from "../../../sanity/lib/image";
+import { useState, useEffect } from "react";
+
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const getPost = async () => {
+  const query = `
+    *[_type=="blog"] | order(date desc) [0...3]{
+  
+    title,
+    slug,
+    description,
+    mainImage{
+      asset->{
+        _id,
+        url
+      }
+    },
+    category,
+    date,
+    tags,
+  }
+  
+    `;
+
+  const response = await client.fetch(query);
+  return response;
+};
 
 const Home5Blog = () => {
+  const [posts, setPosts] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getPost();
+      setPosts(response);
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="home5-blog-section mb-120">
@@ -44,7 +97,7 @@ const Home5Blog = () => {
             </div>
             <div className="col-xl-3 col-md-4 d-flex justify-content-md-end align-items-end">
               <div className="star-btn btn_wrapper">
-                <Link href="/blog/blog-details">
+                <Link href="/blog">
                   <div className="bg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -67,156 +120,82 @@ const Home5Blog = () => {
             </div>
           </div>
           <div className="row g-4 gy-5">
-            <div
-              className="col-lg-4 col-md-6 wow animate fadeInUp"
-              data-wow-delay="200ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="blog-card style-2 two">
-                <div className="blog-card-img-wrap">
-                  <Link href="/blog/blog-details" className="card-img">
-                    <img src="assets/img/home5/blog-img-01.jpg" alt="" />
-                  </Link>
-                  <Link href="/blog" className="date">
-                    <span>
-                      <strong>15</strong> January
-                    </span>
-                  </Link>
-                </div>
-                <div className="card-content">
-                  <div className="blog-meta">
-                    <ul className="category">
-                      <li>
-                        <Link href="/blog">Development</Link>
-                      </li>
-                    </ul>
-                    <div className="blog-comment">
-                      <span>Comment (20)</span>
+            {posts?.map((post, index) => {
+              console.log(post, index);
+              return (
+                <div
+                  key={post.slug.current}
+                  className="col-lg-4 col-md-6 wow animate fadeInUp"
+                  data-wow-delay="600ms"
+                  data-wow-duration="1500ms"
+                >
+                  <div className="blog-card style-2 two">
+                    <div className="blog-card-img-wrap">
+                      <Link
+                        href={`/blog/${post.slug.current}`}
+                        className="card-img"
+                      >
+                        <img
+                          src={
+                            post
+                              ? urlForImage(post?.mainImage).url()
+                              : "/assets/img/home5/blog-img-03.jpg"
+                          }
+                          alt=""
+                        />
+                        {/* <img src="assets/img/home5/blog-img-03.jpg" alt="" /> */}
+                      </Link>
+                      <Link
+                        href={`/blog/${post.slug.current}`}
+                        className="date"
+                      >
+                        <span>
+                          <strong>{new Date(post?.date).getDay()}</strong>
+                          {monthNames[new Date(post?.date).getMonth()]}
+                        </span>
+                      </Link>
+                    </div>
+                    <div className="card-content">
+                      <div className="blog-meta">
+                        <ul className="category">
+                          <li>
+                            <Link href={`/blog/${post.slug.current}`}>
+                              {post.category}
+                            </Link>
+                          </li>
+                        </ul>
+                        <div className="blog-comment">
+                          <span>Comment (30)</span>
+                        </div>
+                      </div>
+                      <h4>
+                        <Link href={`/blog/${post.slug.current}`}>
+                          {post.title}
+                        </Link>
+                      </h4>
+                      <Link
+                        href={`/blog/${post.slug.current}`}
+                        className="read-more-btn"
+                      >
+                        Read More
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={10}
+                          height={10}
+                          viewBox="0 0 10 10"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M8.48878 0.885308L0 9.37364L0.626356 10L9.11469 1.51122V7.38037H10V0H2.61963V0.885308H8.48878Z"
+                          />
+                        </svg>
+                      </Link>
                     </div>
                   </div>
-                  <h4>
-                    <Link href="/blog/blog-details">
-                      Decoding the Cloud A Deep Dive into SaaS Trends.
-                    </Link>
-                  </h4>
-                  <Link href="/blog/blog-details" className="read-more-btn">
-                    Read More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={10}
-                      height={10}
-                      viewBox="0 0 10 10"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M8.48878 0.885308L0 9.37364L0.626356 10L9.11469 1.51122V7.38037H10V0H2.61963V0.885308H8.48878Z"
-                      />
-                    </svg>
-                  </Link>
                 </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 d-flex justify-content-center align-items-center wow animate fadeInUp"
-              data-wow-delay="400ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="blog-card style-2 two w-85">
-                <div className="blog-card-img-wrap">
-                  <Link href="/blog/blog-details" className="card-img">
-                    <img src="assets/img/home5/blog-img-02.jpg" alt="" />
-                  </Link>
-                  <Link href="/blog" className="date">
-                    <span>
-                      <strong>20</strong> April
-                    </span>
-                  </Link>
-                </div>
-                <div className="card-content">
-                  <div className="blog-meta">
-                    <ul className="category">
-                      <li>
-                        <Link href="/blog">Cyber Security</Link>
-                      </li>
-                    </ul>
-                    <div className="blog-comment">
-                      <span>Comment (22)</span>
-                    </div>
-                  </div>
-                  <h4>
-                    <Link href="/blog/blog-details">
-                      Mastering Efiecy Tips and Tricks with our Zenfy.
-                    </Link>
-                  </h4>
-                  <Link href="/blog/blog-details" className="read-more-btn">
-                    Read More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={10}
-                      height={10}
-                      viewBox="0 0 10 10"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M8.48878 0.885308L0 9.37364L0.626356 10L9.11469 1.51122V7.38037H10V0H2.61963V0.885308H8.48878Z"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 wow animate fadeInUp"
-              data-wow-delay="600ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="blog-card style-2 two">
-                <div className="blog-card-img-wrap">
-                  <Link href="/blog/blog-details" className="card-img">
-                    <img src="assets/img/home5/blog-img-03.jpg" alt="" />
-                  </Link>
-                  <Link href="/blog" className="date">
-                    <span>
-                      <strong>25</strong> April
-                    </span>
-                  </Link>
-                </div>
-                <div className="card-content">
-                  <div className="blog-meta">
-                    <ul className="category">
-                      <li>
-                        <Link href="/blog">Consulting</Link>
-                      </li>
-                    </ul>
-                    <div className="blog-comment">
-                      <span>Comment (30)</span>
-                    </div>
-                  </div>
-                  <h4>
-                    <Link href="/blog/blog-details">
-                      From Ideas How Xtore Transforms Workflows.
-                    </Link>
-                  </h4>
-                  <Link href="/blog/blog-details" className="read-more-btn">
-                    Read More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={10}
-                      height={10}
-                      viewBox="0 0 10 10"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M8.48878 0.885308L0 9.37364L0.626356 10L9.11469 1.51122V7.38037H10V0H2.61963V0.885308H8.48878Z"
-                      />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>

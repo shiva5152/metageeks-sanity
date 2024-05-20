@@ -203,7 +203,7 @@ const ServiceDetailsPage = async ({ params }) => {
                             aria-expanded="false"
                             aria-controls={`faqcollapse${index}`}
                           >
-                            {`${index}.`} {faq.question}
+                            {`${index + 1}.`} {faq.question}
                           </button>
                         </h2>
                         <div
