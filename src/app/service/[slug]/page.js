@@ -80,10 +80,32 @@ const ServiceDetailsPage = async ({ params }) => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Service",
     name: service.heading.boldText + service.heading.text,
-    image: service.mainImage,
     description: service.paragraph,
+    provider: {
+      "@type": "Organization",
+      name: "Metageeks Technologies Pvt Ltd",
+      url: "https://metageeks.tech",
+      logo: "https://metageeks.tech/assets/img/logo.png",
+      sameAs: ["https://www.linkedin.com/company/81585385"],
+    },
+    serviceType: service.planHeading,
+    areaServed: {
+      "@type": "Place",
+      name: "Global",
+    },
+    offers: {
+      "@type": "Offer",
+      url: `https://metageeks-sanity.vercel.app/service/${slug}`,
+      priceCurrency: "USD",
+      price: "5000",
+      eligibleRegion: {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+      availability: "https://schema.org/InStock",
+    },
   };
 
   return (
