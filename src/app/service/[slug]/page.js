@@ -78,8 +78,20 @@ const ServiceDetailsPage = async ({ params }) => {
 
   metadata.title = "Service Details | " + slug;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: service.heading.boldText + service.heading.text,
+    image: service.mainImage,
+    description: service.paragraph,
+  };
+
   return (
     <MainLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div
         className="breadcrumb-section"
         style={{
