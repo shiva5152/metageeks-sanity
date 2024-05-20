@@ -113,6 +113,7 @@ const Home5Blog = async () => {
               console.log(post, index);
               return (
                 <div
+                  key={post.slug.current}
                   className="col-lg-4 col-md-6 wow animate fadeInUp"
                   data-wow-delay="600ms"
                   data-wow-duration="1500ms"

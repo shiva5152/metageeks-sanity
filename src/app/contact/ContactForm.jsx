@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { sendContactForm } from "@/lib/api";
+import { notifySuccess, notifyError } from "../utils/toast";
 
 const schema = Yup.object().shape({
   name: Yup.string().required().min(6).label("name"),
@@ -24,10 +25,16 @@ const ContactForm = ({ style }) => {
   const [loading, setLoading] = useState(false);
 
   const onSubmitHandler = async (data) => {
-    setLoading(true);
-    await sendContactForm(data);
-    setLoading(false);
-    reset();
+    try {
+      setLoading(true);
+      await sendContactForm(data);
+      setLoading(false);
+      // reset();
+      notifySuccess("Thank you for your interest, We will reach you soon");
+    } catch (error) {
+      setLoading(false);
+      notifyError("Error while submitting the form, try later");
+    }
   };
 
   return (
