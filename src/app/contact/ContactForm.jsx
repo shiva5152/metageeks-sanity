@@ -14,7 +14,7 @@ const schema = Yup.object().shape({
   message: Yup.string().required().min(50).label("message"),
 });
 
-const ContactForm = ({ style }) => {
+const ContactForm = ({ style, setPopup }) => {
   const {
     register,
     handleSubmit,
@@ -29,8 +29,10 @@ const ContactForm = ({ style }) => {
       setLoading(true);
       await sendContactForm(data);
       setLoading(false);
-      // reset();
+      reset();
       notifySuccess("Thank you for your interest, We will reach you soon");
+      if (setPopup) setPopup(false);
+      console.log(setPopup);
     } catch (error) {
       setLoading(false);
       notifyError("Error while submitting the form, try later");
@@ -106,7 +108,7 @@ const ContactForm = ({ style }) => {
                   <button
                     className="primary-btn2"
                     type="submit"
-                    data-text="Submit Now"
+                    data-text={!loading ? "Submit Now" : "Submitting..."}
                   >
                     <span>{!loading ? "Submit Now" : "Submitting..."}</span>
                   </button>

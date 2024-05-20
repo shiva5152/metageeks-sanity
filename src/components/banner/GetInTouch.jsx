@@ -11,6 +11,7 @@ const GetInTouch = ({ setPopup }) => {
             padding: "20px 40px",
             borderRadius: "10px",
           }}
+          setPopup={setPopup}
         />
         <button id={"closeButton"} onClick={() => setPopup(false)}>
           <svg

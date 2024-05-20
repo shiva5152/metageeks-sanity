@@ -1,7 +1,9 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { client } from "../../../sanity/lib/client";
 import { urlForImage } from "../../../sanity/lib/image";
+import { useState, useEffect } from "react";
 
 const monthNames = [
   "Jan",
@@ -42,8 +44,17 @@ const getPost = async () => {
   return response;
 };
 
-const Home5Blog = async () => {
-  const posts = await getPost();
+const Home5Blog = () => {
+  const [posts, setPosts] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await getPost();
+      setPosts(response);
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <div className="home5-blog-section mb-120">
