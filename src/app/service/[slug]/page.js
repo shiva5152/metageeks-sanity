@@ -6,7 +6,7 @@ import Link from "next/link";
 async function getService(slug) {
   const query = `
  *[_type == "serviceHero" && slug.current == "${slug}"] {
-  intoHeading,
+    intoHeading,
     paragraph,
     planHeading,
     heading{
@@ -259,7 +259,7 @@ const ServiceDetailsPage = async ({ params }) => {
         </div>
       </div>
 
-      <Home5Workprocess />
+      <Home5Workprocess serviceProcess={service.serviceProcess} />
 
       <div className="service-details-feature-section mb-120">
         <div className="container">

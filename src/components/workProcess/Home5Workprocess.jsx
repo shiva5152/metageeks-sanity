@@ -10,38 +10,8 @@ import SwiperCore, {
 import { client } from "../../../sanity/lib/client";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
-async function getProcess() {
-  const query = `
- *[_type == "serviceHero"] {
-  
-    serviceProcess->{
-      subheading,
-      heading {
-        boldText,
-        text
-      },
-      extraText,
-      process[] {
-        heading,
-        description,
-        icon
-      }
-    }
-  }
-  `;
-
-  const response = await client.fetch(query);
-  return response[0];
-}
-const Home5Workprocess = () => {
-  const [process, setProcess] = useState(null);
-
-  useEffect(() => {
-    getProcess().then((data) => {
-      setProcess(data.serviceProcess);
-    });
-  }, []);
-  console.log(process);
+const Home5Workprocess = ({ serviceProcess }) => {
+  const [process, setProcess] = useState(serviceProcess);
 
   const settings = useMemo(() => {
     return {
@@ -129,6 +99,7 @@ const Home5Workprocess = () => {
                   <div className="swiper-wrapper">
                     {process?.process.map((item, index) => (
                       <SwiperSlide
+                        key={item.heading}
                         className="swiper-slide wow animate fadeInDown"
                         data-wow-delay="200ms"
                         data-wow-duration="1500ms"
