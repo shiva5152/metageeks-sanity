@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         {children}
         <ToastContainer />
       </body>
-      <GoogleTagManager gtmId="GTM-K5VV2K23" />
+      {/* <GoogleTagManager gtmId="GTM-K5VV2K23" /> */}
 
       {/* <script
         type="text/javascript"

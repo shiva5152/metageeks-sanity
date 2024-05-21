@@ -1,7 +1,30 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { client } from "../../../sanity/lib/client";
+
+async function getServices() {
+  const query = `
+ *[_type == "serviceHero"] {
+    
+    planHeading,
+    slug{
+      current
+    }
+  }
+  `;
+
+  const response = await client.fetch(query);
+  return response;
+}
 
 const Footer = () => {
+  const [services, setServices] = useState(null);
+  useEffect(() => {
+    getServices().then((data) => {
+      setServices(data);
+    });
+  }, []);
   return (
     <>
       <footer className="footer-section">
@@ -15,48 +38,13 @@ const Footer = () => {
                   </div>
                   <div className="menu-container">
                     <ul className="widget-list">
-                      <li>
-                        <Link href="/service/service-details">
-                          Managed Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/service/service-details">
-                          IT Consulting &amp; Advisory
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/service/service-details">
-                          Cyber Security
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/service/service-details">
-                          Web Development
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/service/service-details">
-                          Mobile Development
-                        </Link>
-                      </li>
-                    </ul>
-                    <ul className="widget-list">
-                      <li>
-                        <Link href="/service/service-details">
-                          Cloud Services
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/service/service-details">
-                          Network Connectivity
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/service/service-details">
-                          ERP Solutions
-                        </Link>
-                      </li>
+                      {services?.map((service) => (
+                        <li key={service.slug.current}>
+                          <Link href={`/service/${service.slug.current}`}>
+                            {service.planHeading}
+                          </Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>

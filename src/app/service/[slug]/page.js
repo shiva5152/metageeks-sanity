@@ -111,10 +111,10 @@ const ServiceDetailsPage = async ({ params }) => {
 
   return (
     <MainLayout>
-      <script
+      {/* <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      /> */}
       <div
         className="breadcrumb-section"
         style={{
