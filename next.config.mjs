@@ -16,6 +16,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/blockchain-development-company",
+        destination: "/service/core-blockchain-development",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

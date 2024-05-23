@@ -46,6 +46,23 @@ const Footer = () => {
                         </li>
                       ))}
                     </ul>
+                    <ul className="widget-list">
+                      <li>
+                        <Link href="/service/service-details">
+                          Cloud Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/service/service-details">
+                          Network Connectivity
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/service/service-details">
+                          ERP Solutions
+                        </Link>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
