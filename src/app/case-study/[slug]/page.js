@@ -23,7 +23,6 @@ const getCaseStudy = async (slug) => {
       slug,
       description,
       client,
-      location,
       industry,
       stack,
       content,
@@ -196,7 +195,7 @@ const CaseStudyDetails = () => {
                         <h5>{caseStudy?.client}</h5>
                       </div>
                     </li>
-                    <li>
+                    {/*<li>
                       <div className="icon">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +215,7 @@ const CaseStudyDetails = () => {
                         <span>Location:</span>
                         <h5>{caseStudy?.location}</h5>
                       </div>
-                    </li>
+                </li>*/}
                     <li>
                       <div className="icon">
                         <svg
@@ -265,27 +264,30 @@ const CaseStudyDetails = () => {
                   <h4>Social Share</h4>
                   <ul>
                     <li>
-                      <a href="#">
+                      <a
+                        target="_blank"
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/case-study/${slug}`}
+                      >
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        href="https://www.facebook.com/sharer/sharer.php?u="
+                        target="_blank"
+                      >
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a
+                        target="_blank"
+                        href={`https://twitter.com/intent/tweet?text=Here is a great case study by @MetaGeeks_tech . \n ${caseStudy?.title}&url=/case-study/${slug}`}
+                      >
                         <i className="bi bi-twitter-x" />
                         <span>Twitter</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="bi bi-instagram" />
-                        <span>Instagram</span>
                       </a>
                     </li>
                   </ul>

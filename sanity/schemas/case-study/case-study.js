@@ -24,11 +24,6 @@ export const caseStudy = {
       type: "string",
     },
     {
-      name: "location",
-      title: "Location",
-      type: "string",
-    },
-    {
       name: "industry",
       title: "Industry",
       type: "string",
