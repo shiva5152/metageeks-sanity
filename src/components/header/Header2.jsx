@@ -814,7 +814,7 @@ const Header2 = () => {
                     </ul>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/contact-us">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -1041,7 +1041,7 @@ const Header2 = () => {
                   </g>
                 </svg>
               </div>
-              <Link href="/contact" className="primary-btn4 d-xl-flex d-none">
+              <Link href="/contact-us" className="primary-btn4 d-xl-flex d-none">
                 Get Started
               </Link>
             </div>

@@ -56,7 +56,7 @@ const Home4award = () => {
                     Celebrating Zenfy's <span>Award-Winning </span>Excellence.
                   </h2>
                 </div>
-                <Link href="/about" className="details-button">
+                <Link href="/about-us" className="details-button">
                   About Us More
                   <svg viewBox="0 0 13 20">
                     <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
@@ -137,7 +137,7 @@ const Home4award = () => {
                     <h5>Innovation Ignition Award</h5>
                     <p>Site Of The Day</p>
                   </div>
-                  <Link className="explore-btn" href="/about">
+                  <Link className="explore-btn" href="/about-us">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={16}
@@ -165,7 +165,7 @@ const Home4award = () => {
                     <h5>CSS Design Award</h5>
                     <p>Site Of The Month</p>
                   </div>
-                  <Link className="explore-btn" href="/about">
+                  <Link className="explore-btn" href="/about-us">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={16}
@@ -193,7 +193,7 @@ const Home4award = () => {
                     <h5>Masterpiece Maker</h5>
                     <p>Awards Jury 2024</p>
                   </div>
-                  <Link className="explore-btn" href="/about">
+                  <Link className="explore-btn" href="/about-us">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={16}
@@ -221,7 +221,7 @@ const Home4award = () => {
                     <h5>Alchemy Achievement</h5>
                     <p>Site Of The Day</p>
                   </div>
-                  <Link className="explore-btn" href="/about">
+                  <Link className="explore-btn" href="/about-us">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={16}

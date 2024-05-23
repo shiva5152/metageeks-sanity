@@ -166,7 +166,7 @@ const Home5About = () => {
                   <img src="assets/img/home5/about-img.jpg" alt="" />
                 </div>
                 <div className="banner-btn">
-                  <Link href="/about">
+                  <Link href="/about-us">
                     <div className="bg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -64,7 +64,8 @@ const Home5Partnerships = () => {
                 data-wow-duration="1500ms"
               >
                 <h2>
-                  Our Clients <span>Partnering for Mutual Success &amp; Assurance</span>
+                  Our Clients{" "}
+                  <span>Partnering for Mutual Success &amp; Assurance</span>
                 </h2>
               </div>
               <div
@@ -72,7 +73,7 @@ const Home5Partnerships = () => {
                 data-wow-delay="400ms"
                 data-wow-duration="1500ms"
               >
-                <Link href="/about">
+                <Link href="/about-us">
                   180+ Global Clients
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

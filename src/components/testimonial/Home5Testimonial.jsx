@@ -67,7 +67,7 @@ const Home5Testimonial = () => {
                 </h2>
               </div>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="details-button wow animate fadeInRight"
                 data-wow-delay="400ms"
                 data-wow-duration="1500ms"

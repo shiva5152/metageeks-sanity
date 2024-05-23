@@ -19,47 +19,61 @@ const Footer5 = () => {
                               <img src="/assets/img/logo.png" alt="" />
                             </Link>
                             <Link href="/" className="logo-light">
-                              <img
-                                src="/assets/img/logo.png"
-                                alt=""
-                              />
+                              <img src="/assets/img/logo.png" alt="" />
                             </Link>
                           </div>
                           <div className="footer-contact-area">
                             <h6>India Office</h6>
                             <a href="#">
-                            55, 2nd Lane, Westend Marg<br /> Saidullajab, Saket<br /> New Delhi - 110030
+                              55, 2nd Lane, Westend Marg
+                              <br /> Saidullajab, Saket
+                              <br /> New Delhi - 110030
                             </a>
                           </div>
                           <div className="social-area">
                             <h6>Follow Us!</h6>
                             <ul className="social-list">
                               <li>
-                                <a href="https://www.linkedin.com/company/metageekstech" target="_blank">
+                                <a
+                                  href="https://www.linkedin.com/company/metageekstech"
+                                  target="_blank"
+                                >
                                   <i className="bi bi-linkedin" />
                                   <span>LinkedIn</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.facebook.com/metageeks.tech" target="_blank">
+                                <a
+                                  href="https://www.facebook.com/metageeks.tech"
+                                  target="_blank"
+                                >
                                   <i className="bi bi-facebook" />
                                   <span>Facebook</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://twitter.com/metageeks_tech" target="_blank">
+                                <a
+                                  href="https://twitter.com/metageeks_tech"
+                                  target="_blank"
+                                >
                                   <i className="bi bi-twitter-x" />
                                   <span>Twitter</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.instagram.com/metageeks.tech/" target="_blank">
+                                <a
+                                  href="https://www.instagram.com/metageeks.tech/"
+                                  target="_blank"
+                                >
                                   <i className="bi bi-instagram" />
                                   <span>Instagram</span>
                                 </a>
                               </li>
                               <li>
-                                <a href="https://www.youtube.com/channel/UC8JKaWzL5azbclD8anmsMxQ" target="_blank">
+                                <a
+                                  href="https://www.youtube.com/channel/UC8JKaWzL5azbclD8anmsMxQ"
+                                  target="_blank"
+                                >
                                   <i className="bi bi-youtube" />
                                   <span>YouTube</span>
                                 </a>
@@ -112,7 +126,7 @@ const Footer5 = () => {
                           <div className="menu-container">
                             <ul className="widget-list">
                               <li>
-                                <Link href="/about">About us</Link>
+                                <Link href="/about-us">About us</Link>
                               </li>
                               <li>
                                 <Link href="/case-study">Case Study</Link>
@@ -124,7 +138,7 @@ const Footer5 = () => {
                                 <Link href="/pricing-plan">Pricing</Link>
                               </li>
                               <li>
-                                <Link href="/contact">Contact Us</Link>
+                                <Link href="/contact-us">Contact Us</Link>
                               </li>
                             </ul>
                           </div>
@@ -163,7 +177,8 @@ const Footer5 = () => {
                   <div className="footer-bottom">
                     <div className="copyright-area">
                       <p>
-                        Copyright 2024 | <a href="#">Metageeks Technologies Pvt Ltd</a>
+                        Copyright 2024 |{" "}
+                        <a href="#">Metageeks Technologies Pvt Ltd</a>
                       </p>
                     </div>
                     <div className="footer-bottom-right">

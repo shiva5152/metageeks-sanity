@@ -1,5 +1,5 @@
 "use client";
-import ContactForm from "@/app/contact/ContactForm";
+import ContactForm from "@/app/contact-us/ContactForm";
 
 const GetInTouch = ({ setPopup }) => {
   return (

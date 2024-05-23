@@ -23,6 +23,21 @@ const nextConfig = {
         destination: "/service/core-blockchain-development",
         statusCode: 301,
       },
+      {
+        source: "/ai-development-company",
+        destination: "/service/ai-chatbot-development",
+        statusCode: 301,
+      },
+      {
+        source: "/game-development-company",
+        destination: "/service/unity-game-development",
+        statusCode: 301,
+      },
+      {
+        source: "/web-application-development",
+        destination: "/service/web-application-development",
+        statusCode: 301,
+      },
     ];
   },
 };

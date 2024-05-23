@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import MainLayout from "@/components/layout/MainLayout";
 import useWow from "@/hooks/useWow";
 import Link from "next/link";
 import React from "react";
 
 const PortfolioDetailsPage = () => {
-  useWow()
+  useWow();
   return (
     <MainLayout>
       <div
@@ -280,7 +280,7 @@ const PortfolioDetailsPage = () => {
                   <h2>
                     Ready to <span>work with us?</span>
                   </h2>
-                  <Link href="/contact" className="primary-btn4 black-hover">
+                  <Link href="/contact-us" className="primary-btn4 black-hover">
                     Get a quote
                   </Link>
                 </div>

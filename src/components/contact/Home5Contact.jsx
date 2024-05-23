@@ -40,7 +40,7 @@ const Home5Contact = () => {
             </div>
             <div className="col-lg-4 d-flex justify-content-lg-end">
               <div className="star-btn btn_wrapper">
-                <Link href="/contact">
+                <Link href="/contact-us">
                   <div className="bg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -42,7 +42,7 @@ const Home5Team = () => {
               </div>
               <div className="star-btn mb-50">
                 <div className="btn_wrapper">
-                  <a href="/contact">
+                  <a href="/contact-us">
                     <div className="bg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

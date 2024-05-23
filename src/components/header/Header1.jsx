@@ -132,8 +132,8 @@ const Header1 = () => {
                     <Link href="/">Home </Link>
                   </li>
                   <li>
-                        <Link href="/about">About </Link>
-                      </li>
+                    <Link href="/about-us">About </Link>
+                  </li>
                   <li>
                     <Link href="/service">Services</Link>
                     <span
@@ -374,7 +374,7 @@ const Header1 = () => {
                     <a href="#">FAQs</a>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/contact-us">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -426,7 +426,9 @@ const Header1 = () => {
                       <div className="contact">
                         <span>Email Now</span>
                         <h6>
-                          <a href="mailto:info@metageeks.tech">info@metageeks.tech</a>
+                          <a href="mailto:info@metageeks.tech">
+                            info@metageeks.tech
+                          </a>
                         </h6>
                       </div>
                     </li>
@@ -444,7 +446,8 @@ const Header1 = () => {
                       </div>
                       <div className="contact">
                         <h6>
-                        55, 2nd Lane, Westend Marg, Saidullajab, Saket, New Delhi - 110030
+                          55, 2nd Lane, Westend Marg, Saidullajab, Saket, New
+                          Delhi - 110030
                         </h6>
                       </div>
                     </li>
@@ -463,33 +466,47 @@ const Header1 = () => {
                     </svg>
                   </h6>
                   <ul className="social-area">
-                  <li>
-                      <a href="https://www.linkedin.com/company/metageekstech" target="_blank">
+                    <li>
+                      <a
+                        href="https://www.linkedin.com/company/metageekstech"
+                        target="_blank"
+                      >
                         <i className="bi bi-linkedin" /> Linkedin
                       </a>
                     </li>
-                  <li>
-                      <a href="https://www.facebook.com/metageeks.tech" target="_blank">
+                    <li>
+                      <a
+                        href="https://www.facebook.com/metageeks.tech"
+                        target="_blank"
+                      >
                         <i className="bi bi-facebook" /> Facebook
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/metageeks_tech" target="_blank">
+                      <a
+                        href="https://twitter.com/metageeks_tech"
+                        target="_blank"
+                      >
                         <i className="bi bi-twitter" /> Twitter
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.instagram.com/metageeks.tech/" target="_blank">
+                      <a
+                        href="https://www.instagram.com/metageeks.tech/"
+                        target="_blank"
+                      >
                         <i className="bi bi-instagram" /> Instagram
                       </a>
                     </li>
-                    
+
                     <li>
-                      <a href="https://www.youtube.com/channel/UC8JKaWzL5azbclD8anmsMxQ" target="_blank">
+                      <a
+                        href="https://www.youtube.com/channel/UC8JKaWzL5azbclD8anmsMxQ"
+                        target="_blank"
+                      >
                         <i className="bi bi-youtube" /> YouTube
                       </a>
                     </li>
-                    
                   </ul>
                 </div>
               </div>

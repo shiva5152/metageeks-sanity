@@ -205,7 +205,7 @@ const Home3ProjectManagement = () => {
                           </ul>
                         </div>
                         <Link
-                          href="/contact"
+                          href="/contact-us"
                           className="primary-btn2 wow animate fadeInUp"
                           data-wow-delay="400ms"
                           data-wow-duration="1500ms"
@@ -314,7 +314,7 @@ const Home3ProjectManagement = () => {
                           </ul>
                         </div>
                         <Link
-                          href="/contact"
+                          href="/contact-us"
                           className="primary-btn2"
                           data-text="Get Started Now"
                         >
@@ -418,7 +418,7 @@ const Home3ProjectManagement = () => {
                           </ul>
                         </div>
                         <Link
-                          href="/contact"
+                          href="/contact-us"
                           className="primary-btn2"
                           data-text="Get Started Now"
                         >
@@ -522,7 +522,7 @@ const Home3ProjectManagement = () => {
                           </ul>
                         </div>
                         <Link
-                          href="/contact"
+                          href="/contact-us"
                           className="primary-btn2"
                           data-text="Get Started Now"
                         >
@@ -626,7 +626,7 @@ const Home3ProjectManagement = () => {
                           </ul>
                         </div>
                         <Link
-                          href="/contact"
+                          href="/contact-us"
                           className="primary-btn2"
                           data-text="Get Started Now"
                         >

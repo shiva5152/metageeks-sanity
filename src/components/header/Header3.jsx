@@ -814,7 +814,7 @@ const Header3 = () => {
                     </ul>
                   </li>
                   <li>
-                    <Link href="/contact">Contact</Link>
+                    <Link href="/contact-us">Contact</Link>
                   </li>
                 </ul>
               </div>
