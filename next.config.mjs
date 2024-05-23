@@ -21,7 +21,7 @@ const nextConfig = {
       {
         source: "/blockchain-development-company",
         destination: "/service/core-blockchain-development",
-        permanent: true,
+        statusCode: 301,
       },
     ];
   },
