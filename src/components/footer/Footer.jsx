@@ -48,19 +48,16 @@ const Footer = () => {
                     </ul>
                     <ul className="widget-list">
                       <li>
-                        <Link href="/service/service-details">
-                          Cloud Services
-                        </Link>
+                        <Link href="/faq">Faq</Link>
                       </li>
                       <li>
-                        <Link href="/service/service-details">
-                          Network Connectivity
-                        </Link>
+                        <Link href="/blog">Blog</Link>
                       </li>
                       <li>
-                        <Link href="/service/service-details">
-                          ERP Solutions
-                        </Link>
+                        <Link href="/about-us">About</Link>
+                      </li>
+                      <li>
+                        <Link href="/">Industry</Link>
                       </li>
                     </ul>
                   </div>

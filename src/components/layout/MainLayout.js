@@ -14,7 +14,8 @@ const MainLayout = ({ children }) => {
     "/cechkout",
     "/cart",
     "/product-details",
-    "/contact",
+    "/contact-us",
+    "/about-us",
   ]; // Add the routes where you want to hide the breadcrumb
 
   const shouldRenderBreadcrumb = !hideBreadcrumbRoutes.some(
