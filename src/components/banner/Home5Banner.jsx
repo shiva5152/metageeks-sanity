@@ -60,7 +60,7 @@ const Home5Banner = () => {
             <div className="row justify-content-center">
               <div className="col-lg-10">
                 <div className="banner-content text-center">
-                  <span className="sub-title5">
+                  <span className="sub-title5" style={{ lineHeight: "16px" }}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={14}
@@ -83,9 +83,10 @@ const Home5Banner = () => {
                     {hero.heading.beforeSpan}{" "}
                     {/* <div style={{ whiteSpace: "nowrap" }}></div> */}
                   </h2>
-                  <h1 style={{ whiteSpace: "nowrap" }}>
+                  <h1 id="bannerHeading">
                     <span className="_span">{hero.heading.span}</span>{" "}
-                    <TypewriterEffect /> Development Company
+                    <TypewriterEffect />
+                    <br className="headingBreak" /> Development Company
                   </h1>
                   <p>{hero.paragraph}</p>
                   <div className="banner-content-bottom">

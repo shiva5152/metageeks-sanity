@@ -16070,6 +16070,14 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   color: var(--primary-color1);
   font-style: italic;
 }
+
+.home5-banner-section .banner-content  #bannerHeading{
+  white-space: nowrap;
+}
+.home5-banner-section .banner-content .headingBreak {
+    display: none;
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .home5-banner-section .banner-content h1 {
     font-size: 65px;
@@ -16087,11 +16095,17 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
     font-size: 45px;
     margin-bottom: 20px;
   }
+  .home5-banner-section .banner-content  #bannerHeading{
+  white-space: wrap;
+}
 }
 @media (max-width: 576px) {
   .home5-banner-section .banner-content h1 {
-    font-size: 40px;
+    font-size: 32px;
     margin-bottom: 20px;
+  }
+  .home5-banner-section .banner-content .headingBreak {
+    display: block;
   }
 }
 .home5-banner-section .banner-content p {
@@ -23231,6 +23245,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
 
 #modal {
   width: 60%;
+  
   background-color: transparent;
   padding: 0px;
   border-radius: 8px;
@@ -23244,6 +23259,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
   #modal {
     width: 100%;
   }
+  
 }
 
 #closeButton {
