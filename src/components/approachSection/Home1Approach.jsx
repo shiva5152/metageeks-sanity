@@ -35,7 +35,7 @@ const Home1Approach = () => {
                     </g>
                   </svg>
                 </span>
-                <h2>The Zenfy Approach</h2>
+                <h2>The MetaGeeks Approach</h2>
               </div>
             </div>
           </div>

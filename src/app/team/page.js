@@ -1,10 +1,10 @@
-"use client"
+"use client";
 import MainLayout from "@/components/layout/MainLayout";
 import useWow from "@/hooks/useWow";
 import React from "react";
 
 const TeamPage = () => {
-  useWow()
+  useWow();
   return (
     <MainLayout>
       <div className="team-card-section pt-120 mb-120" id="team-section">
@@ -47,7 +47,7 @@ const TeamPage = () => {
                 </div>
                 <div className="card-content">
                   <h4>Cassian Coleson</h4>
-                  <span>Founder at, Zenfy</span>
+                  <span>Founder at, MetaGeeks</span>
                 </div>
               </div>
             </div>
@@ -375,7 +375,7 @@ const TeamPage = () => {
                 </div>
                 <div className="card-content">
                   <h4>Khusani Juie</h4>
-                  <span>Co-Founder at, Zenfy</span>
+                  <span>Co-Founder at, MetaGeeks</span>
                 </div>
               </div>
             </div>

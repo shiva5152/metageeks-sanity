@@ -777,7 +777,7 @@ const Aboutpage = () => {
                       </g>
                     </svg>
                   </span>
-                  <h2>Connect with Zenfy</h2>
+                  <h2>Connect with MetaGeeks</h2>
                   <p>
                     Ready to take the first step towards unlocking
                     opportunities, realizing goals, and embracing innovation?

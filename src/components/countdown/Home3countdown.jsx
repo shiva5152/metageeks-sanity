@@ -36,7 +36,7 @@ const Home3countdown = () => {
             </span>
             <h2>Elevate our Experience</h2>
             <p>
-              Welcome to Zenfy, where digital innovation meets strategic
+              Welcome to MetaGeeks, where digital innovation meets strategic
               excellence as a dynamic force in the realm of digital marketing,
               we are dedicated tourat propelling businesses into the spotlight
               of online success.

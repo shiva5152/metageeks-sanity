@@ -53,7 +53,8 @@ const Home4award = () => {
                     Our Award Time
                   </span>
                   <h2>
-                    Celebrating Zenfy's <span>Award-Winning </span>Excellence.
+                    Celebrating MetaGeeks's <span>Award-Winning </span>
+                    Excellence.
                   </h2>
                 </div>
                 <Link href="/about-us" className="details-button">

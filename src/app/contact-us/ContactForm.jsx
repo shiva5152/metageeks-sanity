@@ -14,7 +14,7 @@ const schema = Yup.object().shape({
   message: Yup.string().required().min(50).label("message"),
 });
 
-const ContactForm = ({ style, setPopup }) => {
+const ContactForm = ({ isAddStyle, setPopup }) => {
   const {
     register,
     handleSubmit,
@@ -41,14 +41,13 @@ const ContactForm = ({ style, setPopup }) => {
 
   return (
     <div
-      style={style}
-      className="col-lg-7 wow animate fadeInUp"
+      className={`col-lg-7 wow animate fadeInUp ${isAddStyle && "temp"}`}
       data-wow-delay="200ms"
       data-wow-duration="1500ms"
     >
       <div className="contact-form-wrap">
         <div className="contact-form-area">
-          <h3>Your Success Starts Here!</h3>
+          <p style={{ fontWeight: "bold" }}>Your Success Starts Here!</p>
           <form onSubmit={handleSubmit(onSubmitHandler)}>
             <div className="row">
               <div className="col-lg-6 mb-16">
@@ -96,10 +95,14 @@ const ContactForm = ({ style, setPopup }) => {
                   <p style={{ color: "#f56565" }}>{errors.subject?.message}</p>
                 </div>
               </div>
-              <div className="col-lg-12 mb-30">
+              <div className="col-lg-12 ">
                 <div className="form-inner">
                   <label>Message *</label>
-                  <textarea {...register("message")} defaultValue={""} />
+                  <textarea
+                    style={{ height: "20px" }}
+                    {...register("message")}
+                    defaultValue={""}
+                  />
                   <p style={{ color: "#f56565" }}>{errors.message?.message}</p>
                 </div>
               </div>

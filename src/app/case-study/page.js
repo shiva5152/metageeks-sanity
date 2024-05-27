@@ -36,7 +36,7 @@ const CaseStudyPage = () => {
 
   const [page, setPage] = useState(1);
   const totalPosts = caseStudies[0]?.totalPosts;
-  const pageSize = 1;
+  const pageSize = 3;
 
   const totalPages = Math.ceil(totalPosts / pageSize);
 

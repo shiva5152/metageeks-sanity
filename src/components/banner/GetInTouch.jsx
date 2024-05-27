@@ -5,14 +5,7 @@ const GetInTouch = ({ setPopup }) => {
   return (
     <div id="overlay">
       <div id="modal">
-        <ContactForm
-          style={{
-            backgroundColor: "white",
-            padding: "20px 40px",
-            borderRadius: "10px",
-          }}
-          setPopup={setPopup}
-        />
+        <ContactForm isAddStyle={true} setPopup={setPopup} />
         <button id={"closeButton"} onClick={() => setPopup(false)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

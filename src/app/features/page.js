@@ -47,7 +47,7 @@ const FeaturesPage = () => {
                 </span>
                 <h2>Master Your Project Success</h2>
                 <p>
-                  Welcome to Zenfy, where digital innovation meets strategic
+                  Welcome to MetaGeeks, where digital innovation meets strategic
                   excellence. As a dynamic force in the realm of digital
                   marketing, we are dedicated to propelling businesses into the
                   spotlight of online success.

@@ -21,7 +21,7 @@ const Home5Team = () => {
                   >
                     <path d="M3.7081 12.9544C3.41861 13.1128 3.09011 12.8352 3.14861 12.4808L3.7711 8.69694L1.12886 6.01223C0.882112 5.76104 1.01036 5.30186 1.34111 5.25226L5.0146 4.69548L6.6526 1.23399C6.80035 0.922003 7.2001 0.922003 7.34785 1.23399L8.98584 4.69548L12.6593 5.25226C12.9901 5.30186 13.1183 5.76104 12.8708 6.01223L10.2293 8.69694L10.8518 12.4808C10.9103 12.8352 10.5818 13.1128 10.2923 12.9544L6.9991 11.1497L3.7081 12.9544Z" />
                   </svg>
-                  Our Creative Team
+                  Our Team
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={14}
@@ -32,7 +32,7 @@ const Home5Team = () => {
                   </svg>
                 </span>
                 <h2>
-                  Get to Know Creative <span> Minds At Zenfy.</span>
+                  Get to Know Creative <span> Minds At MetaGeeks.</span>
                 </h2>
                 <p>
                   Feel free adapt this based on the specific managed services,
@@ -68,53 +68,13 @@ const Home5Team = () => {
               <div className="row g-4">
                 <div
                   className="col-md-4 col-sm-6 wow animate fadeInDown"
-                  data-wow-delay="200ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div className="team-card2">
-                    <div className="team-img">
-                      <img
-                        src="https://media.licdn.com/dms/image/D5603AQE6t9UR0HWzXQ/profile-displayphoto-shrink_400_400/0/1704110686462?e=1721865600&v=beta&t=FEsgW88MTd181XAJ9ZdOh8xPtmnBlsHGJ1qK_BCT3PU"
-                        alt=""
-                      />
-                      <ul className="social-area">
-                        <li>
-                          <a href="https://www.facebook.com/">
-                            <i className="bx bxl-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://twitter.com/">
-                            <i className="bx bxl-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.pinterest.com/">
-                            <i className="bx bxl-pinterest-alt" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com/">
-                            <i className="bx bxl-instagram-alt" />
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="team-content text-center">
-                      <h4>Shiva Shah</h4>
-                      <span>Full Stack Developer</span>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="col-md-4 col-sm-6 wow animate fadeInDown"
                   data-wow-delay="400ms"
                   data-wow-duration="1500ms"
                 >
                   <div className="team-card2">
                     <div className="team-img">
-                      <img src="assets/img/home5/team-02.jpg" alt="" />
-                      <ul className="social-area">
+                      <img src="assets/img/team/Pankaj-Chauhan.png" alt="" />
+                      {/* <ul className="social-area">
                         <li>
                           <a href="https://www.facebook.com/">
                             <i className="bx bxl-facebook" />
@@ -135,11 +95,11 @@ const Home5Team = () => {
                             <i className="bx bxl-instagram-alt" />
                           </a>
                         </li>
-                      </ul>
+                      </ul> */}
                     </div>
                     <div className="team-content text-center">
-                      <h4>Jacob Logan</h4>
-                      <span>Web Designer</span>
+                      <h4>Pankaj Chauhan</h4>
+                      <span>Managing Director</span>
                     </div>
                   </div>
                 </div>
@@ -150,8 +110,8 @@ const Home5Team = () => {
                 >
                   <div className="team-card2">
                     <div className="team-img">
-                      <img src="assets/img/home5/team-03.jpg" alt="" />
-                      <ul className="social-area">
+                      <img src="assets/img/team/Kamy.png" alt="" />
+                      {/* <ul className="social-area">
                         <li>
                           <a href="https://www.facebook.com/">
                             <i className="bx bxl-facebook" />
@@ -172,11 +132,11 @@ const Home5Team = () => {
                             <i className="bx bxl-instagram-alt" />
                           </a>
                         </li>
-                      </ul>
+                      </ul> */}
                     </div>
                     <div className="team-content text-center">
-                      <h4>Charlotte Amelia</h4>
-                      <span>Software Developer</span>
+                      <h4>Kamaljeet </h4>
+                      <span>Creative Director</span>
                     </div>
                   </div>
                 </div>
@@ -187,8 +147,8 @@ const Home5Team = () => {
                 >
                   <div className="team-card2">
                     <div className="team-img">
-                      <img src="assets/img/home5/team-04.jpg" alt="" />
-                      <ul className="social-area">
+                      <img src="assets/img/team/Pooja-Karotiya.jpg" alt="" />
+                      {/* <ul className="social-area">
                         <li>
                           <a href="https://www.facebook.com/">
                             <i className="bx bxl-facebook" />
@@ -209,11 +169,51 @@ const Home5Team = () => {
                             <i className="bx bxl-instagram-alt" />
                           </a>
                         </li>
-                      </ul>
+                      </ul> */}
                     </div>
                     <div className="team-content text-center">
-                      <h4>Sofia Scarlett</h4>
-                      <span>Graphic designer</span>
+                      <h4>Pooja Karotiya</h4>
+                      <span>Manager Ops</span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="col-md-4 col-sm-6 wow animate fadeInDown"
+                  data-wow-delay="200ms"
+                  data-wow-duration="1500ms"
+                >
+                  <div className="team-card2">
+                    <div className="team-img">
+                      <img
+                        src="https://media.licdn.com/dms/image/D5603AQE6t9UR0HWzXQ/profile-displayphoto-shrink_400_400/0/1704110686462?e=1721865600&v=beta&t=FEsgW88MTd181XAJ9ZdOh8xPtmnBlsHGJ1qK_BCT3PU"
+                        alt=""
+                      />
+                      {/* <ul className="social-area">
+                        <li>
+                          <a href="https://www.facebook.com/">
+                            <i className="bx bxl-facebook" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/">
+                            <i className="bx bxl-twitter" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.pinterest.com/">
+                            <i className="bx bxl-pinterest-alt" />
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.instagram.com/">
+                            <i className="bx bxl-instagram-alt" />
+                          </a>
+                        </li>
+                      </ul> */}
+                    </div>
+                    <div className="team-content text-center">
+                      <h4>Shiva Shah</h4>
+                      <span>Full Stack Developer</span>
                     </div>
                   </div>
                 </div>

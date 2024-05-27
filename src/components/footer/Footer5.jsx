@@ -156,7 +156,7 @@ const Footer5 = () => {
                             <div className="author-content">
                               <div className="author-name-desig">
                                 <h6>Mr. Daniel Scoot</h6>
-                                <span>Founder / Zenfy</span>
+                                <span>Founder / MetaGeeks</span>
                               </div>
                               <p>
                                 We're dedicated to find the right solution for

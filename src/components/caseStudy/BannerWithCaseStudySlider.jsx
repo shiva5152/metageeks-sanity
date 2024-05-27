@@ -101,7 +101,7 @@ const BannerWithCaseStudySlider = () => {
                   <p>
                     Dive into the success story of [Client/Project Name] and
                     witness firsthand the transformative journey that
-                    exemplifies the impact of Zenfy solutions.
+                    exemplifies the impact of MetaGeeks solutions.
                   </p>
                   <Link
                     href="/case-study"

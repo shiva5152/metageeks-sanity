@@ -1,5 +1,5 @@
 /*===========================
-Project Name: Zenfy - HTML Template
+Project Name: MetaGeeks - HTML Template
 Author: Egens Lab --> (https://www.egenslab.com/)
 Support: https://egenslab.desky.support/
 Developer: Abid Hossain Chowdhury --> hello@egenslab.com
@@ -104,7 +104,9 @@ Version: 1.0
   --title-color-opc: 11, 12, 12;
   --text-color: #3f444b;
   --text-color-opc: 63, 68, 75;
-  --primary-color1: #3067ff;
+  /* --primary-color1: #3067ff; */
+  --primary-color1: #2a82dc;
+
   --primary-color1-opc: 48, 103, 255;
   --primary-color2: #0b0c0c;
   --dark-primary-color2: #0b0c0c;
@@ -1586,6 +1588,7 @@ ul {
   .section-title5.two h2 {
     font-size: 38px;
   }
+
 }
 
 .slider-btn-grp {
@@ -1665,6 +1668,12 @@ ul {
   font-weight: 400;
   padding: 20px 25px;
   min-height: 150px;
+}
+@media (max-width: 767px) {
+  
+  .form-inner textarea{
+    min-height: 60px;
+  }
 }
 .form-inner textarea:focus {
   border-color: var(--primary-color1);
@@ -1762,6 +1771,7 @@ header.style-1.sticky {
 @media (max-width: 991px) {
   header.style-1 .company-logo {
     padding: 15px 0;
+    width: 55%;
   }
 }
 header.style-1 .company-logo .logo-dark {
@@ -2349,6 +2359,7 @@ header.style-2.sticky {
 @media (max-width: 991px) {
   header.style-2 .company-logo {
     padding: 15px 0;
+    width: 55%;
   }
 }
 header.style-2 .company-logo .logo-dark {
@@ -3459,6 +3470,9 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 35px;
+}
+.sidebar-menu .sidebar-menu-top-area .sidebar-menu-logo{
+  width: 55%;
 }
 @media (max-width: 991px) {
   .sidebar-menu .sidebar-contact .getin-touch-area h4 {
@@ -16051,7 +16065,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 }
 @media (max-width: 1399px) {
   .home5-banner-section {
-    padding: 170px 0 60px;
+    padding: 100px 0 60px;
   }
 }
 .home5-banner-section .banner-content {
@@ -16071,11 +16085,11 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   font-style: italic;
 }
 
-.home5-banner-section .banner-content  #bannerHeading{
+.home5-banner-section .banner-content #bannerHeading {
   white-space: nowrap;
 }
 .home5-banner-section .banner-content .headingBreak {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -16095,9 +16109,9 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
     font-size: 45px;
     margin-bottom: 20px;
   }
-  .home5-banner-section .banner-content  #bannerHeading{
-  white-space: wrap;
-}
+  .home5-banner-section .banner-content #bannerHeading {
+    white-space: wrap;
+  }
 }
 @media (max-width: 576px) {
   .home5-banner-section .banner-content h1 {
@@ -23231,21 +23245,27 @@ body:not(.is-mobile) .tt-style-switch:hover {
 
 /* getInTouch overlay */
 #overlay {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000; */
+  position: relative;
+  top: 0;
   z-index: 1000;
+  width: 100%;
+  background-color: #F0F4F8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 #modal {
-  width: 60%;
-  
+  /* width: 60%;
   background-color: transparent;
   padding: 0px;
   border-radius: 8px;
@@ -23253,13 +23273,28 @@ body:not(.is-mobile) .tt-style-switch:hover {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 41, 55, 0.5); /* Equivalent to bg-gray-800 with 50% opacity */
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
+.temp{
+   background-color:white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    width: 40%;   
+}
 @media (max-width: 769px) {
-  #modal {
-    width: 100%;
+  .temp {
+    width: 90%;
+    margin-bottom: 30%;
   }
-  
 }
 
 #closeButton {

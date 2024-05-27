@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Autoplay,
@@ -9,6 +9,28 @@ import SwiperCore, {
 } from "swiper";
 import Link from "next/link";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
+import { client } from "../../../sanity/lib/client";
+import { urlForImage } from "../../../sanity/lib/image";
+
+const getTestimonial = async () => {
+  const query = `
+    *[_type=="testimonial"]{
+    clientName,
+    review,
+    clientOrg,
+    clientImage{
+      asset->{
+        _id,
+        url
+      }
+    }
+  }
+    `;
+
+  const response = await client.fetch(query);
+  console.log(response);
+  return response;
+};
 
 const Home5Testimonial = () => {
   const settings = useMemo(() => {
@@ -31,7 +53,13 @@ const Home5Testimonial = () => {
       },
     };
   }, []);
-
+  const [testimonial, setTestimonial] = useState([]);
+  useEffect(() => {
+    getTestimonial().then((data) => {
+      setTestimonial(data);
+    });
+  }, []);
+  console.log(testimonial);
   return (
     <>
       <div className="home5-testimonial-section mb-120">
@@ -93,11 +121,11 @@ const Home5Testimonial = () => {
                   <path d="M43.1299 75.5255L43.1302 75.5246C44.5323 71.8799 45.7942 66.2902 46.5132 60.5019L46.5133 60.5009C47.4275 53.2558 47.5156 50.5475 47.5156 30.2822C47.5156 20.9386 47.5101 16.0638 47.4556 13.4236C47.4002 10.7452 47.2896 10.4559 47.1512 10.1742L47.1512 10.1742L47.1495 10.1705C46.6743 9.18315 45.8131 8.30019 44.7382 7.72221L44.7382 7.72221L44.7353 7.72065L43.9505 7.29199L25.0469 7.29199C15.6035 7.292 10.8541 7.29204 8.3405 7.35031C7.07949 7.37954 6.40593 7.42315 5.99189 7.48395C5.60851 7.54025 5.46338 7.60786 5.24578 7.71122L5.24439 7.71187C4.17121 8.21759 3.37204 9.00365 2.76128 10.142L2.75827 10.1478C2.66146 10.3354 2.60016 10.4542 2.54632 10.8036C2.4861 11.1943 2.44127 11.847 2.40842 13.0952C2.343 15.5814 2.32658 20.3265 2.29375 29.8152L2.29375 29.8162L2.29375 29.8164L2.2906 30.8175C2.2597 40.6094 2.2444 45.4564 2.3941 48.0548C2.47165 49.4008 2.59169 50.0901 2.75294 50.535C2.8953 50.9277 3.07171 51.1442 3.37525 51.5166C3.39954 51.5464 3.42466 51.5772 3.45063 51.6092L3.45068 51.6092L3.45562 51.6155C3.74945 51.9893 4.49374 52.5697 5.07676 52.8561L5.07679 52.8561L5.08304 52.8593L6.11367 53.3838L15.1375 53.3838L15.1753 53.3838C19.5936 53.3838 21.8863 53.3838 23.0706 53.4372C23.6423 53.463 24.0303 53.5022 24.2772 53.593C24.4162 53.6442 24.5789 53.7353 24.6838 53.9125C24.7813 54.0772 24.7813 54.2429 24.7813 54.3054L24.7813 54.3068C24.7813 56.0196 24.207 60.9744 23.7656 63.2204L23.7655 63.221C23.0797 66.6887 22.3455 68.9314 20.9063 72.0189L20.9061 72.0194C17.8288 78.6016 13.1391 83.017 5.25141 86.8851L5.25011 86.8857C3.23408 87.8671 2.10054 88.5795 1.45204 89.3517C0.83509 90.0863 0.620109 90.9229 0.609386 92.2939C0.609402 93.0301 0.61805 93.3712 0.909416 94.162C1.21953 95.0038 1.83493 96.3069 3.0771 98.9362C3.76405 100.379 4.46142 101.788 5.02991 102.889C5.31439 103.441 5.56535 103.913 5.76587 104.273C5.97188 104.644 6.10657 104.862 6.16611 104.939C7.53928 106.629 9.87577 107.066 12.4845 105.907C27.1058 99.4056 38.2193 88.3623 43.1299 75.5255Z" />
                 </svg>
                 <div
-                  className="testimonial-img wow animate zoomIn"
+                  className="testimonial-img wow p-8 animate zoomIn"
                   data-wow-delay="400ms"
                   data-wow-duration="1500ms"
                 >
-                  <img src="assets/img/home5/testimonial-left-img.jpg" alt="" />
+                  <img src="assets/img/logo.png" alt="" />
                 </div>
               </div>
             </div>
@@ -110,107 +138,31 @@ const Home5Testimonial = () => {
                   data-wow-duration="1500ms"
                 >
                   <div className="swiper-wrapper">
-                    <SwiperSlide className="swiper-slide">
-                      <div className="testimonial-card2">
-                        <div className="content">
-                          <span>Great Digital Marketing!</span>
-                          <p>
-                            Feel free to customize the key features based on the
-                            services and strategies you offer in each plan. This
-                            breakdown helps potential clients understand the
-                            specific value they'll receive at each pricing tier.
-                          </p>
-                          <div className="author-name-desig">
-                            <div className="author-img">
-                              <img
-                                src="assets/img/home4/testi-author-01.png"
-                                alt=""
-                              />
-                            </div>
+                    {testimonial.length > 0 &&
+                      testimonial.map((obj, index) => (
+                        <SwiperSlide className="swiper-slide">
+                          <div className="testimonial-card2">
                             <div className="content">
-                              <h6>Mrs. Flurance Miyagi</h6>
-                              <span>Froxio, CEO</span>
+                              <p>{obj.review}</p>
+                              <div className="author-name-desig">
+                                <div className="author-img">
+                                  <img
+                                    src={
+                                      urlForImage(obj?.clientImage).url() ||
+                                      "assets/img/home4/testi-author-02.png"
+                                    }
+                                    alt=""
+                                  />
+                                </div>
+                                <div className="content">
+                                  <h6>{obj.clientName}</h6>
+                                  <span>{obj.clientOrg}</span>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                      <div className="testimonial-card2">
-                        <div className="content">
-                          <span>Great Digital Marketing!</span>
-                          <p>
-                            You can adjust the length and style of the line to
-                            match the overall design and formatting of your
-                            document. Some other divider options include dashes,
-                            stars, or even a graphical element.
-                          </p>
-                          <div className="author-name-desig">
-                            <div className="author-img">
-                              <img
-                                src="assets/img/home4/testi-author-02.png"
-                                alt=""
-                              />
-                            </div>
-                            <div className="content">
-                              <h6>Dani Alves</h6>
-                              <span>Nurio, CEO</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                      <div className="testimonial-card2">
-                        <div className="content">
-                          <span>Great Digital Marketing!</span>
-                          <p>
-                            The information you might include in a Managing
-                            Director's profile or information list typically
-                            consists of the individual's background, experience,
-                            and responsibilities within a company.
-                          </p>
-                          <div className="author-name-desig">
-                            <div className="author-img">
-                              <img
-                                src="assets/img/home4/testi-author-03.png"
-                                alt=""
-                              />
-                            </div>
-                            <div className="content">
-                              <h6>Mr. Daniel Scoot</h6>
-                              <span>Froxio, CEO</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="swiper-slide">
-                      <div className="testimonial-card2">
-                        <div className="content">
-                          <span>Great Digital Marketing!</span>
-                          <p>
-                            The specific services offered by business
-                            consultants can vary widely depending on the
-                            consultant's expertise and the needs of the client.
-                            Consultants typically work closely with their
-                            clients.
-                          </p>
-                          <div className="author-name-desig">
-                            <div className="author-img">
-                              <img
-                                src="assets/img/home4/testi-author-04.png"
-                                alt=""
-                              />
-                            </div>
-                            <div className="content">
-                              <h6>Mr. Thomas Robert</h6>
-                              <span>Maxcrio, HR</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
+                        </SwiperSlide>
+                      ))}
                   </div>
                 </Swiper>
                 <div className="slider-btn-area">

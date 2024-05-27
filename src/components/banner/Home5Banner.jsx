@@ -60,7 +60,14 @@ const Home5Banner = () => {
             <div className="row justify-content-center">
               <div className="col-lg-10">
                 <div className="banner-content text-center">
-                  <span className="sub-title5" style={{ lineHeight: "16px" }}>
+                  <span
+                    className="sub-title5"
+                    style={{
+                      fontSize: "11px",
+                      marginTop: "-30px",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={14}
