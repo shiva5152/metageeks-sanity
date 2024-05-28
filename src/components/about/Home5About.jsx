@@ -1,5 +1,4 @@
 "use client";
-import CountUp from "react-countup";
 import Link from "next/link";
 import React, { useEffect } from "react";
 
@@ -174,7 +173,7 @@ const Home5About = () => {
                   <img src="assets/img/home5/about-img.jpg" alt="" />
                 </div>
                 <div className="banner-btn">
-                  <Link href="/about-us">
+                  <Link href="/case-study">
                     <div className="bg">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

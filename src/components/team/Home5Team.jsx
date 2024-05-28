@@ -32,12 +32,14 @@ const Home5Team = () => {
                   </svg>
                 </span>
                 <h2>
-                  Get to Know Creative <span> Minds At MetaGeeks.</span>
+                  Meet the
+                  <span> Innovators At MetaGeeks.</span>
                 </h2>
                 <p>
-                  Feel free adapt this based on the specific managed services,
-                  features, and unique selling points your IT service company
-                  provides.
+                  Discover the talented minds behind MetaGeeks, where creativity
+                  meets technical excellence. Our team is dedicated to
+                  delivering top-tier managed services, innovative solutions,
+                  and personalized support to drive your business forward.
                 </p>
               </div>
               <div className="star-btn mb-50">

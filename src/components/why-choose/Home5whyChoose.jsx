@@ -33,8 +33,8 @@ const Home5whyChoose = () => {
                   </svg>
                 </span>
                 <h2>
-                  We work with skilled professionals
-                  <span> to deliver tailored and innovative solutions.</span>
+                  <span> We work with </span> skilled professionals{" "}
+                  <span> to deliver </span> tailored and innovative solutions.
                 </h2>
                 <p>
                   As the best software development company, we work with skilled
@@ -77,6 +77,7 @@ const Home5whyChoose = () => {
                         <div className="number">
                           <h2 className="counter">
                             <CountUp end={30} delay={2} />
+                            <small>+</small>
                           </h2>
                         </div>
                         <div className="content">
@@ -92,12 +93,12 @@ const Home5whyChoose = () => {
                       <div className="single-countdown two">
                         <div className="number">
                           <h2 className="counter">
-                            <CountUp end={1} delay={2} />
+                            <CountUp end={80} delay={2} />
+                            <small>+</small>
                           </h2>
-                          <span>K</span>
                         </div>
                         <div className="content">
-                          <p>Awesome clients</p>
+                          <p>Worldwide clients</p>
                         </div>
                       </div>
                     </div>
@@ -109,7 +110,8 @@ const Home5whyChoose = () => {
                       <div className="single-countdown three">
                         <div className="number">
                           <h2 className="counter">
-                            <CountUp end={6} delay={1} />
+                            <CountUp end={15} delay={1} />
+                            <small>+</small>
                           </h2>
                         </div>
                         <div className="content">
@@ -125,11 +127,12 @@ const Home5whyChoose = () => {
                       <div className="single-countdown four">
                         <div className="number">
                           <h2 className="counter">
-                            <CountUp end={19} delay={3} />
+                            <CountUp end={14} delay={3} />
+                            <small>+</small>
                           </h2>
                         </div>
                         <div className="content">
-                          <p>Awards Winning</p>
+                          <p>Global Team</p>
                         </div>
                       </div>
                     </div>

@@ -142,26 +142,26 @@ const process = [
   {
     heading: "Client Consultation",
     description:
-      "During the initial client consultation, we focus on understanding your unique business needs, goals, and project requirements. Our team engages in detailed discussions to gather insights into your vision, target audience, and specific functionalities you need. This step ensures that we are aligned with your expectations and sets the foundation for a successful project.",
+      "We start by understanding your business needs and project requirements through detailed discussions. This ensures our team is aligned with your vision and goals. This foundational step sets the stage for a successful project.",
   },
   {
     heading: "UI/UX Designing & Prototyping",
     description:
-      "Our UI/UX designers translate your ideas into visually appealing and user-friendly interfaces. We create wireframes and prototypes to give you a clear picture of the app or website’s look and feel. This iterative process allows for feedback and revisions, ensuring the design meets your aesthetic and functional requirements before moving forward.",
+      "Our designers create wireframes and prototypes to visualize your app or website. This iterative process incorporates your feedback, ensuring the final design is both aesthetically pleasing and user-friendly.",
   },
   {
     heading: "Development",
     description:
-      "Once the design is finalized, our development team starts building your software. We use the latest technologies and agile methodologies to ensure efficient and high-quality development. Regular progress updates and iterative releases keep you informed and involved, allowing for adjustments and refinements throughout the process.",
+      "Our development team uses the latest technologies and agile methodologies to build your software. Regular updates and iterative releases keep you informed and allow for adjustments throughout the process.",
   },
   {
     heading: "Testing & Quality Assurance",
     description:
-      "In this phase, our QA team rigorously tests the software to identify and fix any issues or bugs. We perform various types of testing, including functional, performance, security, and usability testing. Our goal is to ensure the software is reliable, secure, and provides a seamless user experience before launch.",
+      "Our QA team conducts thorough testing to identify and fix issues. We ensure the software is reliable, secure, and provides a seamless user experience before launch through various types of testing.",
   },
   {
     heading: "Deployment & Support",
     description:
-      "After successful testing, we deploy your software to the live environment. Our team ensures a smooth transition and monitors the deployment to address any immediate issues. We also offer ongoing support and maintenance services to keep your software updated, secure, and running smoothly, ensuring long-term success and user satisfaction.",
+      "We deploy your software smoothly to the live environment and monitor for any issues. Our ongoing support and maintenance services ensure your software remains updated, secure, and performing optimally.",
   },
 ];

@@ -86,12 +86,13 @@ const Home5Blog = () => {
                   </svg>
                 </span>
                 <h2>
-                  Tech Tips and Trends<span> Article Unveiled.</span>
+                  Tech Insights and <span> Innovations.</span>
                 </h2>
                 <p>
-                  Feel free adapt this based on the specific managed services,
-                  features, and unique selling points your IT service company
-                  provides.
+                  Explore our latest articles on tech tips and trends. Discover
+                  how our managed services, innovative solutions, and unique
+                  expertise can enhance your business operations and keep you
+                  ahead of the curve.
                 </p>
               </div>
             </div>

@@ -92,7 +92,7 @@ const Home5Testimonial = () => {
                   </svg>
                 </span>
                 <h2>
-                  Inspiring Words from <span>Clients of Us.</span>
+                  Inspiring Words from <span>Our Clients .</span>
                 </h2>
               </div>
               <Link
