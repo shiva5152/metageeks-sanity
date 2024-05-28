@@ -8,9 +8,10 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import Link from "next/link";
-SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 import { client } from "../../../sanity/lib/client";
 import { urlForImage } from "../../../sanity/lib/image";
+
+SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const getTestimonial = async () => {
   const query = `
@@ -35,7 +36,7 @@ const getTestimonial = async () => {
 const Home5Testimonial = () => {
   const settings = useMemo(() => {
     return {
-      slidesPerView: "auto",
+      slidesPerView: 1,
       speed: 1500,
       spaceBetween: 25,
       loop: true,
@@ -59,7 +60,7 @@ const Home5Testimonial = () => {
       setTestimonial(data);
     });
   }, []);
-  console.log(testimonial);
+  // console.log(testimonial);
   return (
     <>
       <div className="home5-testimonial-section mb-120">
@@ -125,7 +126,7 @@ const Home5Testimonial = () => {
                   data-wow-delay="400ms"
                   data-wow-duration="1500ms"
                 >
-                  <img src="assets/img/logo.png" alt="" />
+                  <img src="assets/img/testimonial-left-img.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -140,10 +141,13 @@ const Home5Testimonial = () => {
                   <div className="swiper-wrapper">
                     {testimonial.length > 0 &&
                       testimonial.map((obj, index) => (
-                        <SwiperSlide className="swiper-slide">
+                        <SwiperSlide
+                          key={obj?.clientName}
+                          className="swiper-slide"
+                        >
                           <div className="testimonial-card2">
                             <div className="content">
-                              <p>{obj.review}</p>
+                              <p>{obj?.review}</p>
                               <div className="author-name-desig">
                                 <div className="author-img">
                                   <img
@@ -155,8 +159,8 @@ const Home5Testimonial = () => {
                                   />
                                 </div>
                                 <div className="content">
-                                  <h6>{obj.clientName}</h6>
-                                  <span>{obj.clientOrg}</span>
+                                  <h6>{obj?.clientName}</h6>
+                                  <span>{obj?.clientOrg}</span>
                                 </div>
                               </div>
                             </div>
