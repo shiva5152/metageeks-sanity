@@ -214,12 +214,12 @@ const Home5Partnerships = () => {
                       <div className="partner-logos">
                         <img
                           className="white"
-                          src="/assets/img/home5/game-terminal-white.png"
+                          src="/assets/img/home5/Game-Terminal-white.png"
                           alt=""
                         />
                         <img
                           className="black"
-                          src="/assets/img/home5/game-terminal-black.png"
+                          src="/assets/img/home5/Game-Terminal-black.png"
                           alt=""
                         />
                       </div>

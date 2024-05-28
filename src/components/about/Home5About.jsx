@@ -62,7 +62,7 @@ const Home5About = () => {
                   </svg>
                 </span>
                 <h2>
-                  More than just a blockchain development company{" "}
+                  More than just a Software development company{" "}
                   <span>we're a catalyst for innovation</span>
                 </h2>
               </div>
@@ -86,6 +86,14 @@ const Home5About = () => {
                 <div className="eg-progress-wrap">
                   <div className="eg-progress-bar-single mb-40">
                     <div className="eg-progress-bar-title">
+                      <h6>Custom Software Development</h6>
+                    </div>
+                    <div className="eg-progress-bar">
+                      <div className="experience-bar-per" data-per="95%" />
+                    </div>
+                  </div>
+                  <div className="eg-progress-bar-single mb-40">
+                    <div className="eg-progress-bar-title">
                       <h6>Dapp &amp; Smart Contract Development</h6>
                     </div>
                     <div className="eg-progress-bar">
@@ -94,7 +102,7 @@ const Home5About = () => {
                   </div>
                   <div className="eg-progress-bar-single mb-40">
                     <div className="eg-progress-bar-title">
-                      <h6>Web3 Game Development</h6>
+                      <h6>Unity Game Development</h6>
                     </div>
                     <div className="eg-progress-bar">
                       <div className="experience-bar-per" data-per="85%" />

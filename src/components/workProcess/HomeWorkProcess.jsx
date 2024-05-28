@@ -142,26 +142,26 @@ const process = [
   {
     heading: "Client Consultation",
     description:
-      "Engage with clients to understand their business needs and challenges through detailed discussions and assessments.",
+      "During the initial client consultation, we focus on understanding your unique business needs, goals, and project requirements. Our team engages in detailed discussions to gather insights into your vision, target audience, and specific functionalities you need. This step ensures that we are aligned with your expectations and sets the foundation for a successful project.",
   },
   {
-    heading: "Strategy Development",
+    heading: "UI/UX Designing & Prototyping",
     description:
-      "Develop a strategic plan based on client insights to align IT solutions with business objectives.",
+      "Our UI/UX designers translate your ideas into visually appealing and user-friendly interfaces. We create wireframes and prototypes to give you a clear picture of the app or website’s look and feel. This iterative process allows for feedback and revisions, ensuring the design meets your aesthetic and functional requirements before moving forward.",
   },
   {
-    heading: "Market Research",
+    heading: "Development",
     description:
-      "Analyze industry trends and competitor strategies to ensure our solutions are innovative and relevant.",
+      "Once the design is finalized, our development team starts building your software. We use the latest technologies and agile methodologies to ensure efficient and high-quality development. Regular progress updates and iterative releases keep you informed and involved, allowing for adjustments and refinements throughout the process.",
   },
   {
-    heading: "Campaign Planning",
+    heading: "Testing & Quality Assurance",
     description:
-      "Design detailed plans with timelines and milestones for structured and effective implementation of IT solutions.",
+      "In this phase, our QA team rigorously tests the software to identify and fix any issues or bugs. We perform various types of testing, including functional, performance, security, and usability testing. Our goal is to ensure the software is reliable, secure, and provides a seamless user experience before launch.",
   },
   {
-    heading: "Performance Evaluation",
+    heading: "Deployment & Support",
     description:
-      "Monitor and assess the effectiveness of implemented solutions, making adjustments as necessary to ensure optimal results.",
+      "After successful testing, we deploy your software to the live environment. Our team ensures a smooth transition and monitors the deployment to address any immediate issues. We also offer ongoing support and maintenance services to keep your software updated, secure, and running smoothly, ensuring long-term success and user satisfaction.",
   },
 ];

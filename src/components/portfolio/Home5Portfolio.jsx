@@ -6,7 +6,7 @@ import { urlForImage } from "../../../sanity/lib/image";
 
 const getCaseStudies = async () => {
   const query = `
-    *[_type=="caseStudy" | order(date desc) [0...4]]{
+    *[_type=="caseStudy"] | order(date desc) [0...4]{
 
     title,
     slug,
@@ -22,6 +22,7 @@ const getCaseStudies = async () => {
     `;
 
   const response = await client.fetch(query);
+  console.log(response, "response");
   return response;
 };
 

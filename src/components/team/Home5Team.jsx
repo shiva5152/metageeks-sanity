@@ -224,33 +224,11 @@ const Home5Team = () => {
                 >
                   <div className="team-card2">
                     <div className="team-img">
-                      <img src="assets/img/home5/team-05.jpg" alt="" />
-                      <ul className="social-area">
-                        <li>
-                          <a href="https://www.facebook.com/">
-                            <i className="bx bxl-facebook" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://twitter.com/">
-                            <i className="bx bxl-twitter" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.pinterest.com/">
-                            <i className="bx bxl-pinterest-alt" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://www.instagram.com/">
-                            <i className="bx bxl-instagram-alt" />
-                          </a>
-                        </li>
-                      </ul>
+                      <img src="assets/img/team/Kanhaiya.png" alt="" />
                     </div>
                     <div className="team-content text-center">
-                      <h4>Maverick Dylan</h4>
-                      <span>Digital Marketer</span>
+                      <h4>Kanhaiya </h4>
+                      <span>Full Stack Developer</span>
                     </div>
                   </div>
                 </div>

@@ -48,13 +48,13 @@ const Footer = () => {
                     </ul>
                     <ul className="widget-list">
                       <li>
-                        <Link href="/faq">Faq</Link>
+                        <Link href="/about-us">About</Link>
                       </li>
                       <li>
                         <Link href="/blog">Blog</Link>
                       </li>
                       <li>
-                        <Link href="/about-us">About</Link>
+                        <Link href="/faq">FAQ</Link>
                       </li>
                       <li>
                         <Link href="/">Industry</Link>

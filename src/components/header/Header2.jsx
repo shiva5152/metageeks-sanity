@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useMemo, useReducer, useRef } from "react";
+import { useEffect, useMemo, useState, useReducer, useRef } from "react";
 import navData from "../../data/nav.json";
+import { client } from "../../../sanity/lib/client";
+
 const initialState = {
   activeMenu: "",
   activeSubMenu: "",
@@ -11,6 +13,18 @@ const initialState = {
   isLang: false,
 };
 
+async function getServices() {
+  const query = `
+ *[_type == "serviceHero"] {
+    slug{
+      current
+    }
+  }
+  `;
+
+  const response = await client.fetch(query);
+  return response;
+}
 function reducer(state, action) {
   switch (action.type) {
     case "TOGGLE_MENU":
@@ -56,6 +70,12 @@ function reducer(state, action) {
 
 const Header2 = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [services, setServices] = useState([]);
+  useEffect(() => {
+    getServices().then((data) => {
+      setServices(data);
+    });
+  }, []);
   const headerRef = useRef(null);
 
   const handleScroll = () => {
@@ -135,7 +155,9 @@ const Header2 = () => {
                   <li>
                     <Link href="/case-study">Case Study</Link>
                   </li>
-
+                  <li>
+                    <Link href="/about-us">About</Link>
+                  </li>
                   <li>
                     <Link href="/contact-us">Contact</Link>
                   </li>
@@ -322,49 +344,20 @@ const Header2 = () => {
                       />
                     )}
 
-                    {subMenu && (
+                    {label === "Services" && (
                       <ul
                         className={`sub-menu ${
                           state.activeMenu === label ? "d-block" : ""
                         }`}
                       >
-                        {subMenu.map((subItem, subIndex) => (
+                        {services.map((subItem, subIndex) => (
                           <li key={subIndex}>
-                            <Link legacyBehavior href={subItem.link}>
-                              <a>{subItem.label}</a>
+                            <Link
+                              legacyBehavior
+                              href={`/service/${subItem.slug.current}`}
+                            >
+                              <a>{subItem.slug.current}</a>
                             </Link>
-                            {subItem.icon && subItem.icon ? (
-                              <>
-                                <i className="d-lg-flex d-none bi bi-chevron-right dropdown-icon" />
-                                <i
-                                  onClick={() => toggleSubMenu(subItem.label)}
-                                  className={`d-lg-none d-flex bi bi-${
-                                    state.activeSubMenu === subItem.label
-                                      ? "dash"
-                                      : "plus"
-                                  } dropdown-icon `}
-                                />
-                              </>
-                            ) : (
-                              ""
-                            )}
-                            {subItem.subMenu && (
-                              <ul
-                                className={`sub-menu ${
-                                  state.activeSubMenu === subItem.label
-                                    ? "d-block"
-                                    : ""
-                                }`}
-                              >
-                                {subItem.subMenu.map((subItem, subIndex) => (
-                                  <li key={subItem.id}>
-                                    <Link legacyBehavior href={subItem.link}>
-                                      <a>{subItem.label}</a>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
                           </li>
                         ))}
                       </ul>

@@ -33,15 +33,16 @@ const Home5whyChoose = () => {
                   </svg>
                 </span>
                 <h2>
-                  We are a IT service Company working with talents{" "}
-                  <span>on delivering unique ideas.</span>
+                  We work with skilled professionals
+                  <span> to deliver tailored and innovative solutions.</span>
                 </h2>
                 <p>
-                  Where innovation meets passion in a journey that started with
-                  a simple idea and a shared dora Founded in recent year we
-                  embarked on a mission told bring the new innovation and
-                  introduct the technology. From humble beginnings to our
-                  current aspirations.
+                  As the best software development company, we work with skilled
+                  professionals to deliver tailored and innovative solutions.
+                  Our dedicated team of experts leverages the latest
+                  technologies and industry best practices to ensure that each
+                  project meets your specific needs and exceeds your
+                  expectations.
                 </p>
               </div>
             </div>
