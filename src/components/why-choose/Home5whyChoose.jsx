@@ -34,7 +34,8 @@ const Home5whyChoose = () => {
                 </span>
                 <h2>
                   <span> We work with </span> skilled professionals{" "}
-                  <span> to deliver </span> tailored and innovative solutions.
+                  <span> to deliver </span> tailored <span>and</span> innovative
+                  solutions.
                 </h2>
                 <p>
                   As the best software development company, we work with skilled

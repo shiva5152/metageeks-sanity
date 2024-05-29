@@ -74,7 +74,7 @@ const Home5Partnerships = () => {
                 data-wow-duration="1500ms"
               >
                 <Link href="/about-us">
-                  180+ Global Clients
+                  80+ Global Clients
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={10}
