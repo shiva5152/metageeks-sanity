@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { sendContactForm } from "@/lib/api";
 import { notifySuccess, notifyError } from "../utils/toast";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const schema = Yup.object().shape({
   name: Yup.string().required().min(6).label("name"),
@@ -38,6 +39,10 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
       notifyError("Error while submitting the form, try later");
     }
   };
+  const [capValue, setCapValue] = useState();
+  const onCaptchaChange = (val) => {
+    setCapValue(val);
+  };
 
   return (
     <div
@@ -61,7 +66,6 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
                   <p style={{ color: "#f56565" }}>{errors.name?.message}</p>
                 </div>
               </div>
-
               <div className="col-lg-6 mb-16">
                 <div className="form-inner">
                   <label>Phone *</label>
@@ -109,6 +113,7 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
               <div className="col-lg-12">
                 <div className="form-inner">
                   <button
+                    disabled={!capValue}
                     className="primary-btn2"
                     type="submit"
                     data-text={!loading ? "Submit Now" : "Submitting..."}
@@ -116,6 +121,13 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
                     <span>{!loading ? "Submit Now" : "Submitting..."}</span>
                   </button>
                 </div>
+              </div>
+
+              <div className="d-flex mt-4 justify-content-center">
+                <ReCAPTCHA
+                  sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITE_KEY}`}
+                  onChange={onCaptchaChange}
+                />
               </div>
             </div>
           </form>

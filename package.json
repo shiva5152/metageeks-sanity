@@ -29,6 +29,7 @@
     "react-datepicker": "^6.1.0",
     "react-dom": "^18",
     "react-fast-marquee": "^1.6.4",
+    "react-google-recaptcha": "^3.1.0",
     "react-hook-form": "^7.51.4",
     "react-modal-video": "^2.0.1",
     "react-simple-typewriter": "^5.0.1",
