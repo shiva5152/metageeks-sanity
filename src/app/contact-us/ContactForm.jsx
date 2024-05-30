@@ -40,8 +40,8 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
     }
   };
   const [capValue, setCapValue] = useState();
-  const onCaptchaChange = (val) => {
-    setCapValue(val);
+  const onCaptchaChange = (value) => {
+    setCapValue(value);
   };
 
   return (

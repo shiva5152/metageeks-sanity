@@ -9,6 +9,7 @@ import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { slugify } from "@/app/utils/helpers";
 import { usePathname } from "next/navigation";
+import Comments from "@/components/blog/Comments";
 
 async function getPost(slug) {
   const query = `
@@ -161,7 +162,7 @@ const BlogPage = () => {
             </div>
             <div className="col-lg-4">
               <div className="sidebar-area">
-                <div className="single-widget mb-30">
+                {/* <div className="single-widget mb-30">
                   <h5 className="widget-title">Search Here</h5>
                   <form>
                     <div className="search-box">
@@ -316,7 +317,7 @@ const BlogPage = () => {
                       </Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="single-widget mb-30">
                   <h5 className="widget-title">Popular Post </h5>
                   <div className="recent-post-widget mb-20">
@@ -375,62 +376,45 @@ const BlogPage = () => {
                   </div>
                 </div>
                 <div className="single-widget mb-30">
-                  <h5 className="widget-title">New Tags</h5>
+                  <h5 className="widget-title">Releted Tags</h5>
                   <ul className="tag-list">
-                    <li>
-                      <Link href="/blog">Creative</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Web Design</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Software</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Industry</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Marketing</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Product</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Optimization</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Graphic</Link>
-                    </li>
-                    <li>
-                      <Link href="/blog">Natural</Link>
-                    </li>
+                    {post?.tags?.map((tag) => (
+                      <li>
+                        <Link href={""} onClick={(e) => e.preventDefault()}>
+                          {tag}
+                        </Link>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="single-widget">
                   <h5 className="widget-title">Social Share</h5>
                   <ul className="social-list">
                     <li>
-                      <a href="https://www.linkedin.com/">
+                      <a
+                        target="_blank"
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/blog/${slug}`}
+                      >
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/">
+                      <a
+                        href="https://www.facebook.com/sharer/sharer.php?u="
+                        target="_blank"
+                      >
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/">
+                      <a
+                        target="_blank"
+                        href={`https://twitter.com/intent/tweet?text=Here is a great blog by @MetaGeeks_tech . \n ${post?.title}&url=/case-study/${slug}`}
+                      >
                         <i className="bi bi-twitter-x" />
                         <span>Twitter</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.instagram.com/">
-                        <i className="bi bi-instagram" />
-                        <span>Instagram</span>
                       </a>
                     </li>
                   </ul>
@@ -443,9 +427,7 @@ const BlogPage = () => {
               <h6>Tag:</h6>
               <ul>
                 {post?.tags?.map((tag) => (
-                  <li>
-                    <Link href="/blog">{tag}</Link>
-                  </li>
+                  <li>{tag}</li>
                 ))}
               </ul>
             </div>
@@ -453,7 +435,12 @@ const BlogPage = () => {
 
           <div className="row">
             <div className="col-lg-8">
-              <div className="comment-area" id="comment-area">
+              <Comments
+                url={`${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
+                identifier={slug}
+                title={post?.title || ""}
+              />
+              {/* <div className="comment-area" id="comment-area">
                 <div className="comment-title">
                   <h4>Comments (03)</h4>
                   <div className="dash" />
@@ -666,7 +653,7 @@ const BlogPage = () => {
                     </div>
                   </form>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

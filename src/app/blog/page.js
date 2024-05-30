@@ -7,40 +7,82 @@ import { client } from "../../../sanity/lib/client";
 import { useEffect, useState } from "react";
 import { urlForImage } from "../../../sanity/lib/image";
 
-const getPost = async (page, pageSize) => {
+const getPost = async (page, pageSize, searchTerm = "") => {
   const start = (page - 1) * pageSize;
   const end = page * pageSize;
 
+  // Escape special characters in the search term to prevent GROQ injection
+  const escapedSearchTerm = searchTerm.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
+
   const query = `
-    *[_type=="blog"]{
-  
-    title,
-    slug,
-    description,
-    mainImage{
-      asset->{
-        _id,
-        url
-      }
-    },
-    category,
-    date,
-    tags,
-    "totalPosts": count(*[_type=="blog"])
-  }[${start}...${end}]
-  
-    `;
+    *[_type == "blog" && (
+      title match "${escapedSearchTerm}*" ||
+      "${escapedSearchTerm}" in tags
+    )]{
+      title,
+      slug,
+      description,
+      mainImage {
+        asset->{
+          _id,
+          url
+        }
+      },
+      category,
+      date,
+      tags,
+      "totalPosts": count(*[_type == "blog" && (
+        title match "${escapedSearchTerm}*" ||
+        "${escapedSearchTerm}" in tags
+      )])
+    }[${start}...${end}]
+  `;
 
   const response = await client.fetch(query);
   console.log(response);
   return response;
 };
 
+const getTrendingTags = async () => {
+  const query = `
+    *[_type == "blog"]{
+      tags
+    }
+  `;
+
+  const posts = await client.fetch(query);
+
+  // Aggregate tag counts
+  const tagCounts = {};
+  posts.forEach((post) => {
+    post.tags.forEach((tag) => {
+      if (tagCounts[tag]) {
+        tagCounts[tag]++;
+      } else {
+        tagCounts[tag] = 1;
+      }
+    });
+  });
+
+  // Convert tagCounts to an array and sort by count in descending order
+  const sortedTags = Object.keys(tagCounts)
+    .map((tag) => ({
+      tag,
+      count: tagCounts[tag],
+    }))
+    .sort((a, b) => b.count - a.count);
+
+  // console.log(sortedTags);
+  return sortedTags.slice(0, 8);
+};
+
 const BlogStandardPage = () => {
   useWow();
 
   const [posts, setPosts] = useState([]);
+  const [trendingTags, setSetTrendingTags] = useState([]);
   const [page, setPage] = useState(1);
+  const [searchTerm, setSearchTerm] = useState("");
   const totalPosts = posts[0]?.totalPosts;
   const pageSize = 3;
   const totalPages = Math.ceil(totalPosts / pageSize);
@@ -53,15 +95,35 @@ const BlogStandardPage = () => {
     if (totalPages > page) setPage((prev) => prev + 1);
   };
 
+  const fetchData = async (value) => {
+    const response = await getPost(page, pageSize, value ? value : searchTerm);
+    setPosts(response);
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await getPost(page, pageSize);
-      setPosts(response);
-    };
     fetchData();
   }, [page]);
 
-  console.log(posts);
+  useEffect(() => {
+    const fetchTags = async () => {
+      const response = await getTrendingTags();
+      setSetTrendingTags(response);
+    };
+    fetchTags();
+  }, []);
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    await fetchData();
+  };
+  const handleTagSearch = async (value) => {
+    await fetchData(value);
+  };
+
+  const handleKeyDown = async (event) => {
+    if (event.key === "Enter") {
+      await fetchData();
+    }
+  };
 
   return (
     <MainLayout>
@@ -198,8 +260,14 @@ const BlogStandardPage = () => {
                   <h5 className="widget-title">Search Here</h5>
                   <form>
                     <div className="search-box">
-                      <input type="text" placeholder="Search Here" />
-                      <button type="submit">
+                      <input
+                        type="text"
+                        value={searchTerm}
+                        onKeyDown={handleKeyDown}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        placeholder="Search Here"
+                      />
+                      <button onClick={handleSearch}>
                         <i className="bx bx-search" />
                       </button>
                     </div>
@@ -208,146 +276,36 @@ const BlogStandardPage = () => {
                 <div className="single-widget mb-30">
                   <h5 className="widget-title">Category</h5>
                   <ul className="category-list">
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
+                    {trendingTags.map((tagObj, index) => {
+                      return (
+                        <li key={tagObj.tag}>
+                          <Link
+                            href={""}
+                            onClick={(event) => {
+                              event.preventDefault();
+                              handleTagSearch(tagObj.tag);
+                            }}
                           >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          Digital Marketing
-                        </span>
-                        <span>(20)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          Creative Agency
-                        </span>
-                        <span>(15)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          Web Design
-                        </span>
-                        <span>(25)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          Web Development
-                        </span>
-                        <span>(30)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          Content Marketing
-                        </span>
-                        <span>(32)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          App Development
-                        </span>
-                        <span>(35)</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/blog-sidebar">
-                        <span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={13}
-                            height={14}
-                            viewBox="0 0 13 14"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
-                            />
-                          </svg>
-                          UI/UX Design
-                        </span>
-                        <span>(38)</span>
-                      </Link>
-                    </li>
+                            <span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={13}
+                                height={14}
+                                viewBox="0 0 13 14"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  clipRule="evenodd"
+                                  d="M11.0354 1.65188L0 12.6867L0.814262 13.501L11.8491 2.46556V10.0955H13V0.500977H3.40552V1.65188H11.0354Z"
+                                />
+                              </svg>
+                              {tagObj.tag}
+                            </span>
+                            <span>({tagObj.count})</span>
+                          </Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 <div className="single-widget mb-30">
@@ -407,7 +365,7 @@ const BlogStandardPage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="single-widget mb-30">
+                {/* <div className="single-widget mb-30">
                   <h5 className="widget-title">New Tags</h5>
                   <ul className="tag-list">
                     <li>
@@ -438,34 +396,43 @@ const BlogStandardPage = () => {
                       <Link href="/blog">Natural</Link>
                     </li>
                   </ul>
-                </div>
+                </div> */}
                 <div className="single-widget">
                   <h5 className="widget-title">Social Share</h5>
                   <ul className="social-list">
                     <li>
-                      <a href="https://www.linkedin.com/">
+                      <a
+                        target="_blank"
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/blog`}
+                      >
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://www.facebook.com/">
+                      <a
+                        href="https://www.facebook.com/sharer/sharer.php?u="
+                        target="_blank"
+                      >
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
                     </li>
                     <li>
-                      <a href="https://twitter.com/">
+                      <a
+                        target="_blank"
+                        href={`https://twitter.com/intent/tweet?text=""`}
+                      >
                         <i className="bi bi-twitter-x" />
                         <span>Twitter</span>
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a href="https://www.instagram.com/">
                         <i className="bi bi-instagram" />
                         <span>Instagram</span>
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </div>
               </div>
