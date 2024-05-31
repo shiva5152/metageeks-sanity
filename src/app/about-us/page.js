@@ -100,16 +100,16 @@ const Aboutpage = () => {
                     </svg>
                   </span>
                   <h2>
-                    We are a Startup agency working with young talents on
-                    delivering unique ideas and creative work.
+                    Welcome to Metageeks Technologies: Pioneering Excellence in
+                    Software Development
                   </h2>
                   <p>
-                    Where innovation meets passion in a journey that started
-                    with a simple idea and a shared dream. Founded in recent
-                    year we embarked on a mission to bring the new innovation
-                    and introduce the technology. From humble beginnings to our
-                    current aspirations, every step has been fueled by a
-                    relentless commitment
+                    With over 15 years of experience, Metageeks Technologies Pvt
+                    Ltd is a leading global software development company
+                    headquartered in New Delhi, India. Under the visionary
+                    leadership of Mr. Pankaj Chauhan, our Managing Director, we
+                    have been at the forefront of delivering innovative
+                    solutions to clients worldwide.
                   </p>
                 </div>
               </div>
@@ -140,7 +140,8 @@ const Aboutpage = () => {
                     <div className="content">
                       <div className="number">
                         <h5 className="counter">
-                          <CountUp end={150} delay={5} />
+                          <CountUp end={30} delay={5} />
+                          <span>+</span>
                         </h5>
                         <span>Project</span>
                       </div>
@@ -189,9 +190,9 @@ const Aboutpage = () => {
                     <div className="content">
                       <div className="number">
                         <h5 className="counter">
-                          <CountUp end={3} delay={5} />
+                          <CountUp end={24} delay={5} />
                         </h5>
-                        <span>Mins</span>
+                        <span>Hr</span>
                       </div>
                       <p>Average Answer Time</p>
                     </div>
@@ -219,9 +220,11 @@ const Aboutpage = () => {
                   <div className="content">
                     <h4>Expertise and Innovation</h4>
                     <p>
-                      We pride ourselves staying at the front of innovation,
-                      constantly pushing boundaries a redefining what's
-                      possible.
+                      Our team of skilled professionals is adept at leveraging
+                      the latest technologies to deliver high-quality software
+                      solutions, including blockchain development, artificial
+                      intelligence, custom software development, game
+                      development, and mobile app development.
                     </p>
                   </div>
                 </div>
@@ -241,8 +244,11 @@ const Aboutpage = () => {
                   <div className="content">
                     <h4>Transparent Process</h4>
                     <p>
-                      Our transparent process is designed to demystify the
-                      journey from concept to delivery.
+                      Transparency is a core value at Metageeks Technologies. We
+                      maintain open communication with our clients throughout
+                      the project lifecycle, ensuring they are well-informed and
+                      involved in every step of the development process. This
+                      approach builds trust and fosters long-term partnerships.
                     </p>
                   </div>
                 </div>
@@ -262,9 +268,11 @@ const Aboutpage = () => {
                   <div className="content">
                     <h4>Client-Centric Approach</h4>
                     <p>
-                      Our dedicated team takes the time to listen, &amp;
-                      collaborate, ensuring that every interaction a step
-                      towards your success.
+                      Our clients are at the heart of everything we do. We take
+                      the time to understand their unique needs and challenges,
+                      tailoring our solutions to meet their specific
+                      requirements. Our commitment to client satisfaction drives
+                      us to exceed expectations and deliver exceptional results.
                     </p>
                   </div>
                 </div>
@@ -284,8 +292,11 @@ const Aboutpage = () => {
                   <div className="content">
                     <h4>Cost-Effective</h4>
                     <p>
-                      Our commitment to providing cost-effective solutions is
-                      ingrained in our mission.
+                      We believe that high-quality software solutions should be
+                      accessible to businesses of all sizes. Our cost-effective
+                      development strategies ensure that our clients receive the
+                      best value for their investment, without compromising on
+                      quality or performance.
                     </p>
                   </div>
                 </div>
@@ -294,7 +305,7 @@ const Aboutpage = () => {
           </div>
         </div>
       </div>
-      <div className="partnership-area mb-120">
+      {/* <div className="partnership-area mb-120">
         <div className="container">
           <div className="row">
             <div
@@ -573,9 +584,9 @@ const Aboutpage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="home2-process-section two mb-120">
+      {/* <div className="home2-process-section two mb-120">
         <div className="container">
           <div
             className="section-title5 text-center mb-70 wow animate fadeInDown"
@@ -735,13 +746,11 @@ const Aboutpage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Home5whyChoose />
-
-      <Home4award />
-
       <Home5Team />
+      <Home4award />
 
       <Home1Contact />
     </MainLayout>

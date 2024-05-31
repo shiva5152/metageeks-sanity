@@ -234,7 +234,7 @@ const Home5Team = () => {
                     </div>
                   </div>
                 </div>
-                <div
+                {/* <div
                   className="col-md-4 col-sm-6 wow animate fadeInDown"
                   data-wow-delay="400ms"
                   data-wow-duration="1500ms"
@@ -270,7 +270,7 @@ const Home5Team = () => {
                       <span>HR, Manager</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -3,30 +3,30 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 const Home4award = () => {
-  const followImageCursor = (event, serviceImgItem) => {
-    const contentBox = serviceImgItem.getBoundingClientRect();
-    const dx = event.clientX - contentBox.x;
-    const dy = event.clientY - contentBox.y;
-    serviceImgItem.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(20deg)`;
-  };
+  // const followImageCursor = (event, serviceImgItem) => {
+  //   const contentBox = serviceImgItem.getBoundingClientRect();
+  //   const dx = event.clientX - contentBox.x;
+  //   const dy = event.clientY - contentBox.y;
+  //   serviceImgItem.children[2].style.transform = `translate(${dx}px, ${dy}px) rotate(20deg)`;
+  // };
 
-  useEffect(() => {
-    const serviceImgItems = document.querySelectorAll(
-      ".sevices-wrap2 .single-services"
-    );
+  // useEffect(() => {
+  //   const serviceImgItems = document.querySelectorAll(
+  //     ".sevices-wrap2 .single-services"
+  //   );
 
-    const handleMouseMove = (event) => {
-      serviceImgItems.forEach((item) => {
-        followImageCursor(event, item);
-      });
-    };
+  //   const handleMouseMove = (event) => {
+  //     serviceImgItems.forEach((item) => {
+  //       followImageCursor(event, item);
+  //     });
+  //   };
 
-    document.addEventListener("mousemove", handleMouseMove);
+  //   document.addEventListener("mousemove", handleMouseMove);
 
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []); // Empty dependency array to run the effect only once on mount
+  //   return () => {
+  //     document.removeEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []); // Empty dependency array to run the effect only once on mount
   return (
     <>
       <div className="home4-award-section mb-130">
@@ -52,17 +52,14 @@ const Home4award = () => {
                     </svg>
                     Our Award Time
                   </span>
-                  <h2>
-                    Celebrating MetaGeeks's <span>Award-Winning </span>
-                    Excellence.
-                  </h2>
+                  <h2>Celebrating MetaGeeks's Excellence.</h2>
                 </div>
-                <Link href="/about-us" className="details-button">
+                {/* <Link href="/about-us" className="details-button">
                   About Us More
                   <svg viewBox="0 0 13 20">
                     <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
                   </svg>
-                </Link>
+                </Link> */}
                 <div className="vector">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -128,17 +125,18 @@ const Home4award = () => {
             </div>
             <div className="col-lg-7">
               <div className="sevices-wrap2">
-                <div
-                  className="single-services wow animate fadeInDown"
-                  data-wow-delay="200ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div className="content">
-                    <span>2024</span>
-                    <h5>Innovation Ignition Award</h5>
-                    <p>Site Of The Day</p>
-                  </div>
-                  <Link className="explore-btn" href="/about-us">
+                {milestones.map((obj) => (
+                  <div
+                    className="single-services wow animate fadeInDown"
+                    data-wow-delay="200ms"
+                    data-wow-duration="1500ms"
+                  >
+                    <div className="content">
+                      <span style={{ fontWeight: "bold" }}>{obj.date}</span>
+                      {/* <h5>Innovation Ignition Award</h5> */}
+                      <p>{obj.event}</p>
+                    </div>
+                    {/* <Link className="explore-btn" href="/about-us">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={16}
@@ -151,95 +149,12 @@ const Home4award = () => {
                         d="M13.582 1.41649L0 14.9978L1.00217 16L14.5835 2.41795L14.5835 11.8086H16L16 0L4.1914 0V1.41649L13.582 1.41649Z"
                       />
                     </svg>
-                  </Link>
-                  <div className="services-img">
+                  </Link> */}
+                    {/* <div className="services-img">
                     <img src="assets/img/home4/award-img1.jpg" alt="" />
+                  </div> */}
                   </div>
-                </div>
-                <div
-                  className="single-services wow animate fadeInDown"
-                  data-wow-delay="400ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div className="content">
-                    <span>2024</span>
-                    <h5>CSS Design Award</h5>
-                    <p>Site Of The Month</p>
-                  </div>
-                  <Link className="explore-btn" href="/about-us">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.582 1.41649L0 14.9978L1.00217 16L14.5835 2.41795L14.5835 11.8086H16L16 0L4.1914 0V1.41649L13.582 1.41649Z"
-                      />
-                    </svg>
-                  </Link>
-                  <div className="services-img">
-                    <img src="assets/img/home4/award-img2.jpg" alt="" />
-                  </div>
-                </div>
-                <div
-                  className="single-services wow animate fadeInDown"
-                  data-wow-delay="600ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div className="content">
-                    <span>2024</span>
-                    <h5>Masterpiece Maker</h5>
-                    <p>Awards Jury 2024</p>
-                  </div>
-                  <Link className="explore-btn" href="/about-us">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.582 1.41649L0 14.9978L1.00217 16L14.5835 2.41795L14.5835 11.8086H16L16 0L4.1914 0V1.41649L13.582 1.41649Z"
-                      />
-                    </svg>
-                  </Link>
-                  <div className="services-img">
-                    <img src="assets/img/home4/award-img3.jpg" alt="" />
-                  </div>
-                </div>
-                <div
-                  className="single-services wow animate fadeInDown"
-                  data-wow-delay="800ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div className="content">
-                    <span>2024</span>
-                    <h5>Alchemy Achievement</h5>
-                    <p>Site Of The Day</p>
-                  </div>
-                  <Link className="explore-btn" href="/about-us">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.582 1.41649L0 14.9978L1.00217 16L14.5835 2.41795L14.5835 11.8086H16L16 0L4.1914 0V1.41649L13.582 1.41649Z"
-                      />
-                    </svg>
-                  </Link>
-                  <div className="services-img">
-                    <img src="assets/img/home4/award-img4.jpg" alt="" />
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -250,3 +165,61 @@ const Home4award = () => {
 };
 
 export default Home4award;
+
+const milestones = [
+  {
+    date: "1st June 2022",
+    event:
+      "Metageeks Technologies registered as Pvt Ltd company in New Delhi, India",
+  },
+  {
+    date: "August 2022",
+    event: "Contracted first Play2Earn game development project",
+  },
+  {
+    date: "December 2022",
+    event: "Developed a fully functional web3 Launchpad with 40+ features",
+  },
+  {
+    date: "January 2023",
+    event:
+      "Developed the first chatGPT integrated project - a Chrome extension for replying to tweets with AI",
+  },
+  {
+    date: "April 2023",
+    event:
+      "Metageeks Technologies got its current address as the registered office",
+  },
+  {
+    date: "July 2023",
+    event: "Developed a Web3 Quest platform for an international client",
+  },
+  {
+    date: "August 2023",
+    event: "Redesigned Hobit.in web application",
+  },
+  {
+    date: "September 2023",
+    event:
+      "Contracted to develop a royalty-free image, video, and audio selling marketplace, completely developed on AWS cloud with AI features like image recognition and image captioning",
+  },
+  {
+    date: "December 2023",
+    event: "Developed the first crypto trading BOT on Telegram",
+  },
+  {
+    date: "January 2024",
+    event:
+      "Contracted to develop a full-featured Job Board with AI features like job description writing and candidate matching",
+  },
+  {
+    date: "March 2024",
+    event:
+      "Developed DocsBot - an AI chatbot to read, analyze, and extract information from multiple PDFs and scrape webpages",
+  },
+  {
+    date: "1st June 2024",
+    event:
+      "Completely redesigned and launched the new website of Metageeks Technologies",
+  },
+];
