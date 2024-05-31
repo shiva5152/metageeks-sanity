@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { sendContactForm } from "@/lib/api";
 import { notifySuccess, notifyError } from "../utils/toast";
 import ReCAPTCHA from "react-google-recaptcha";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const schema = Yup.object().shape({
   name: Yup.string().required().min(6).label("name"),
@@ -37,6 +38,8 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
     } catch (error) {
       setLoading(false);
       notifyError("Error while submitting the form, try later");
+    } finally {
+      sendGAEvent({ event: "buttonClicked", value: "contact from submitted" });
     }
   };
   const [capValue, setCapValue] = useState();

@@ -17,7 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import useWow from "@/hooks/useWow";
 import { ToastContainer } from "react-toastify";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
         {children}
         <ToastContainer />
       </body>
+      {/* <GoogleAnalytics gaId="G-F99PDVQRH5" /> */}
       {/* <GoogleTagManager gtmId="GTM-K5VV2K23" /> */}
 
       {/* <script

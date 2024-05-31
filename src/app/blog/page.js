@@ -6,6 +6,7 @@ import React from "react";
 import { client } from "../../../sanity/lib/client";
 import { useEffect, useState } from "react";
 import { urlForImage } from "../../../sanity/lib/image";
+import RecentPost from "./RecentPost";
 
 const getPost = async (page, pageSize, searchTerm = "") => {
   const start = (page - 1) * pageSize;
@@ -40,6 +41,27 @@ const getPost = async (page, pageSize, searchTerm = "") => {
 
   const response = await client.fetch(query);
   console.log(response);
+  return response;
+};
+
+const getLatestPost = async () => {
+  const query = `
+    *[_type=="blog"] | order(date desc) [0...3]{
+  
+    title,
+    slug,
+    mainImage{
+      asset->{
+        _id,
+        url
+      }
+    },
+    date,
+  }
+  
+    `;
+
+  const response = await client.fetch(query);
   return response;
 };
 
@@ -95,10 +117,21 @@ const BlogStandardPage = () => {
     if (totalPages > page) setPage((prev) => prev + 1);
   };
 
+  const [latestPosts, setLatestPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchLatestPost = async () => {
+      const response = await getLatestPost();
+      setLatestPosts(response);
+    };
+    fetchLatestPost();
+  }, []);
+
   const fetchData = async (value) => {
     const response = await getPost(page, pageSize, value ? value : searchTerm);
     setPosts(response);
   };
+
   useEffect(() => {
     fetchData();
   }, [page]);
@@ -309,26 +342,11 @@ const BlogStandardPage = () => {
                   </ul>
                 </div>
                 <div className="single-widget mb-30">
-                  <h5 className="widget-title">Popular Post </h5>
-                  <div className="recent-post-widget mb-20">
-                    <div className="recent-post-img">
-                      <Link href="/blog/blog-details">
-                        <img
-                          src="/assets/img/innerpage/popular-post-img1.png"
-                          alt=""
-                        />
-                      </Link>
-                    </div>
-                    <div className="recent-post-content">
-                      <Link href="/blog">20 January, 2024</Link>
-                      <h6>
-                        <Link href="/blog/blog-details">
-                          Looking Inspiration Traveling The World.
-                        </Link>
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="recent-post-widget mb-20">
+                  <h5 className="widget-title">Recent Post </h5>
+                  {latestPosts.map((post, index) => {
+                    return <RecentPost key={post.title} post={post} />;
+                  })}
+                  {/* <div className="recent-post-widget mb-20">
                     <div className="recent-post-img">
                       <Link href="/blog/blog-details">
                         <img
@@ -363,7 +381,7 @@ const BlogStandardPage = () => {
                         </Link>
                       </h6>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
                 {/* <div className="single-widget mb-30">
                   <h5 className="widget-title">New Tags</h5>

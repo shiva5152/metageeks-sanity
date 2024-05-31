@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "metageeksserviceaccount",
+  "private_key_id": "bb39dc4b3bcf3399253c2ad576e47db044a3ab0f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDLj2FjwTUp9FhY\neT+TqMEhCjgl0ekf6DTIx+7dSMqPHLJUAsIPuLNXvKX3GYCIPDrYgpUJZhFcbKFq\nZ7IuWuckyKBTcrzkcvl5h0lHjWQetd86cIGNTLvyXtIvCz19ilFhCaUHrEDQR4YY\ndGnZdzGApbQATDRpNIIKCIwGiJ9A7gphRwFVy6Qyot7x24G1i5lFlLDcADuh5Qdz\nSfoCL/DPSrFZR0213P4W7c3jrAwigW+qpF/DWuBHEg5cgaAlkKffE1iU/425EC9v\n3E/8lvWyOm0ZcbjJlrivR/CeHIm6H23JjHkByL4ZvYHQOjK5yzWfVwi/phmmeRCN\nMod8zl5FAgMBAAECggEAD+y0msA3r4ONEcbSgXO3QCVzhQnp6fQZhQeXGTqjlhSR\not7gXah+Z0O73BvjoUTM+bklfam9e/SHoDJijxvPb2I+oKiePGT+PVKnGfDmvzxN\nLV411F8HaQuf98wyUErs2OGPRo1kOKcPx4P77+ZSOhU8grVzeDOCZNSMV8qCYurY\nr0AKpnJCHQzbLw8OpBw+XiUM1JTSfWMrnEr+phKQHciF0wVdIxsBs60UR5PuXTTd\niCR95Mnf0dcFxw7FDjYWCqBO65v/cdkVysrOF0yDTRb8tzjaNjLnBkmJ07HvjntY\nuDOXl/SH+5LPaktFw5aMEUoZpON1nvn/K8+eV8tANQKBgQDlhzsWWgdbuz1DOhr6\nU+njzw1RGgU3GJD6WXy7TUyg4ARKIk0IWZjFdgV9qZCP94zvLsmK2SVUKPgPzodr\npLhk4cagZNyBwk5+u9skv9mMymrHMK+F3I0I8n/qm+DKOT6sQ5quDvp6heU9UujB\nn0UOlfseGs4wacfRMiTfh7CMwwKBgQDjCXIIhMiy9JPIj4uELWiptavs4hqe9v7R\nW/sil3ezLoGxFim/hRp85qxMMxs8/02kok0S3bzhw8hszMOfwfLc1+7rnzBs/Svc\n8uOD6SyHIlEUsoEdwJfH8eFu2oyswhf4a7b7wR4O2CloPEXOCJU/wswRCr+3+4zw\nkrATii7YVwKBgDwjMV0K25CyPzvk9nqOD+LrNe8A5UrpOdsOJTsh5qjj6NvPnuVI\nLFnYMVoaWlEOKDPmy1GA0WH6lfv2Pc77SoDMEvGlW4z37v8PkzxOs95Kjq1/2Q02\nmxE0EEXU75Gsa/pQgC+IpyIBAO4PUgKhC0PmEfRyS4GtxXfPLpAOijhnAoGALFiO\n9o0BKrtNFnK7XKEF/YgnwchUTNKP6VLfFd2iGtStrmpW0zrrdpQT+XpOCrcPcmXl\nShcXqr10K5Q/bbgTeQGQgGOCsPculyS2PfDQqsCQN8u6Hpaczwg28VEtAx2SUwqv\nHjOVbG7af6quM9VHWcHx3C5OTmCLIf50+AwYpFcCgYBEZHjgdw49jKoOAy7lVFV6\n2wB5CbLlU1+9E87+PKoU7BcrBIJprykOPSq5qRNSOKoHzRXQD7sp7fQXLZf7aGFA\nXoHLCtjx3ht/WoyT20LWx27il3K/+7dnGQ8GzpJTYGmvKOTJMfs+2mkBo64h+XDT\nandeSCR0yTGHCxAHPGsfDw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "metageeks-website@metageeksserviceaccount.iam.gserviceaccount.com",
+  "client_id": "106074426478287698952",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/metageeks-website%40metageeksserviceaccount.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
