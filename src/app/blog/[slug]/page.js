@@ -374,7 +374,7 @@ const BlogPage = () => {
                     <li>
                       <a
                         target="_blank"
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/blog/${slug}`}
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
                       >
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
@@ -382,7 +382,7 @@ const BlogPage = () => {
                     </li>
                     <li>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u="
+                        href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.NEXT_PUBLIC_APP_URL}/blog/${slug}`}
                         target="_blank"
                       >
                         <i className="bi bi-facebook" />

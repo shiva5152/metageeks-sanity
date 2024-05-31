@@ -25,7 +25,8 @@ const FaqPage = () => {
                         aria-expanded="true"
                         aria-controls="faqcollapseOne"
                       >
-                        01. What is Task Management and how does it work?
+                        01. What types of blockchain development services do you
+                        offer?
                       </button>
                     </h2>
                     <div
@@ -35,10 +36,12 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inci only Integer purus onthis felis non
-                        aliquam.Mauris nec just vitae ann auctor tol euismod sit
-                        amet non ipsul growing this
+                        We offer a comprehensive range of blockchain development
+                        services, including smart contract development,
+                        blockchain consulting, private blockchain development,
+                        and blockchain integration with existing systems. We
+                        also specialize in developing decentralized applications
+                        (DApps) and providing blockchain security solutions.
                       </div>
                     </div>
                   </div>
@@ -52,7 +55,8 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseTwo"
                       >
-                        02. Is MetaGeeks suitable for my business?
+                        02. Can you develop custom software tailored to my
+                        business needs?
                       </button>
                     </h2>
                     <div
@@ -62,11 +66,11 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        Yes, we excel in custom software development. Our team
+                        works closely with clients to understand their specific
+                        requirements and business processes, delivering bespoke
+                        software solutions that are scalable, secure, and
+                        optimized for performance.
                       </div>
                     </div>
                   </div>
@@ -80,7 +84,8 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseThree"
                       >
-                        03. the system requirements using Task Management?
+                        03. How do you incorporate Artificial Intelligence in
+                        your software solutions?
                       </button>
                     </h2>
                     <div
@@ -90,11 +95,11 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        Our AI software development services include machine
+                        learning model development, natural language processing,
+                        computer vision, predictive analytics, and AI-powered
+                        automation. We tailor our AI solutions to enhance your
+                        business operations and decision-making processes.
                       </div>
                     </div>
                   </div>
@@ -108,7 +113,7 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseFour"
                       >
-                        04. How can I upgrade my subscription?
+                        04. What is your approach to game development?
                       </button>
                     </h2>
                     <div
@@ -118,11 +123,13 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        Our game development process is comprehensive and
+                        collaborative. We handle everything from initial concept
+                        and design to development, testing, and deployment. We
+                        create engaging and immersive games across various
+                        platforms, including mobile, PC, and consoles, ensuring
+                        high-quality graphics, smooth gameplay, and a
+                        captivating user experience.
                       </div>
                     </div>
                   </div>
@@ -136,7 +143,8 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseFive"
                       >
-                        05. What measures are in protect user privacy?
+                        05. Do you develop mobile applications for both iOS and
+                        Android platforms?
                       </button>
                     </h2>
                     <div
@@ -146,11 +154,11 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        Yes, we develop mobile applications for both iOS and
+                        Android platforms. Our team uses the latest technologies
+                        and frameworks to create user-friendly, feature-rich,
+                        and high-performance mobile apps tailored to your
+                        business needs.
                       </div>
                     </div>
                   </div>
@@ -164,7 +172,8 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseSix"
                       >
-                        06. I'm Find technical issues. What should I do?
+                        06. How do you ensure the quality and security of the
+                        software you develop?
                       </button>
                     </h2>
                     <div
@@ -174,11 +183,12 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        Quality and security are paramount at Metageeks
+                        Technologies. We follow industry best practices for
+                        software development, including rigorous testing, code
+                        reviews, and security assessments. Our team stays
+                        updated with the latest security protocols to ensure
+                        your software is robust and secure.
                       </div>
                     </div>
                   </div>
@@ -192,7 +202,8 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseSeven"
                       >
-                        07. How can I reach customer support?
+                        07. What is the typical timeline for a custom software
+                        development project?
                       </button>
                     </h2>
                     <div
@@ -202,11 +213,12 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        The timeline for a custom software development project
+                        varies depending on the complexity and scope of the
+                        project. After an initial consultation and requirement
+                        analysis, we provide a detailed project plan with
+                        estimated timelines. We strive to deliver projects on
+                        time while maintaining high standards of quality.
                       </div>
                     </div>
                   </div>
@@ -220,7 +232,7 @@ const FaqPage = () => {
                         aria-expanded="false"
                         aria-controls="faqcollapseEight"
                       >
-                        08. a community forum for Task Management users?
+                        08. How do you support your clients post-development?
                       </button>
                     </h2>
                     <div
@@ -230,11 +242,13 @@ const FaqPage = () => {
                       data-bs-parent="#accordionGeneral"
                     >
                       <div className="accordion-body">
-                        Aptent taciti sociosqu ad litora torquent per conubia
-                        nostra, per inceptos only Integer purus onthis placerat
-                        felis non aliquam.Mauris nec justo vitae ante auctor tol
-                        euismod sit amet non ipsul growing this Praesent commodo
-                        at massa eget suscipit. Utani vitae enim velit.
+                        We offer comprehensive post-development support,
+                        including maintenance, updates, and troubleshooting. Our
+                        team is available to assist with any issues that arise
+                        and to ensure your software remains up-to-date and
+                        performs optimally. We also provide training and
+                        documentation to help you make the most of your new
+                        software.
                       </div>
                     </div>
                   </div>
@@ -242,7 +256,7 @@ const FaqPage = () => {
               </div>
             </div>
           </div>
-          <div className="row g-4">
+          {/* <div className="row g-4">
             <div className="col-lg-4 d-flex justify-content-lg-center align-items-lg-center">
               <div className="verticle-text">
                 <h2>Payment</h2>
@@ -477,7 +491,7 @@ const FaqPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </MainLayout>

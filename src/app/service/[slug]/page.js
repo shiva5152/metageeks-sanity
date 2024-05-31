@@ -61,7 +61,8 @@ async function getService(slug) {
   }
   `;
 
-  const response = await client.fetch(query);
+  const response = await client.fetch(query, { cache: "no-store" });
+  // console.log(response);
   return response[0];
 }
 

@@ -346,42 +346,6 @@ const BlogStandardPage = () => {
                   {latestPosts.map((post, index) => {
                     return <RecentPost key={post.title} post={post} />;
                   })}
-                  {/* <div className="recent-post-widget mb-20">
-                    <div className="recent-post-img">
-                      <Link href="/blog/blog-details">
-                        <img
-                          src="/assets/img/innerpage/popular-post-img2.png"
-                          alt=""
-                        />
-                      </Link>
-                    </div>
-                    <div className="recent-post-content">
-                      <Link href="/blog">12 January, 2024</Link>
-                      <h6>
-                        <Link href="/blog/blog-details">
-                          Challenges creating a multi-brand system.
-                        </Link>
-                      </h6>
-                    </div>
-                  </div>
-                  <div className="recent-post-widget mb-20">
-                    <div className="recent-post-img">
-                      <Link href="/blog/blog-details">
-                        <img
-                          src="/assets/img/innerpage/popular-post-img3.png"
-                          alt=""
-                        />
-                      </Link>
-                    </div>
-                    <div className="recent-post-content">
-                      <Link href="/blog">04 January, 2024</Link>
-                      <h6>
-                        <Link href="/blog/blog-details">
-                          Decoding the Cloud And Deep Dive Creative.
-                        </Link>
-                      </h6>
-                    </div>
-                  </div> */}
                 </div>
                 {/* <div className="single-widget mb-30">
                   <h5 className="widget-title">New Tags</h5>
@@ -415,13 +379,13 @@ const BlogStandardPage = () => {
                     </li>
                   </ul>
                 </div> */}
-                <div className="single-widget">
+                {/* <div className="single-widget">
                   <h5 className="widget-title">Social Share</h5>
                   <ul className="social-list">
                     <li>
                       <a
                         target="_blank"
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:3000/blog`}
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${process.env.NEXT_PUBLIC_APP_URL}`}
                       >
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
@@ -429,7 +393,7 @@ const BlogStandardPage = () => {
                     </li>
                     <li>
                       <a
-                        href="https://www.facebook.com/sharer/sharer.php?u="
+                        href={`https://www.facebook.com/sharer/sharer.php?u=${process.env.NEXT_PUBLIC_APP_URL}`}
                         target="_blank"
                       >
                         <i className="bi bi-facebook" />
@@ -445,14 +409,14 @@ const BlogStandardPage = () => {
                         <span>Twitter</span>
                       </a>
                     </li>
-                    {/* <li>
+                    <li>
                       <a href="https://www.instagram.com/">
                         <i className="bi bi-instagram" />
                         <span>Instagram</span>
                       </a>
-                    </li> */}
+                    </li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
