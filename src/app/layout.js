@@ -17,7 +17,6 @@ import "react-toastify/dist/ReactToastify.css";
 import ScrollProgress from "@/components/common/ScrollProgress";
 import useWow from "@/hooks/useWow";
 import { ToastContainer } from "react-toastify";
-import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
