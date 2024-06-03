@@ -23301,3 +23301,12 @@ body:not(.is-mobile) .tt-style-switch:hover {
   top: 30px;
   right: 30px;
 }
+
+.text-35px{
+   font-size: 35px;
+}
+@media (max-width: 769px) {
+  .text-35px {
+    font-size:30px;
+  }
+}

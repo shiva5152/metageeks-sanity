@@ -194,6 +194,8 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul> */}
+
+                  <h3 className="mt-4 text-35px fw-bold">We Are Social!</h3>
                   <ul className="social-list d-flex gap-3 flex-wrap">
                     <li>
                       <a
