@@ -51,6 +51,11 @@ export const caseStudy = {
       },
     },
     {
+      name: "mainImageAlt",
+      title: "Main image alt",
+      type: "string",
+    },
+    {
       name: "content",
       title: "Content",
       type: "array",

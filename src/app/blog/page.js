@@ -185,7 +185,7 @@ const BlogStandardPage = () => {
                             ? urlForImage(post?.mainImage).url()
                             : "/assets/img/innerpage/blog-details-thumb-img.jpg"
                         }
-                        alt=""
+                        alt={post?.mainImageAlt}
                       />
                     </Link>
                     <Link href={`/blog/${post.slug.current}`} className="date">

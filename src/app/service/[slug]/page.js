@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import Home5Workprocess from "@/components/workProcess/Home5Workprocess";
 import { client } from "../../../../sanity/lib/client";
+import { urlForImage } from "../../../../sanity/lib/image";
 import Link from "next/link";
 
 async function getService(slug) {
@@ -16,10 +17,21 @@ async function getService(slug) {
     tags,
     slug{
       current
-    }
-      ,
-    mainImage,
-    faqImage,
+    },
+    mainImage{
+      asset->{
+        _id,
+        url
+      }
+    },
+    mainImageAlt,
+    faqImage{
+      asset->{
+        _id,
+        url
+      }
+    },
+    faqImageAlt,
     faq[] {
       question,
       answer
@@ -78,37 +90,6 @@ const ServiceDetailsPage = async ({ params }) => {
   const service = await getService(slug);
 
   metadata.title = "Service Details | " + slug;
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": " WebPage",
-    name: service.heading.boldText + service.heading.text,
-    description: service.paragraph,
-    image: service.mainImage,
-    // provider: {
-    //   "@type": "Organization",
-    //   name: "Metageeks Technologies Pvt Ltd",
-    //   url: "https://metageeks.tech",
-    //   logo: "https://metageeks.tech/assets/img/logo.png",
-    //   sameAs: ["https://www.linkedin.com/company/81585385"],
-    // },
-    // serviceType: service.planHeading,
-    // areaServed: {
-    //   "@type": "Place",
-    //   name: "Global",
-    // },
-    // offers: {
-    //   "@type": "Offer",
-    //   url: `https://metageeks-sanity.vercel.app/service/${slug}`,
-    //   priceCurrency: "USD",
-    //   price: "5000",
-    //   eligibleRegion: {
-    //     "@type": "Place",
-    //     name: "Worldwide",
-    //   },
-    //   availability: "https://schema.org/InStock",
-    // },
-  };
 
   return (
     <MainLayout>
@@ -196,10 +177,11 @@ const ServiceDetailsPage = async ({ params }) => {
                 <div className="service-details-img">
                   <img
                     src={
-                      service.mainImage ||
-                      "/assets/img/innerpage/service-details-feature-img.jpg"
+                      service
+                        ? urlForImage(service?.mainImage).url()
+                        : "/assets/img/innerpage/service-details-feature-img.jpg"
                     }
-                    alt=""
+                    alt={service.mainImageAlt}
                   />
                 </div>
               </div>
@@ -215,10 +197,10 @@ const ServiceDetailsPage = async ({ params }) => {
                 <div className="service-details-faq-img">
                   <img
                     src={
-                      service.faqImage ||
+                      urlForImage(service?.faqImage).url() ||
                       "/assets/img/innerpage/service-details-faq-img.jpg"
                     }
-                    alt=""
+                    alt={service.faqImageAlt}
                   />
                 </div>
               </div>

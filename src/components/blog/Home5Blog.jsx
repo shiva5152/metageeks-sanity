@@ -142,7 +142,7 @@ const Home5Blog = () => {
                               ? urlForImage(post?.mainImage).url()
                               : "/assets/img/home5/blog-img-03.jpg"
                           }
-                          alt=""
+                          alt={post?.mainImageAlt}
                         />
                         {/* <img src="assets/img/home5/blog-img-03.jpg" alt="" /> */}
                       </Link>

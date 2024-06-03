@@ -136,7 +136,7 @@ const BlogPage = () => {
                       ? urlForImage(post?.mainImage).url()
                       : "/assets/img/innerpage/blog-details-thumb-img.jpg"
                   }
-                  alt=""
+                  alt={post?.mainImageAlt}
                 />
               </div>
               <div className="blog-details-author-meta">

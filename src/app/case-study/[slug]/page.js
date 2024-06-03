@@ -126,7 +126,7 @@ const CaseStudyDetails = () => {
                       ? urlForImage(caseStudy?.mainImage).url()
                       : "/assets/img/innerpage/case-thumb.jpg"
                   }
-                  alt=""
+                  alt={caseStudy?.mainImageAlt}
                 />
               </div>
               <div className="case-details-content">
@@ -344,7 +344,7 @@ const CaseStudyDetails = () => {
                           ? urlForImage(caseStudy?.mainImage).url()
                           : "/assets/img/innerpage/case-study-img1.jpg"
                       }
-                      alt=""
+                      alt={caseStudy?.mainImageAlt}
                     />
                   </div>
                   <div className="card-content">

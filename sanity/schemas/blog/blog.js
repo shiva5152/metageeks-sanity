@@ -51,6 +51,11 @@ export const blog = {
       },
     },
     {
+      name: "mainImageAlt",
+      title: "Main image alt",
+      type: "string",
+    },
+    {
       name: "date",
       title: "Date",
       type: "datetime",

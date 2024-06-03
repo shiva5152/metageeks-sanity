@@ -13,7 +13,7 @@ const RecentPost = ({ post }) => {
                 ? urlForImage(post?.mainImage).url()
                 : "/assets/img/innerpage/popular-post-img1.png"
             }
-            alt=""
+            alt={post?.mainImageAlt}
           />
         </Link>
       </div>

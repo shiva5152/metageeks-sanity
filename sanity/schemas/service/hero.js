@@ -62,14 +62,28 @@ export const serviceHero = {
     {
       name: "mainImage",
       title: "Main Image",
-      type: "url",
-      validation: (Rule) => Rule.required().error("Required"),
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "mainImageAlt",
+      title: "Main image alt",
+      type: "string",
     },
     {
       name: "faqImage",
       title: "Faq Image",
-      type: "url",
-      validation: (Rule) => Rule.required().error("Required"),
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: "faqImageAlt",
+      title: "Faq image alt",
+      type: "string",
     },
     {
       name: "faq",
