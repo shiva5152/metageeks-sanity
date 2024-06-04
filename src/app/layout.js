@@ -1,5 +1,3 @@
-"use client";
-import { useEffect } from "react";
 import { Inter, Roboto_Mono, Hanken_Grotesk } from "next/font/google";
 import "../../public/assets/css/bootstrap-icons.css";
 import "../../public/assets/css/boxicons.min.css";
@@ -14,9 +12,7 @@ import "../../public/assets/css/bootstrap.min.css";
 import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 import "react-toastify/dist/ReactToastify.css";
-import ScrollProgress from "@/components/common/ScrollProgress";
-import useWow from "@/hooks/useWow";
-import { ToastContainer } from "react-toastify";
+import BootstrapStyleWrapper from "@/components/BoostrapStyleWarapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,12 +25,40 @@ const hankenGrotesk = Hanken_Grotesk({
   variable: "--font-hankenGrotesk",
   display: "swap",
 });
-export default function RootLayout({ children }) {
-  useWow();
 
-  useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
-  }, []);
+export const metadata = {
+  title: "Example Title Home",
+  description: "Example Description",
+  canonical: "",
+  openGraph: {
+    url: "",
+    title: "",
+    description: "",
+    images: [
+      {
+        url: "",
+        width: 800,
+        height: 600,
+        alt: "Og Image Alt",
+        type: "image/jpeg",
+      },
+      {
+        url: "",
+        width: 900,
+        height: 800,
+        alt: "Og Image Alt Second",
+        type: "image/jpeg",
+      },
+    ],
+    siteName: "SiteName",
+  },
+  twitter: {
+    handle: "@handle",
+    site: "@site",
+    cardType: "summary_large_image",
+  },
+};
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${hankenGrotesk.variable}`}>
       <head>
@@ -44,14 +68,9 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="16x16"
         />
-        <title>
-          Metageeks Technologies | Blockchain, Custom Software & AI Solutions
-        </title>
       </head>
       <body>
-        <ScrollProgress />
-        {children}
-        <ToastContainer />
+        <BootstrapStyleWrapper>{children}</BootstrapStyleWrapper>
       </body>
       {/* <GoogleAnalytics gaId="G-F99PDVQRH5" /> */}
       {/* <GoogleTagManager gtmId="GTM-K5VV2K23" /> */}

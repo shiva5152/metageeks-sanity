@@ -5,6 +5,7 @@ import { blog } from "./schemas/blog/blog";
 import { serviceTechStack } from "./schemas/service/tech";
 import { caseStudy } from "./schemas/case-study/case-study";
 import { testimonial } from "./schemas/testimonial/testimonial";
+import { metadata } from "./schemas/metadata/metadata";
 
 export const schema = {
   types: [
@@ -15,5 +16,6 @@ export const schema = {
     serviceTechStack,
     caseStudy,
     testimonial,
+    metadata,
   ],
 };

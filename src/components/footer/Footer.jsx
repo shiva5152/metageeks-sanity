@@ -25,6 +25,7 @@ const Footer = () => {
       setServices(data);
     });
   }, []);
+
   return (
     <>
       <footer className="footer-section">

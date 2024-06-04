@@ -1,7 +1,5 @@
-import IndustryPage from "./Industry";
-
 export const metadata = {
-  title: "Industry",
+  title: "Example Title sfjfh",
   description: "Example Description",
   canonical: "",
   openGraph: {
@@ -32,9 +30,6 @@ export const metadata = {
     cardType: "summary_large_image",
   },
 };
-
-const page = () => {
-  return <IndustryPage />;
+export const MetadataWrapper = ({ children }) => {
+  return children;
 };
-
-export default page;
