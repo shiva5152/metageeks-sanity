@@ -12,6 +12,7 @@ import "../../public/assets/css/bootstrap.min.css";
 import "yet-another-react-lightbox/styles.css";
 import "../../public/assets/css/style.css";
 import "react-toastify/dist/ReactToastify.css";
+import { client } from "../../sanity/lib/client";
 import BootstrapStyleWrapper from "@/components/BoostrapStyleWarapper";
 
 const inter = Inter({
@@ -26,39 +27,60 @@ const hankenGrotesk = Hanken_Grotesk({
   display: "swap",
 });
 
-export const metadata = {
-  title: "Example Title Home",
-  description: "Example Description",
-  canonical: "",
-  openGraph: {
-    url: "",
-    title: "",
-    description: "",
-    images: [
-      {
-        url: "",
-        width: 800,
-        height: 600,
-        alt: "Og Image Alt",
-        type: "image/jpeg",
+const getMetaData = async () => {
+  const query = `*[_type == "metadata" && metadataFor=="home"]{
+      title,
+      description,
+      canonical,
+      openGraph{
+        url,
+        title,
+        description,
+        images[]{
+          url,
+          width,
+          height,
+          alt,
+          type
+        },
+        siteName
       },
-      {
-        url: "",
-        width: 900,
-        height: 800,
-        alt: "Og Image Alt Second",
-        type: "image/jpeg",
-      },
-    ],
-    siteName: "SiteName",
-  },
-  twitter: {
-    handle: "@handle",
-    site: "@site",
-    cardType: "summary_large_image",
-  },
+      twitter{
+        handle,
+        site,
+        cardType
+      }
+    }`;
+
+  const response = await client.fetch(query, { cache: "no-store" });
+  console.log(response);
+  return response[0];
 };
-export default function RootLayout({ children }) {
+
+export let metadata = {};
+
+export default async function RootLayout({ children }) {
+  const data = await getMetaData();
+
+  const fetchedMetadata = {
+    title: data.title || "MetaGeeks Technologies",
+    description: data.description || "MetaGeeks Technologies",
+    canonical: data.canonical || "",
+    openGraph: {
+      url: data.openGraph?.url || "",
+      title: data.openGraph?.title || "",
+      description: data.openGraph?.description || "",
+      images: data.openGraph?.images || [],
+      siteName: data.openGraph?.siteName || "Default Site Name",
+    },
+    twitter: {
+      handle: data.twitter?.handle || "@handle",
+      site: data.twitter?.site || "@site",
+      cardType: data.twitter?.cardType || "summary_large_image",
+    },
+  };
+
+  metadata = fetchedMetadata;
   return (
     <html lang="en" className={`${inter.variable} ${hankenGrotesk.variable}`}>
       <head>
