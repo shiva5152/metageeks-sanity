@@ -57,8 +57,6 @@ const getMetaData = async () => {
   return response[0];
 };
 
-export let metadata = {};
-
 export default async function RootLayout({ children }) {
   const data = await getMetaData();
 
@@ -104,3 +102,5 @@ export default async function RootLayout({ children }) {
     </html>
   );
 }
+
+export let metadata = {};
