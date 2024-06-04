@@ -125,5 +125,11 @@ export const serviceHero = {
       type: "reference",
       to: [{ type: "serviceTechStack" }],
     },
+    {
+      name: "ServiceMetadata",
+      title: "Service Metadata",
+      type: "reference",
+      to: [{ type: "metadata" }],
+    },
   ],
 };

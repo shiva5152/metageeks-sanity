@@ -2,8 +2,12 @@ import React from "react";
 import BlogPage from "./BlogDetails";
 import { client } from "../../../../sanity/lib/client";
 
-const getMetaData = async () => {
-  const query = `*[_type == "metadata" && metadataFor=="blogDetails"]{
+async function getPost(slug) {
+  const query = `
+    *[_type=="blog" && slug.current=="${slug}"]{
+    title,
+    description,
+    blogMetadata->{
       title,
       description,
       canonical,
@@ -25,34 +29,24 @@ const getMetaData = async () => {
         site,
         cardType
       }
-    }`;
-
-  const response = await client.fetch(query, { cache: "no-store" });
-  console.log(response);
-  return response[0];
-};
-async function getPost(slug) {
-  const query = `
-    *[_type=="blog" && slug.current=="${slug}"]{
-    title,
-    description,
+    }
   } 
   `;
 
-  const response = await client.fetch(query);
+  const response = await client.fetch(query, { cache: "no-store" });
   return response[0];
 }
 export let metadata = {};
 
 const page = async ({ params }) => {
   console.log("blog page Details", params.slug);
-  const data = await getMetaData();
   const blog = await getPost(params.slug);
+  const data = blog?.blogMetadata;
 
   const fetchedMetadata = {
-    title: "Blog Details | " + blog.title || "Default ",
-    description: blog.description || "Default Description",
-    canonical: data.canonical || "",
+    title: blog?.title || "Default ",
+    description: blog?.description || "Default Description",
+    canonical: data?.canonical || "",
     openGraph: {
       url: data.openGraph?.url || "",
       title: data.openGraph?.title || "",

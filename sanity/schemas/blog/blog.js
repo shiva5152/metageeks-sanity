@@ -72,5 +72,11 @@ export const blog = {
         },
       ],
     },
+    {
+      name: "blogMetadata",
+      title: "Blog MetaData",
+      type: "reference",
+      to: [{ type: "metadata" }],
+    },
   ],
 };
