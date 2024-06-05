@@ -52,8 +52,8 @@ const getMetaData = async () => {
       }
     }`;
 
-  const response = await client.fetch(query, { cache: "no-store" });
-  console.log(response);
+  const response = await client.fetch(query, { revalidate: 0 });
+  // console.log(response);
   return response[0];
 };
 
@@ -85,9 +85,11 @@ export default async function RootLayout({ children }) {
 export let metadata = async () => {
   const data = await getMetaData();
 
+  console.log(data);
+
   const fetchedMetadata = {
-    title: data.title || "MetaGeeks Technologies",
-    description: data.description || "MetaGeeks Technologies",
+    title: data.title || "MetaGeeks ",
+    description: data.description || "MetaGeeks ",
     canonical: data.canonical || "",
     openGraph: {
       url: data.openGraph?.url || "",
