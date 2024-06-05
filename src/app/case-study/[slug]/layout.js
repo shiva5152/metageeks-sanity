@@ -34,8 +34,6 @@ const getCaseStudy = async (slug) => {
   return response[0];
 };
 
-export let metadata = {};
-
 const layout = async ({ children, params }) => {
   const caseStudy = await getCaseStudy(params.slug);
   const data = caseStudy?.caseStudyMetadata;
@@ -64,3 +62,4 @@ const layout = async ({ children, params }) => {
 };
 
 export default layout;
+export let metadata = {};

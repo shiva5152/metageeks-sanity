@@ -35,8 +35,6 @@ async function getService(slug) {
   return response[0];
 }
 
-export let metadata = {};
-
 const page = async ({ children, params }) => {
   const service = await getService(params.slug);
   const data = service?.ServiceMetadata;
@@ -63,3 +61,5 @@ const page = async ({ children, params }) => {
 };
 
 export default page;
+
+export let metadata = {};

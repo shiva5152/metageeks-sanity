@@ -34,7 +34,6 @@ async function getPost(slug) {
   const response = await client.fetch(query, { cache: "no-store" });
   return response[0];
 }
-export let metadata = {};
 
 const layout = async ({ children, params }) => {
   console.log("blog page Details", params.slug);
@@ -63,3 +62,4 @@ const layout = async ({ children, params }) => {
 };
 
 export default layout;
+export let metadata = {};
