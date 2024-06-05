@@ -31,7 +31,7 @@ async function getPost(slug) {
   } 
   `;
 
-  const response = await client.fetch(query, { revalidate: 0 });
+  const response = await client.fetch(query);
   return response[0];
 }
 let slug = "";
