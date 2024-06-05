@@ -42,7 +42,7 @@ const layout = async ({ children, params }) => {
 
 export default layout;
 export let metadata = async () => {
-  const caseStudy = await getCaseStudy(params.slug);
+  const caseStudy = await getCaseStudy(slug);
   const data = caseStudy?.caseStudyMetadata;
 
   const fetchedMetadata = {
