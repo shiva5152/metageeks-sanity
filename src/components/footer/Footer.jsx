@@ -289,7 +289,8 @@ const Footer = () => {
                 <span>Address</span>
                 <h6>
                   <a href="https://maps.app.goo.gl/92WiJ41Prt3UpFu9A">
-                    India, New Delhi
+                    55, 2nd Lane, Westend Marg,
+                    <br /> Saidullajab, Saket, New Delhi-110030
                   </a>
                 </h6>
               </div>
@@ -330,13 +331,13 @@ const Footer = () => {
             <div className="footer-bottom-right">
               <ul>
                 <li>
-                  <a href="#">Support Policy</a>
+                  <a href="/support-policy">Support Policy</a>
                 </li>
                 <li>
-                  <a href="#">Terms &amp; Conditions</a>
+                  <a href="/terms-and-conditions">Terms &amp; Conditions</a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a href="/privacy-policy">Privacy Policy</a>
                 </li>
               </ul>
             </div>

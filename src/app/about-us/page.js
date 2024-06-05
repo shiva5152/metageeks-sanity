@@ -99,17 +99,15 @@ const Aboutpage = () => {
                       </g>
                     </svg>
                   </span>
-                  <h2>
-                    Welcome to Metageeks Technologies: Pioneering Excellence in
-                    Software Development
-                  </h2>
+                  <h2>Welcome to Metageeks Technologies.</h2>
                   <p>
-                    With over 15 years of experience, Metageeks Technologies Pvt
-                    Ltd is a leading global software development company
-                    headquartered in New Delhi, India. Under the visionary
-                    leadership of Mr. Pankaj Chauhan, our Managing Director, we
-                    have been at the forefront of delivering innovative
-                    solutions to clients worldwide.
+                    Metageeks Technologies Pvt Ltd, a leading global software
+                    development company headquartered in New Delhi, India,
+                    thrives under the visionary leadership of our Managing
+                    Director, Mr. Pankaj Chauhan, who brings over 15 years of
+                    experience to the table. Under his guidance, we have been at
+                    the forefront of delivering innovative solutions to
+                    clients worldwide.
                   </p>
                 </div>
               </div>
