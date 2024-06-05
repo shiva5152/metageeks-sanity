@@ -34,9 +34,18 @@ async function getService(slug) {
   // console.log(response);
   return response[0];
 }
-
+let slug = "";
 const page = async ({ children, params }) => {
-  const service = await getService(params.slug);
+  slug = params.slug;
+
+  return children;
+};
+
+export default page;
+
+export let metadata = async () => {
+  const service = await getService(slug);
+
   const data = service?.ServiceMetadata;
 
   const fetchedMetadata = {
@@ -56,10 +65,5 @@ const page = async ({ children, params }) => {
       cardType: data.twitter?.cardType || "summary_large_image",
     },
   };
-  metadata = fetchedMetadata;
-  return children;
+  return fetchedMetadata;
 };
-
-export default page;
-
-export let metadata = {};
