@@ -34,10 +34,16 @@ async function getPost(slug) {
   const response = await client.fetch(query, { cache: "no-store" });
   return response[0];
 }
-
+let slug = "";
 const layout = async ({ children, params }) => {
-  console.log("blog page Details", params.slug);
-  const blog = await getPost(params.slug);
+  slug = params.slug;
+
+  return children;
+};
+
+export default layout;
+export let metadata = async () => {
+  const blog = await getPost(slug);
   const data = blog?.blogMetadata;
 
   const fetchedMetadata = {
@@ -57,9 +63,5 @@ const layout = async ({ children, params }) => {
       cardType: data.twitter?.cardType || "summary_large_image",
     },
   };
-  metadata = fetchedMetadata;
-  return children;
+  return fetchedMetadata;
 };
-
-export default layout;
-export let metadata = {};

@@ -33,11 +33,17 @@ const getCaseStudy = async (slug) => {
   // console.log(response);
   return response[0];
 };
-
+let slug = "";
 const layout = async ({ children, params }) => {
+  slug = params.slug;
+
+  return children;
+};
+
+export default layout;
+export let metadata = async () => {
   const caseStudy = await getCaseStudy(params.slug);
   const data = caseStudy?.caseStudyMetadata;
-  // console.log(data, "data");
 
   const fetchedMetadata = {
     title: data?.title || "Service Details",
@@ -56,10 +62,5 @@ const layout = async ({ children, params }) => {
       cardType: data.twitter?.cardType || "summary_large_image",
     },
   };
-  metadata = fetchedMetadata;
-
-  return children;
+  return fetchedMetadata;
 };
-
-export default layout;
-export let metadata = {};
