@@ -18,7 +18,8 @@ async function getServices() {
  *[_type == "serviceHero"] {
     slug{
       current
-    }
+    },
+    planHeading
   }
   `;
 
@@ -356,7 +357,7 @@ const Header2 = () => {
                               legacyBehavior
                               href={`/service/${subItem.slug.current}`}
                             >
-                              <a>{subItem.slug.current}</a>
+                              <a>{subItem.planHeading}</a>
                             </Link>
                           </li>
                         ))}
