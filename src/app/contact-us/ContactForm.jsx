@@ -7,6 +7,7 @@ import { sendContactForm } from "@/lib/api";
 import { notifySuccess, notifyError } from "../utils/toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import { sendGAEvent } from "@next/third-parties/google";
+import { useRouter } from "next/navigation";
 
 const schema = Yup.object().shape({
   name: Yup.string().required().min(6).label("name"),
@@ -25,6 +26,7 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const onSubmitHandler = async (data) => {
     try {
@@ -32,7 +34,8 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
       await sendContactForm(data);
       setLoading(false);
       reset();
-      notifySuccess("Thank you for your interest, We will reach you soon");
+      router.push("/thank-you");
+      // notifySuccess("Thank you for your interest, We will reach you soon");
       if (setPopup) setPopup(false);
       console.log(setPopup);
     } catch (error) {
