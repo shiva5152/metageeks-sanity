@@ -30,9 +30,11 @@ const getMetaData = async () => {
   return response[0];
 };
 
-export let metadata = {};
-
 const layout = async ({ children }) => {
+  return children;
+};
+
+export let metadata = async () => {
   const data = await getMetaData();
 
   const fetchedMetadata = {
@@ -53,9 +55,7 @@ const layout = async ({ children }) => {
     },
   };
 
-  metadata = fetchedMetadata;
-
-  return children;
+  return fetchedMetadata;
 };
 
 export default layout;
