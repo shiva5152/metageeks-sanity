@@ -10,7 +10,7 @@ const page = () => {
       <div className="error-page">
         <div className="container">
           <div className="error-content">
-            <h2>Thank</h2>
+            <h2>Terms & Conditions</h2>
             <p>
               Welcome to Metageeks Technologies Pvt Ltd. By accessing or using
               our website and services, you agree to comply with and be bound by

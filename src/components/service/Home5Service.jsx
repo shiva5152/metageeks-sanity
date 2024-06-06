@@ -186,50 +186,55 @@ const Home5Service = () => {
             </div>
             <div className="col-xl-8">
               <div className="row g-0">
-                {services?.map((service, index) => (
-                  <div
-                    key={service.slug.current}
-                    className="col-md-6 wow animate fadeInUp"
-                    data-wow-delay={`${(index + 1) * 200}ms`}
-                    data-wow-duration="1500ms"
-                  >
-                    <div className="services-card">
-                      {icons[index % icons.length].icon}
-                      <div className="services-content">
-                        <div className="title-category">
-                          <h3>{service.planHeading}</h3>
-                          {/* <span>Advisory</span> */}
-                        </div>
-                        <p>{service.intoHeading}</p>
-                        <ul className="flex-column d-flex justify-content-start align-items-start">
-                          {service.tags.slice(0, 4).map((tag, i) => (
-                            <li className="" key={tag}>
-                              <i className="bi bi-plus-lg" /> {tag}
-                            </li>
-                          ))}
-                        </ul>
-                        <Link
-                          href={`/service/${service.slug.current}`}
-                          className="explore-btn"
-                        >
-                          Learn More
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={12}
-                            height={12}
-                            viewBox="0 0 12 12"
+                {services
+                  ?.filter(
+                    (service) =>
+                      service.slug.current !== "web-application-development"
+                  )
+                  ?.map((service, index) => (
+                    <div
+                      key={service.slug.current}
+                      className="col-md-6 wow animate fadeInUp"
+                      data-wow-delay={`${(index + 1) * 200}ms`}
+                      data-wow-duration="1500ms"
+                    >
+                      <div className="services-card">
+                        {icons[index % icons.length].icon}
+                        <div className="services-content">
+                          <div className="title-category">
+                            <h3>{service.planHeading}</h3>
+                            {/* <span>Advisory</span> */}
+                          </div>
+                          <p>{service.intoHeading}</p>
+                          <ul className="flex-column d-flex justify-content-start align-items-start">
+                            {service.tags.slice(0, 4).map((tag, i) => (
+                              <li className="" key={tag}>
+                                <i className="bi bi-plus-lg" /> {tag}
+                              </li>
+                            ))}
+                          </ul>
+                          <Link
+                            href={`/service/${service.slug.current}`}
+                            className="explore-btn"
                           >
-                            <path
-                              fillRule="evenodd"
-                              clipRule="evenodd"
-                              d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"
-                            />
-                          </svg>
-                        </Link>
+                            Learn More
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width={12}
+                              height={12}
+                              viewBox="0 0 12 12"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                clipRule="evenodd"
+                                d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"
+                              />
+                            </svg>
+                          </Link>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>
