@@ -16361,7 +16361,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
 }
 .home5-banner-section .scroll-down-btn {
   position: absolute;
-  left: 50%;
+  left: 49%;
   transform: translateX(-50%);
   bottom: 160px;
   animation: up-down 2s linear infinite alternate;

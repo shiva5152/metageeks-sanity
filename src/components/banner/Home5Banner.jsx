@@ -103,7 +103,7 @@ const Home5Banner = () => {
                     >
                       {hero.cta}
                     </button>
-                    <a href="https://clutch.co" className="rating-area">
+                    {/* <a href="https://clutch.co" className="rating-area">
                       <div className="review">
                         <span>Review On</span>
                         <img
@@ -137,7 +137,7 @@ const Home5Banner = () => {
                         </ul>
                         <span>(50 reviews)</span>
                       </div>
-                    </a>
+                    </a> */}
                     {/* <div
                     className="clutch-widget"
                     data-url="https://widget.clutch.co"
