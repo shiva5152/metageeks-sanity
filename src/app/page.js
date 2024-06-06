@@ -15,6 +15,27 @@ import Home5whyChoose from "@/components/why-choose/Home5whyChoose";
 import HomeWorkProcess from "@/components/workProcess/HomeWorkProcess";
 import useWow from "@/hooks/useWow";
 
+import Analytics from "analytics";
+import googleTagManager from "@analytics/google-tag-manager";
+
+const analytics = Analytics({
+  app: "awesome-app",
+  plugins: [
+    googleTagManager({
+      containerId: "GTM-K5VV2K23",
+    }),
+  ],
+});
+
+/* Track a page view */
+analytics.page();
+
+/* Track a custom event */
+analytics.track("cartCheckout", {
+  item: "pink socks",
+  price: 20,
+});
+
 const Home = () => {
   useWow();
   return (
