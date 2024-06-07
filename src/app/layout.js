@@ -14,6 +14,7 @@ import "../../public/assets/css/style.css";
 import "react-toastify/dist/ReactToastify.css";
 import { client } from "../../sanity/lib/client";
 import BootstrapStyleWrapper from "@/components/BoostrapStyleWarapper";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,7 +73,7 @@ export default async function RootLayout({ children }) {
         <BootstrapStyleWrapper>{children}</BootstrapStyleWrapper>
       </body>
       {/* <GoogleAnalytics gaId="G-F99PDVQRH5" /> */}
-      {/* <GoogleTagManager gtmId="GTM-K5VV2K23" /> */}
+      <GoogleTagManager gtmId="GTM-K5VV2K23" />
 
       {/* <script
         type="text/javascript"
