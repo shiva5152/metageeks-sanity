@@ -5,8 +5,8 @@ const Home5BannerMarque = () => {
   return (
     <>
       <div className="home1-banner-bottom mb-120">
-        <div className="marquee_text">
-          <Marquee speed={120} style={{ minWidth: "90%" }}>
+        <div className="marquee_text" style={{ maxWidth: "100vw" }}>
+          <Marquee autofill speed={120} style={{ minWidth: "90%" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={17}

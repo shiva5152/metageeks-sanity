@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { sendContactForm } from "@/lib/api";
 import { notifySuccess, notifyError } from "../utils/toast";
 import ReCAPTCHA from "react-google-recaptcha";
-// import { sendGAEvent } from "@next/third-parties/google";
 import { useRouter } from "next/navigation";
 
 const schema = Yup.object().shape({
@@ -26,29 +25,35 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const router = useRouter();
 
+  const [capValue, setCapValue] = useState();
+  const onCaptchaChange = (value) => {
+    if (error) setError(false);
+    setCapValue(value);
+  };
+
   const onSubmitHandler = async (data) => {
+    if (!capValue) {
+      setError("Please verify the captcha");
+      return;
+    }
+
     try {
       setLoading(true);
       await sendContactForm(data);
       setLoading(false);
       reset();
       router.push("/thank-you");
-      // notifySuccess("Thank you for your interest, We will reach you soon");
+
       if (setPopup) setPopup(false);
       console.log(setPopup);
     } catch (error) {
       setLoading(false);
       console.log(error);
       notifyError("Error while submitting the form, try later");
-    } finally {
-      // sendGAEvent({ event: "buttonClicked", value: "contact from submitted" });
     }
-  };
-  const [capValue, setCapValue] = useState();
-  const onCaptchaChange = (value) => {
-    setCapValue(value);
   };
 
   return (
@@ -120,13 +125,13 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
               <div className="col-lg-12">
                 <div className="form-inner">
                   <button
-                    disabled={!capValue}
                     className="primary-btn2"
                     type="submit"
                     data-text={!loading ? "Submit Now" : "Submitting..."}
                   >
                     <span>{!loading ? "Submit Now" : "Submitting..."}</span>
                   </button>
+                  {error && <p style={{ color: "#f56565" }}>{error}</p>}
                 </div>
               </div>
 
