@@ -6,7 +6,7 @@ const Home5BannerMarque = () => {
     <>
       <div className="home1-banner-bottom mb-120">
         <div className="marquee_text">
-          <Marquee autoFill={true} speed={120} style={{ minWidth: "90%" }}>
+          <Marquee speed={120} style={{ minWidth: "90%" }}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={17}
