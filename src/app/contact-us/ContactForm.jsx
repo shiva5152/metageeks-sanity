@@ -40,6 +40,7 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
       console.log(setPopup);
     } catch (error) {
       setLoading(false);
+      console.log(error);
       notifyError("Error while submitting the form, try later");
     } finally {
       // sendGAEvent({ event: "buttonClicked", value: "contact from submitted" });
