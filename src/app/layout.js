@@ -14,7 +14,6 @@ import "../../public/assets/css/style.css";
 import "react-toastify/dist/ReactToastify.css";
 import { client } from "../../sanity/lib/client";
 import BootstrapStyleWrapper from "@/components/BoostrapStyleWarapper";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -86,7 +85,7 @@ export default async function RootLayout({ children }) {
 export let metadata = async () => {
   const data = await getMetaData();
 
-  console.log(data);
+  // console.log(data);
 
   const fetchedMetadata = {
     title: data.title || "MetaGeeks ",

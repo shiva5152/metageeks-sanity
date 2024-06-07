@@ -96,6 +96,7 @@ const Home5Workprocess = () => {
                   <div className="swiper-wrapper">
                     {process?.map((item, index) => (
                       <SwiperSlide
+                        key={index}
                         className="swiper-slide wow animate fadeInDown"
                         data-wow-delay="200ms"
                         data-wow-duration="1500ms"

@@ -16,7 +16,7 @@ import HomeWorkProcess from "@/components/workProcess/HomeWorkProcess";
 import useWow from "@/hooks/useWow";
 
 const Home = () => {
-  useWow();
+  // useWow();
   return (
     <>
       <Header1 />
