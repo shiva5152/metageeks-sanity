@@ -26,7 +26,7 @@ const getMetaData = async () => {
     }`;
 
   const response = await client.fetch(query, { cache: "no-store" });
-  console.log(response, "response");
+  // console.log(response, "response");
   return response[0];
 };
 
