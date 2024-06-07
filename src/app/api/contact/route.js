@@ -38,6 +38,6 @@ export const POST = async (req, res) => {
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (err) {
     console.log(err);
-    return NextResponse.json({ message: err }, { status: 400 });
+    return NextResponse.json({ message: err.message }, { status: 400 });
   }
 };
