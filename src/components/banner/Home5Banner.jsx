@@ -91,8 +91,9 @@ const Home5Banner = () => {
                     {/* <div style={{ whiteSpace: "nowrap" }}></div> */}
                   </h2>
                   <h1 id="bannerHeading">
-                    <span className="_span">{hero.heading.span}</span> Software
-                    <br className="headingBreak" /> Development Company
+                    <span className="_span">{hero.heading.span}</span>{" "}
+                    <TypewriterEffect />
+                    <br className="headingBreak" /> De velopment Company
                   </h1>
                   <p>{hero.paragraph}</p>
                   <div className="banner-content-bottom">
