@@ -93,7 +93,7 @@ const Home5Banner = () => {
                   <h1 id="bannerHeading">
                     <span className="_span">{hero.heading.span}</span>{" "}
                     <TypewriterEffect />
-                    <br className="headingBreak" /> De velopment Company
+                    <br className="headingBreak" /> Development Company
                   </h1>
                   <p>{hero.paragraph}</p>
                   <div className="banner-content-bottom">
