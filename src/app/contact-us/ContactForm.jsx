@@ -35,11 +35,6 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
   };
 
   const onSubmitHandler = async (data) => {
-    if (!capValue) {
-      setError("Please verify the captcha");
-      return;
-    }
-
     try {
       setLoading(true);
       await sendContactForm(data);
@@ -56,6 +51,19 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
     }
   };
 
+  const onSubmitWithCaptchaCheck = (e) => {
+    e.preventDefault();
+
+    // Check if captcha is verified
+    if (!capValue) {
+      setError("Please verify the captcha");
+      return;
+    }
+
+    // If captcha is verified, call handleSubmit
+    handleSubmit(onSubmitHandler)(e);
+  };
+
   return (
     <div
       className={`col-lg-7 wow animate fadeInUp ${isAddStyle && "temp"}`}
@@ -65,11 +73,11 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
       <div className="contact-form-wrap">
         <div className="contact-form-area">
           <p style={{ fontWeight: "bold" }}>Your Success Starts Here!</p>
-          <form onSubmit={handleSubmit(onSubmitHandler)}>
+          <form onSubmit={onSubmitWithCaptchaCheck}>
             <div className="row">
               <div className="col-lg-6 mb-16">
                 <div className="form-inner">
-                  <label>Name</label>
+                  <label>Name*</label>
                   <input
                     type="text"
                     {...register("name")}
@@ -122,24 +130,24 @@ const ContactForm = ({ isAddStyle, setPopup }) => {
                   <p style={{ color: "#f56565" }}>{errors.message?.message}</p>
                 </div>
               </div>
+              <div className="d-flex mt-2 mb-2 flex-column align-items-center">
+                <ReCAPTCHA
+                  sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITE_KEY}`}
+                  onChange={onCaptchaChange}
+                />
+                {<p style={{ color: "#f56565" }}>{error}</p>}
+              </div>
               <div className="col-lg-12">
                 <div className="form-inner">
                   <button
+                    disabled={loading}
                     className="primary-btn2"
                     type="submit"
                     data-text={!loading ? "Submit Now" : "Submitting..."}
                   >
                     <span>{!loading ? "Submit Now" : "Submitting..."}</span>
                   </button>
-                  {error && <p style={{ color: "#f56565" }}>{error}</p>}
                 </div>
-              </div>
-
-              <div className="d-flex mt-4 justify-content-center">
-                <ReCAPTCHA
-                  sitekey={`${process.env.NEXT_PUBLIC_GOOGLE_CAPTCHA_SITE_KEY}`}
-                  onChange={onCaptchaChange}
-                />
               </div>
             </div>
           </form>

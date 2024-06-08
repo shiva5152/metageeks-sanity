@@ -93,7 +93,7 @@ const Home5About = () => {
                   </div>
                   <div className="eg-progress-bar-single mb-40">
                     <div className="eg-progress-bar-title">
-                      <h6>Dapp &amp; Smart Contract Development</h6>
+                      <h6>Blockchain Development</h6>
                     </div>
                     <div className="eg-progress-bar">
                       <div className="experience-bar-per" data-per="95%" />

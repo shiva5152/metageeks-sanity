@@ -1588,7 +1588,6 @@ ul {
   .section-title5.two h2 {
     font-size: 38px;
   }
-
 }
 
 .slider-btn-grp {
@@ -1670,8 +1669,7 @@ ul {
   min-height: 150px;
 }
 @media (max-width: 767px) {
-  
-  .form-inner textarea{
+  .form-inner textarea {
     min-height: 60px;
   }
 }
@@ -3471,7 +3469,7 @@ header.style-3 .main-menu > ul li.menu-item-has-children > i {
   font-weight: 800;
   margin-bottom: 35px;
 }
-.sidebar-menu .sidebar-menu-top-area .sidebar-menu-logo{
+.sidebar-menu .sidebar-menu-top-area .sidebar-menu-logo {
   width: 55%;
 }
 @media (max-width: 991px) {
@@ -23260,7 +23258,7 @@ body:not(.is-mobile) .tt-style-switch:hover {
   top: 0;
   z-index: 1000;
   width: 100%;
-  background-color: #F0F4F8;
+  background-color: #f0f4f8;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
@@ -23279,16 +23277,21 @@ body:not(.is-mobile) .tt-style-switch:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(31, 41, 55, 0.5); /* Equivalent to bg-gray-800 with 50% opacity */
+  background-color: rgba(
+    31,
+    41,
+    55,
+    0.5
+  ); /* Equivalent to bg-gray-800 with 50% opacity */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.temp{
-   background-color:white;
-    padding: 20px 40px;
-    border-radius: 10px;
-    width: 40%;   
+.temp {
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 10px;
+  width: 40%;
 }
 @media (max-width: 769px) {
   .temp {
@@ -23302,11 +23305,11 @@ body:not(.is-mobile) .tt-style-switch:hover {
   right: 30px;
 }
 
-.text-35px{
-   font-size: 35px;
+.text-35px {
+  font-size: 35px;
 }
 @media (max-width: 769px) {
   .text-35px {
-    font-size:30px;
+    font-size: 30px;
   }
 }
