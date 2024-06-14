@@ -15,7 +15,7 @@ import { myPortableTextComponents } from "@/app/blog/[slug]/page";
 const getCaseStudy = async (slug) => {
   // const start = (page - 1) * pageSize;
   // const end = page * pageSize;
-
+  // hello
   const query = `
   {
   "caseStudy": *[_type=="caseStudy" && slug.current=="${slug}"]{
