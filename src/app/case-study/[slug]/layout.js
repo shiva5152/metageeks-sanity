@@ -29,7 +29,7 @@ const getCaseStudy = async (slug) => {
     }
     `;
 
-  const response = await client.fetch(query, { cache: "no-store" });
+  const response = await client.fetch(query, { revalidate: 1 });
   // console.log(response);
   return response[0];
 };
