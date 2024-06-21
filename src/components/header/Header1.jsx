@@ -157,6 +157,85 @@ const Header1 = () => {
 
                   <li>
                     <Link href="/service">Services</Link>
+                    <span
+                      className={`dropdown-icon2 ${
+                        state.activeMenu === "service" ? "active" : ""
+                      }`}
+                      onClick={() => toggleMenu("service")}
+                    >
+                      <i className="bi bi-plus" />
+                    </span>
+                    <ul
+                      className={`submenu-list ${
+                        state.activeMenu === "service" ? "d-block" : "d-none"
+                      }`}
+                    >
+                      <li>
+                        <Link href="/service">
+                          Service style 01
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={10}
+                            height={10}
+                            viewBox="0 0 10 10"
+                          >
+                            <path d="M8.33624 2.84003L1.17627 10L0 8.82373L7.15914 1.66376H0.849347V0H10V9.15065H8.33624V2.84003Z" />
+                          </svg>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/service/service2">
+                          Service style 02
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={10}
+                            height={10}
+                            viewBox="0 0 10 10"
+                          >
+                            <path d="M8.33624 2.84003L1.17627 10L0 8.82373L7.15914 1.66376H0.849347V0H10V9.15065H8.33624V2.84003Z" />
+                          </svg>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/service/service3">
+                          Service style 03
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={10}
+                            height={10}
+                            viewBox="0 0 10 10"
+                          >
+                            <path d="M8.33624 2.84003L1.17627 10L0 8.82373L7.15914 1.66376H0.849347V0H10V9.15065H8.33624V2.84003Z" />
+                          </svg>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/service/service4">
+                          Service style 04
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={10}
+                            height={10}
+                            viewBox="0 0 10 10"
+                          >
+                            <path d="M8.33624 2.84003L1.17627 10L0 8.82373L7.15914 1.66376H0.849347V0H10V9.15065H8.33624V2.84003Z" />
+                          </svg>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="/service/service-details">
+                          Service Details
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={10}
+                            height={10}
+                            viewBox="0 0 10 10"
+                          >
+                            <path d="M8.33624 2.84003L1.17627 10L0 8.82373L7.15914 1.66376H0.849347V0H10V9.15065H8.33624V2.84003Z" />
+                          </svg>
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <Link href="/case-study">Case Studies</Link>
