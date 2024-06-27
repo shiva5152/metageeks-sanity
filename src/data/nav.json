@@ -21,8 +21,8 @@
     },
     {
         "id": "5",
-        "label": "About",
-        "link": "/about-us",
+        "label": "Industry",
+        "link": "/industry",
         "icon": false
     },
     {

@@ -186,7 +186,7 @@ const Header2 = () => {
                     <Link href="/case-study">Case Studies</Link>
                   </li>
                   <li>
-                    <Link href="/about-us">About</Link>
+                    <Link href="/industry">Industry</Link>
                   </li>
                   <li>
                     <Link href="/contact-us">Contact</Link>

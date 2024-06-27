@@ -76,6 +76,19 @@ const Home5Banner = () => {
                   >
                     Get in Touch
                   </button>
+                  {/* <div>
+                    <a
+                      target="_blank"
+                      href="https://www.goodfirms.co/company/metageeks-technologies-pvt-ltd"
+                    >
+                      <img
+                        style={{ width: "100px" }}
+                        src="https://assets.goodfirms.co/badges/color-badge/artificial-intelligence.svg"
+                        title=" Company"
+                        alt=" Company"
+                      />
+                    </a>
+                  </div> */}
                   {/* <a href="https://clutch.co" className="rating-area">
                       <div className="review">
                         <span>Review On</span>
@@ -151,7 +164,7 @@ const Home5Banner = () => {
                 </div>
               </div>
             </div>
-            <div className="banner-img d-xl-flex d-none">
+            {/* <div className="banner-img d-xl-flex d-none">
               <img
                 src={
                   "https://zenfy-next-js.vercel.app/assets/img/home5/banner-img.jpg" ||
@@ -159,6 +172,19 @@ const Home5Banner = () => {
                 }
                 alt="banner-img"
               />
+            </div> */}
+            <div>
+              <a
+                target="_blank"
+                href="https://www.goodfirms.co/company/metageeks-technologies-pvt-ltd"
+              >
+                <img
+                  style={{ width: "243px" }}
+                  src="https://assets.goodfirms.co/badges/color-badge/artificial-intelligence.svg"
+                  title=" Company"
+                  alt=" Company"
+                />
+              </a>
             </div>
           </div>
         </div>
