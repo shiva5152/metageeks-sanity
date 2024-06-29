@@ -192,7 +192,7 @@ const Header1 = () => {
                     <Link href="/case-study">Case Studies</Link>
                   </li>
                   <li>
-                    <Link href="/industry">Industry </Link>
+                    <Link href="/industry">Industries </Link>
                   </li>
 
                   <li>
