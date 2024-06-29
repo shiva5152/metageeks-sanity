@@ -392,6 +392,21 @@ const Header2 = () => {
                         ))}
                       </ul>
                     )}
+                    {label === "Industries" && (
+                      <ul
+                        className={`sub-menu ${
+                          state.activeMenu === label ? "d-block" : ""
+                        }`}
+                      >
+                        {data.subMenu.map((subItem, subIndex) => (
+                          <li key={subIndex}>
+                            <Link legacyBehavior href={subItem.link}>
+                              <a>{subItem.label}</a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </li>
                 );
               })}

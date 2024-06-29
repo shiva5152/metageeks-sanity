@@ -14,8 +14,8 @@
     },
     {
         "id": "3",
-        "label": "Case Studies",
-        "link": "/case-study",
+        "label": "About",
+        "link": "/about-us",
         "icon": false
         
     },
@@ -23,7 +23,14 @@
         "id": "5",
         "label": "Industries",
         "link": "/industry",
-        "icon": false
+        "icon": true,
+        "subMenu": [
+            {
+                "id": "1",
+                "label": "Case Studies",
+                "link": "/case-study"
+            }
+        ]         
     },
     {
         "id": "6",

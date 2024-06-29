@@ -164,7 +164,7 @@ const Home5Banner = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="banner-img d-xl-flex d-none">
+            <div className="banner-img d-xl-flex d-none">
               <img
                 src={
                   "https://zenfy-next-js.vercel.app/assets/img/home5/banner-img.jpg" ||
@@ -172,8 +172,8 @@ const Home5Banner = () => {
                 }
                 alt="banner-img"
               />
-            </div> */}
-            <div>
+            </div>
+            {/* <div>
               <a
                 target="_blank"
                 href="https://www.goodfirms.co/company/metageeks-technologies-pvt-ltd"
@@ -185,7 +185,7 @@ const Home5Banner = () => {
                   alt=" Company"
                 />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
