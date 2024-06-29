@@ -12,13 +12,7 @@
         "icon": true
         
     },
-    {
-        "id": "3",
-        "label": "About",
-        "link": "/about-us",
-        "icon": false
-        
-    },
+    
     {
         "id": "5",
         "label": "Industries",
@@ -31,6 +25,13 @@
                 "link": "/case-study"
             }
         ]         
+    },
+    {
+        "id": "3",
+        "label": "About",
+        "link": "/about-us",
+        "icon": false
+        
     },
     {
         "id": "6",
