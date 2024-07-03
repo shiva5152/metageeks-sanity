@@ -21,10 +21,37 @@
         "subMenu": [
             {
                 "id": "1",
-                "label": "Case Studies",
-                "link": "/case-study"
+                "label": "Banking",
+                "link": "/industry/banking"
+            },
+            {
+                "id": "2",
+                "label": "Insurance",
+                "link": "/industry/insurance"
+            },
+            {
+                "id": "3",
+                "label": "Financial Services",
+                "link": "/industry/financial-services"
+            },
+            {
+                "id": "4",
+                "label": "Healthcare",
+                "link": "/industry/healthcare"
+            },
+            {
+                "id": "5",
+                "label": "Ed Tech",
+                "link": "/industry/ed-tech"
             }
         ]         
+    },
+     {
+        "id": "4",
+        "label": "Case Studies",
+                "link": "/case-study",
+        "icon": false
+        
     },
     {
         "id": "3",

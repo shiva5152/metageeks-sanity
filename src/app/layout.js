@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { client } from "../../sanity/lib/client";
 import BootstrapStyleWrapper from "@/components/BoostrapStyleWarapper";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -75,10 +76,10 @@ export default async function RootLayout({ children }) {
       {/* <GoogleAnalytics gaId="G-F99PDVQRH5" /> */}
       <GoogleTagManager gtmId="GTM-K5VV2K23" />
 
-      {/* <script
+      <Script
         type="text/javascript"
         src="https://widget.clutch.co/static/js/widget.js"
-      ></script> */}
+      ></Script>
     </html>
   );
 }

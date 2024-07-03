@@ -173,19 +173,6 @@ const Home5Banner = () => {
                 alt="banner-img"
               />
             </div>
-            {/* <div>
-              <a
-                target="_blank"
-                href="https://www.goodfirms.co/company/metageeks-technologies-pvt-ltd"
-              >
-                <img
-                  style={{ width: "243px" }}
-                  src="https://assets.goodfirms.co/badges/color-badge/artificial-intelligence.svg"
-                  title=" Company"
-                  alt=" Company"
-                />
-              </a>
-            </div> */}
           </div>
         </div>
       </div>

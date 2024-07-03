@@ -115,13 +115,13 @@ const Footer = () => {
                     </span>
                     <h3>What Sets Us Apart?</h3>
                   </div>
-                  <div className="content">
+                  {/* <div className="content">
                     <p>
                       Welcome to MetaGeeks, where innovation meets our passion
                       in a journey that started with a simple idea and a shared
                       dream.
                     </p>
-                  </div>
+                  </div> */}
                   {/* <ul className="rating-area">
                     <li>
                       <a href="https://clutch.co/" className="single-rating">
@@ -195,6 +195,33 @@ const Footer = () => {
                       </a>
                     </li>
                   </ul> */}
+                  <div className="d-flex gap-3 mt-3 justify-content-start align-items-center">
+                    <div
+                      style={{ width: "150px" }}
+                      className="clutch-widget width-fit-content"
+                      data-url="https://widget.clutch.co"
+                      data-widget-type="1"
+                      data-height="40"
+                      data-nofollow="true"
+                      data-expandifr="true"
+                      data-scale="100"
+                      data-clutchcompany-id="2251045"
+                    ></div>
+
+                    <div>
+                      <a
+                        target="_blank"
+                        href="https://www.goodfirms.co/company/metageeks-technologies-pvt-ltd"
+                      >
+                        <img
+                          style={{ width: "80px" }}
+                          src="https://assets.goodfirms.co/badges/color-badge/artificial-intelligence.svg"
+                          title=" Company"
+                          alt=" Company"
+                        />
+                      </a>
+                    </div>
+                  </div>
 
                   <h3 className="mt-4 text-35px fw-bold">We Are Social!</h3>
                   <ul className="social-list d-flex gap-3 flex-wrap">
