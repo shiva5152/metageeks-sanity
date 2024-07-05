@@ -104,7 +104,7 @@ const Aboutpage = () => {
                     Metageeks Technologies Pvt Ltd, a leading global software
                     development company headquartered in New Delhi, India,
                     thrives under the visionary leadership of our Managing
-                    Director, Mr. Pankaj Chauhan, who brings over 15 years of
+                    Director, Mr. Pankaj Kumar, who brings over 15 years of
                     experience to the table. Under his guidance, we have been at
                     the forefront of delivering innovative solutions to
                     clients worldwide.

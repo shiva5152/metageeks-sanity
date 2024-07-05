@@ -5,7 +5,7 @@ import { urlForImage } from "../../../sanity/lib/image";
 
 const getTeam = async () => {
   const query = `
-  *[_type == "team"] | order(rank asc){
+  *[_type == "team"] | order(rank asc)[0...6] {
   fullName,
   position,
   rank,
@@ -14,7 +14,7 @@ const getTeam = async () => {
 `;
 
   const response = await client.fetch(query);
-  // console.log(response);
+  console.log(response);
   return response;
 };
 
@@ -23,12 +23,13 @@ const Home5Team = () => {
   useEffect(() => {
     getTeam().then((data) => setTeam(data));
   }, []);
+
   return (
     <>
       <div className="home5-team-section mb-120">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-xxl-5 col-xl-4 d-flex flex-column gap-4 ">
+            <div className="col-xxl-5 col-xl-4 d-flex flex-column gap-4 justify-content-between">
               <div
                 className="section-title5 wow animate fadeInDown"
                 data-wow-delay="400ms"

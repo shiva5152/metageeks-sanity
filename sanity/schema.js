@@ -7,6 +7,7 @@ import { caseStudy } from "./schemas/case-study/case-study";
 import { testimonial } from "./schemas/testimonial/testimonial";
 import { metadata } from "./schemas/metadata/metadata";
 import { industry } from "./schemas/industry/industry";
+import { team } from "./schemas/team/team";
 
 export const schema = {
   types: [
@@ -19,5 +20,6 @@ export const schema = {
     testimonial,
     metadata,
     industry,
+    team,
   ],
 };

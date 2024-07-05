@@ -14,6 +14,7 @@ import Home5Testimonial from "@/components/testimonial/Home5Testimonial";
 import Home5whyChoose from "@/components/why-choose/Home5whyChoose";
 import HomeWorkProcess from "@/components/workProcess/HomeWorkProcess";
 import useWow from "@/hooks/useWow";
+import HomeTeam from "@/components/team/HomeTeam";
 //
 const Home = () => {
   useWow();
@@ -29,7 +30,7 @@ const Home = () => {
       <Home5Testimonial />
       <HomeWorkProcess />
       <Home5whyChoose />
-      <Home5Team />
+      <HomeTeam />
       <Home5Blog />
       <Home5Contact />
       <Footer />
