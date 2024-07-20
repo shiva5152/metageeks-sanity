@@ -20,10 +20,13 @@ async function getServices() {
 
 const Footer = () => {
   const [services, setServices] = useState(null);
+  const [isRendered, setIsRendered] = useState(false);
+
   useEffect(() => {
     getServices().then((data) => {
       setServices(data);
     });
+    setIsRendered(true);
   }, []);
 
   return (
@@ -196,17 +199,19 @@ const Footer = () => {
                     </li>
                   </ul> */}
                   <div className="d-flex gap-3 mt-3 justify-content-start align-items-center">
-                    <div
-                      style={{ width: "150px" }}
-                      className="clutch-widget width-fit-content"
-                      data-url="https://widget.clutch.co"
-                      data-widget-type="1"
-                      data-height="40"
-                      data-nofollow="true"
-                      data-expandifr="true"
-                      data-scale="100"
-                      data-clutchcompany-id="2251045"
-                    ></div>
+                    {isRendered ? (
+                      <div
+                        style={{ width: "150px" }}
+                        className="clutch-widget width-fit-content"
+                        data-url="https://widget.clutch.co"
+                        data-widget-type="1"
+                        data-height="40"
+                        data-nofollow="true"
+                        data-expandifr="true"
+                        data-scale="100"
+                        data-clutchcompany-id="2251045"
+                      ></div>
+                    ) : null}
 
                     <div>
                       <a

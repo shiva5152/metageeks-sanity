@@ -76,10 +76,10 @@ export default async function RootLayout({ children }) {
       {/* <GoogleAnalytics gaId="G-F99PDVQRH5" /> */}
       <GoogleTagManager gtmId="GTM-K5VV2K23" />
 
-      <Script
+      <script
         type="text/javascript"
         src="https://widget.clutch.co/static/js/widget.js"
-      ></Script>
+      ></script>
     </html>
   );
 }
