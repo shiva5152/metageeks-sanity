@@ -118,7 +118,7 @@ const Home5Partnerships = () => {
                       <p>Chrome Extension</p>
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide className="swiper-slide">
+                  {/* <SwiperSlide className="swiper-slide">
                     <div className="single-pertner">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -144,7 +144,7 @@ const Home5Partnerships = () => {
                       </div>
                       <p>Crypto Trading BOT</p>
                     </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                   <SwiperSlide className="swiper-slide">
                     <div className="single-pertner">
                       <svg
